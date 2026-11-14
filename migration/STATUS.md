@@ -1,9 +1,7 @@
-# 迁移状态
+# 迁移已完成
 
-目标：[kkkkkkkee/CoT-length-generalization](https://github.com/kkkkkkkee/CoT-length-generalization)。
+代码与报告已推送，19,353 个实验文件已经分为 76 个压缩包上传，并逐包与 GitHub 服务端 SHA-256 校验一致。
 
-代码、测试、实验预案、报告、图表和恢复工具已经推送。完整实验附件正在上传和逐包与 GitHub 服务端 SHA-256 比对，**尚未宣布数据迁移完成**。
+[下载完整实验附件](https://github.com/kkkkkkkee/CoT-length-generalization/releases/tag/experiment-archive-2026-11-14)。附件包括 76 个 runs 压缩包及 archive-manifest.json。
 
-存档包含 19,353 个文件、37.16 GiB 原始实验数据，分为 76 个压缩包。Release `experiment-archive-2026-11-14` 会在全部包校验完成后发布。恢复步骤见项目 README。
-
-在本页标注完成、且 Release 中包含 76 个 `runs-*.tar.gz` 和 `archive-manifest.json` 之前，请保留旧服务器。旧服务器原始数据不会被删除。
+恢复步骤见项目 README；逐包校验记录见 upload-receipt.json。旧服务器原始数据未删除。建议在新服务器执行完整恢复并确认校验通过后再释放旧服务器。

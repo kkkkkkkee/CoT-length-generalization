@@ -1,0 +1,467 @@
+{
+  "complete": true,
+  "repo": "kkkkkkkee/CoT-length-generalization",
+  "tag": "experiment-archive-2026-11-14",
+  "verified_parts": 76,
+  "files": 19353,
+  "completed_unix": 1794676518.4741504,
+  "verification": "Each uploaded archive SHA-256 verified against GitHub server digest before publication",
+  "assets": {
+    "runs-001.tar.gz": {
+      "sha256": "b7a6e0e473eda7f12ca8ef9ed6e38f049ce8ac8edda74dfb37c861ea8684f5f9",
+      "bytes": 438242626,
+      "asset_id": 747875088,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-004.tar.gz": {
+      "sha256": "eec279e1d72b210795388717423015745a192369f2f82eb3d367d93a0c7a7b40",
+      "bytes": 440312279,
+      "asset_id": 747887972,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-002.tar.gz": {
+      "sha256": "23a3216a1c995cb9d0ad62a4cab2137d82d6fb70685b83362eefbc22e8587ca1",
+      "bytes": 484424691,
+      "asset_id": 747887951,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-003.tar.gz": {
+      "sha256": "830784c98b0490bf61b5e2a178a334bbc60c76e077a1c24dc2630a201eb6ae6f",
+      "bytes": 470500390,
+      "asset_id": 747887973,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-006.tar.gz": {
+      "sha256": "5256440a1ae94bc6585bf6276f2c29b9c5a56522943b6723c7360a70a1e24e5c",
+      "bytes": 443312046,
+      "asset_id": 747900219,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-005.tar.gz": {
+      "sha256": "dddb1a2b228ff3c5bfb50d5393503529976697a2f753438a304f39327e0d026c",
+      "bytes": 444236379,
+      "asset_id": 747899851,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-007.tar.gz": {
+      "sha256": "0e3bc89ce77bec2e5e06cb55426b1ff4e96c0db985976e76d54bb1f3261e2037",
+      "bytes": 440321915,
+      "asset_id": 747901693,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-008.tar.gz": {
+      "sha256": "0f57fd41f4c24f6bfb4e6453104f0de967f2ea8dbda920a7928186b6686abc6b",
+      "bytes": 436125047,
+      "asset_id": 747907385,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-010.tar.gz": {
+      "sha256": "2e39b158b07f6cde8532802017610395568307c2f0b091147bc5c416a2eb1415",
+      "bytes": 407213688,
+      "asset_id": 747917194,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-011.tar.gz": {
+      "sha256": "e4194d13951d987c3a44c2ff0e9c6fa70f27f8a14d70ae2a26a00fb2f0b27501",
+      "bytes": 407144202,
+      "asset_id": 747917478,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-009.tar.gz": {
+      "sha256": "0dcd72db8feba651b4bf844e8fb7b3f4863eea85107455166d212e20cdabeeb8",
+      "bytes": 407250329,
+      "asset_id": 747916951,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-012.tar.gz": {
+      "sha256": "4ee0362f036933bdd206dff090a51959eab420c5425cf43dacf1aacc1ecd43bb",
+      "bytes": 410594680,
+      "asset_id": 747926858,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-015.tar.gz": {
+      "sha256": "e489c05d0a5bc2274568b552908180250a991608fc8c94f701a319d6273366d0",
+      "bytes": 409258648,
+      "asset_id": 747932651,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-014.tar.gz": {
+      "sha256": "77ffc23bec7859706b59ce3529c3f88f378f7c7aa8401995721bfe0a65408641",
+      "bytes": 413500613,
+      "asset_id": 747927677,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-013.tar.gz": {
+      "sha256": "cd29ee284316db08c89b18eddeb0300ad213c46bc6f4dc99f3574cc0467deb16",
+      "bytes": 409355727,
+      "asset_id": 747926946,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-017.tar.gz": {
+      "sha256": "d3385f5b433215a46634e01f31157c295aef54c6d1c269aec3bf648ce80694d0",
+      "bytes": 407168451,
+      "asset_id": 747940787,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-016.tar.gz": {
+      "sha256": "6c4284bbc4d3777baaa22d6d79f303b8d1f14c55a11339387e48f84cf583304f",
+      "bytes": 406952975,
+      "asset_id": 747937150,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-020.tar.gz": {
+      "sha256": "26537f8d22c05f20541530b4d7d5171cf4352aec93e25d1fb1e2e591e74419a2",
+      "bytes": 407193515,
+      "asset_id": 747949089,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-018.tar.gz": {
+      "sha256": "f46e677a3acbb5a1447f651a0eda547453f652a8637d05fa089e20441c833e90",
+      "bytes": 407168270,
+      "asset_id": 747942913,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-019.tar.gz": {
+      "sha256": "4df88e4880814739a0cd27f3e3bcfd835dd2e7f0e233e8b10aa73867b0d86fd1",
+      "bytes": 407184180,
+      "asset_id": 747947242,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-021.tar.gz": {
+      "sha256": "c62e00ba31d84e3c0a33137949d6a35e86150e371dfe8860323305413b8c16f7",
+      "bytes": 410063607,
+      "asset_id": 747954448,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-022.tar.gz": {
+      "sha256": "def70c63359c278eaf71682682d948904a4ad78138a54e8974d88719d9132234",
+      "bytes": 413604204,
+      "asset_id": 747956282,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-025.tar.gz": {
+      "sha256": "d38040a88c1e45d955973184f5b715633e7a3ecb7a3e96f5626caf617bcc514c",
+      "bytes": 409275443,
+      "asset_id": 747966783,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-023.tar.gz": {
+      "sha256": "90101c1a29d5ed98ca2a402572cea33ad1a82d31b8c5a9a7ae71440e3ffcff3f",
+      "bytes": 409271569,
+      "asset_id": 747960154,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-024.tar.gz": {
+      "sha256": "be35bc0fc40def7039df8c0140aaf7386a7c7447c8c1b5c763bf2455bb11e16c",
+      "bytes": 413602869,
+      "asset_id": 747964296,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-027.tar.gz": {
+      "sha256": "d2aa3063a1a6b34b2ae52c0321016b9cb3bdf6d38b4bd731bf67e194050c3188",
+      "bytes": 440455463,
+      "asset_id": 747974713,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-026.tar.gz": {
+      "sha256": "53e424217e04d7c324de28074f62da714ccec4d4387fbbefc34bf17cd7f67c15",
+      "bytes": 409370828,
+      "asset_id": 747972055,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-030.tar.gz": {
+      "sha256": "a1676a9e05144245610cb0d139fc1c3f9a53d08fc31f087e63209e2ae7975bbb",
+      "bytes": 419516514,
+      "asset_id": 747984710,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-028.tar.gz": {
+      "sha256": "978d71389f4c373e30e5b96b4a142eec6fb3844806934ac041009a922927b0b7",
+      "bytes": 442729026,
+      "asset_id": 747975792,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-029.tar.gz": {
+      "sha256": "059133dd9e6d0d126c1e0d3f5a0981805a82faa9b716c65b4465233678b3b06d",
+      "bytes": 442900038,
+      "asset_id": 747980914,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-032.tar.gz": {
+      "sha256": "2dd78fd090115d07a221b8875cd3d8d861f8e57af312b11255832f47a152aea7",
+      "bytes": 309231618,
+      "asset_id": 747991154,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-033.tar.gz": {
+      "sha256": "425b94ac4b2ebb35360f212c8a90ceb0ec32ba5475069a2bf837acf230c38b93",
+      "bytes": 308506147,
+      "asset_id": 747992869,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-031.tar.gz": {
+      "sha256": "ac03e7abcc35ca1663f498bdb4f090f642a0728632e9582ec5f044d607f0ae5f",
+      "bytes": 435902915,
+      "asset_id": 747990313,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-034.tar.gz": {
+      "sha256": "59d0feed7b74e7815a5e845ee284e46081bfa879c57bc659a48bc87f84738e9e",
+      "bytes": 271614283,
+      "asset_id": 747999255,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-036.tar.gz": {
+      "sha256": "3d9db0ce3583d2e868c380f33cd7184752264150f46d47d4f18703b7de9c3f42",
+      "bytes": 396643446,
+      "asset_id": 748001107,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-038.tar.gz": {
+      "sha256": "136b44a83a229f210d9c0bfb65e609394127d71759dd5351376dc05d8a738e54",
+      "bytes": 350114300,
+      "asset_id": 748008582,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-035.tar.gz": {
+      "sha256": "9a9e9e6d7bfa2c18fe1b6ea5dda6a480535a0940b53a9d8180c2fe9c155315dd",
+      "bytes": 389093929,
+      "asset_id": 748000201,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-037.tar.gz": {
+      "sha256": "b728afbc1178380e6b93ca401bef5cd7a713c3589adaa44cd79fb832da7e0535",
+      "bytes": 248685304,
+      "asset_id": 748005377,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-039.tar.gz": {
+      "sha256": "2fafb3e623a4f0fd7d7fa42931dac6bbb0d575b86cfa1d25aa846d20e2959d37",
+      "bytes": 285933874,
+      "asset_id": 748014045,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-041.tar.gz": {
+      "sha256": "d77d27e278451902813541dd3520950bf8ff154d2839fad02e080f4090e89135",
+      "bytes": 411304325,
+      "asset_id": 748017937,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-042.tar.gz": {
+      "sha256": "7b5b1002ce9fea78649d0698c5d60b081d28af24e2dde8308f27de9f0a95ec15",
+      "bytes": 411487740,
+      "asset_id": 748019199,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-043.tar.gz": {
+      "sha256": "9adcd4706e89003ba722d427831dfb8128c19f42507d42b62edf13a9d0c9b93c",
+      "bytes": 412022801,
+      "asset_id": 748027322,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-040.tar.gz": {
+      "sha256": "4c537baae6bb102dd529a12936fd057e36d383e9b47a7dbcd31172880df42006",
+      "bytes": 418673875,
+      "asset_id": 748016384,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-046.tar.gz": {
+      "sha256": "37bca6d88dfcd8b63583c71a47a2901446debf8c33a8c8afb8de869cf4a8a083",
+      "bytes": 410404847,
+      "asset_id": 748035424,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-044.tar.gz": {
+      "sha256": "28b080bd95c8156acfa839b8ee3eae9f54ac9fb331553a60365770cbfad53cf2",
+      "bytes": 407394719,
+      "asset_id": 748028196,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-047.tar.gz": {
+      "sha256": "1802401588e2b8b740168ce656eeeedaafeb46e327a349c570946f2284f28c01",
+      "bytes": 414607738,
+      "asset_id": 748041284,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-049.tar.gz": {
+      "sha256": "fb75e367e5a5ed930b5c6094ffdf7d65572b3fdfbfd2c2b0572ac14a2fa32123",
+      "bytes": 408031501,
+      "asset_id": 748047201,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-050.tar.gz": {
+      "sha256": "ac392bfccdd4d75269c5596eee61b6e988929353d27d2db257310535847c11fa",
+      "bytes": 408222508,
+      "asset_id": 748052168,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-051.tar.gz": {
+      "sha256": "8b1593d296a42ec57d36681046da348e5efbd80aa225d5f1ed8227472bd22697",
+      "bytes": 226591139,
+      "asset_id": 748057852,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-052.tar.gz": {
+      "sha256": "8b55796476a6ca232b043cd3c8f99ebbe89487a1b1af65bce67ac76c2e1dbd35",
+      "bytes": 423258496,
+      "asset_id": 748061269,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-053.tar.gz": {
+      "sha256": "3d8ef6ddb0b0f6b26004a3cc7b8a116f082223418bb247d4f207929a470e4ae1",
+      "bytes": 467307712,
+      "asset_id": 748066931,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-054.tar.gz": {
+      "sha256": "0eafae9e24000bc59e486ee0bbc56ed84744633ae0bd2c9594d26955cd426103",
+      "bytes": 473666906,
+      "asset_id": 748072045,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-055.tar.gz": {
+      "sha256": "438566c28e82b221d17d7bf6d4bddc06fddc11a0a7b71d4d3aba3c805ffb8ff1",
+      "bytes": 215746672,
+      "asset_id": 748077453,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-056.tar.gz": {
+      "sha256": "f5436f467897bf8fe693e947257d4212331bf494691ba192f098ce8a9c3c6fa5",
+      "bytes": 455917973,
+      "asset_id": 748080470,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-057.tar.gz": {
+      "sha256": "1b93a7552854fb3b5816d0de5653a0d5f24176c3d0dad919d332b51eb4c5b5d9",
+      "bytes": 368125798,
+      "asset_id": 748086387,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-058.tar.gz": {
+      "sha256": "4be5e99e7037c9a679b023f90fd2f3a04c703271ccbc206b6eefcff84fd7cef0",
+      "bytes": 379933391,
+      "asset_id": 748091487,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-059.tar.gz": {
+      "sha256": "b405fc2d049f66c235c9c468ec1114d52dea37ea5470725e1af8025d65bc2d53",
+      "bytes": 441561103,
+      "asset_id": 748095600,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-045.tar.gz": {
+      "sha256": "4e370b499c692ae8dd7fe83b93f71f56947cb48566ac985e1dac7a00dfc60629",
+      "bytes": 407586825,
+      "asset_id": 748033960,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-060.tar.gz": {
+      "sha256": "0108a6d89cf5f5c1f5e5865696541a5a95e9ed9692fd09b740c09c145da249da",
+      "bytes": 367067074,
+      "asset_id": 748101404,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-048.tar.gz": {
+      "sha256": "d8c3104c2382c8c104ca788013a2536f4230791d877f32bf2a2349c403c11a4e",
+      "bytes": 418996598,
+      "asset_id": 748043427,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-061.tar.gz": {
+      "sha256": "d28e6e3284bbeb31cba7cbd9f6b86db22eac5759fd79e2e3c32a3220fef55c83",
+      "bytes": 389545107,
+      "asset_id": 748101872,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-062.tar.gz": {
+      "sha256": "11e2e5061aec05160f836cd747030afec7d50318b14f9495a30e85ed883e5ef8",
+      "bytes": 434067794,
+      "asset_id": 748108872,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-065.tar.gz": {
+      "sha256": "d7746f0788f07b4674b462bcfd0d7cab4fc82e56d17f30521ad4c12e6f449565",
+      "bytes": 442157757,
+      "asset_id": 748113880,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-066.tar.gz": {
+      "sha256": "78dfe5cea8cb4f7eea4422d6ca2d9ec8735afd50fb3a9a06d561e2cede44ea18",
+      "bytes": 446059080,
+      "asset_id": 748119408,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-067.tar.gz": {
+      "sha256": "1112293581d57007fa6e7f81f939121ed9ffe5dd7da3fe2cad6df61d588e377b",
+      "bytes": 459033587,
+      "asset_id": 748125015,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-068.tar.gz": {
+      "sha256": "331983cdcc4583ca70fff06f2636f31478e6ea758bf41181cf1464174be70c83",
+      "bytes": 480183889,
+      "asset_id": 748130389,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-069.tar.gz": {
+      "sha256": "75a0d329ba3f9ef9b10f7044594f84d27f30c7156cf8d075532d045e285a8dd9",
+      "bytes": 446995161,
+      "asset_id": 748136517,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-070.tar.gz": {
+      "sha256": "5e5ec166388e914599c9b6928cd59fd55bf87d0b626488708413edf15e0531b1",
+      "bytes": 477243882,
+      "asset_id": 748143579,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-071.tar.gz": {
+      "sha256": "e5f57661fef8ed0fe2d529620686b3fd3bb49a78afc8ed401f6dcc59ac2091ce",
+      "bytes": 462850085,
+      "asset_id": 748148883,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-072.tar.gz": {
+      "sha256": "3a64def835d1648cc3e9fb01a394e39b0629f0dfd58222e1ab86956867aae14c",
+      "bytes": 442026031,
+      "asset_id": 748154328,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-073.tar.gz": {
+      "sha256": "68c51d9de1f3113aac1e26b0ce92781f72006107d262ffb3a1c78c393c0702ab",
+      "bytes": 348294360,
+      "asset_id": 748161147,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-074.tar.gz": {
+      "sha256": "836365b68b483100281910f131adeb55e26e06b48dd82f2f01d123df25dfc032",
+      "bytes": 83128893,
+      "asset_id": 748165641,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-075.tar.gz": {
+      "sha256": "0beb7320613ed0c88717440b1f986eb959c83af94033e17791f2206fd8f71f12",
+      "bytes": 292970528,
+      "asset_id": 748167608,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-076.tar.gz": {
+      "sha256": "c2c639f6cdeea46f43000d186e1c777c909fb8e19135664bbbb1052c7002e480",
+      "bytes": 9966305,
+      "asset_id": 748170681,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-064.tar.gz": {
+      "sha256": "a3c0754c4d3f7d918df496dd3cbdd9904c15349a6646fa91d3d6ed850672d76e",
+      "bytes": 438427527,
+      "asset_id": 748110904,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    },
+    "runs-063.tar.gz": {
+      "sha256": "3e281f5a437b4a3cc39d6145884fe479ce83715a3992aa32d53179e69c2028db",
+      "bytes": 442257913,
+      "asset_id": 748110528,
+      "verification": "GitHub server SHA-256 equals local archive SHA-256"
+    }
+  }
+}
