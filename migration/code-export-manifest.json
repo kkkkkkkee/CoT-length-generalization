@@ -207,8 +207,8 @@
     },
     {
       "path": "migration/STATUS.md",
-      "sha256": "8fb97adda9ce66a3f497619d0c019303f9f9498af5fd35fb6c88b26daf0e9ce9",
-      "bytes": 623
+      "sha256": "54312c45fb2281c235b1fea3bbe0f52ccebab4da0c4bd4e3c0d5c78efdeb5609",
+      "bytes": 690
     },
     {
       "path": "migration/archive-manifest.json",
@@ -217,8 +217,8 @@
     },
     {
       "path": "migration/github_archive.py",
-      "sha256": "d3fe5d5d428b985e122a263b837a5c0f4db2c55ad193810ba6d32061582767da",
-      "bytes": 10664
+      "sha256": "4c10dee63cb652f4ba87fe0c5a705347488ad35203e582f31301809478d7fed6",
+      "bytes": 12738
     },
     {
       "path": "notes/SESSION_HANDOFF.md",

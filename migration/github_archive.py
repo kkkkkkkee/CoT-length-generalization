@@ -2,7 +2,7 @@
 """Preserve experiment runs as checksum-verified GitHub Release assets.
 
 Requires Python 3.10+ and authenticated gh. Each compressed shard is generated,
-uploaded, downloaded for verification, then removed from the temporary cache.
+uploaded, checked against GitHub server SHA-256, then removed from the cache.
 Original experiment files are never deleted. Restore verifies every member.
 """
 import argparse
@@ -73,7 +73,8 @@ def prepare(root, manifest, size):
 
 
 def pack(root, part, target):
-    with tarfile.open(target, 'w:gz', compresslevel=1) as tar:
+    temporary = Path(str(target) + '.packing')
+    with tarfile.open(temporary, 'w:gz', compresslevel=1) as tar:
         for row in part['files']:
             p = safe_path(root, row['path'])
             if p.stat().st_size != row['size'] or sha(p) != row['sha256']:
@@ -84,6 +85,7 @@ def pack(root, part, target):
             info.mtime = 0
             with p.open('rb') as f:
                 tar.addfile(info, f)
+    temporary.replace(target)
 
 
 def unpack(root, part, archive):
@@ -121,6 +123,7 @@ def download(repo, tag, name, dest):
 
 
 def upload(root, manifest_path, repo, tag, cache):
+    from concurrent.futures import ThreadPoolExecutor, as_completed
     manifest = json.loads(manifest_path.read_text())
     manifest_hash = sha(manifest_path)
     cache.mkdir(parents=True, exist_ok=True)
@@ -130,54 +133,88 @@ def upload(root, manifest_path, repo, tag, cache):
     if any(state[k] != v for k, v in {'repo': repo, 'tag': tag, 'manifest_sha256': manifest_hash}.items()):
         raise RuntimeError('Upload journal belongs to another archive')
     try:
-        release = json.loads(gh('release', 'view', tag, '--repo', repo, '--json', 'assets,isDraft'))
+        view = json.loads(gh('release', 'view', tag, '--repo', repo, '--json', 'isDraft'))
     except subprocess.CalledProcessError:
         gh('release', 'create', tag, '--repo', repo, '--draft', '--title', 'Complete experiment migration archive',
-           '--notes', 'All experiment runs, checkpoints and datasets. Restore with migration/github_archive.py; checksums in archive-manifest.json.')
-        release = {'assets': [], 'isDraft': True}
-    if not release['isDraft']:
+           '--notes', 'All experiment runs, checkpoints and datasets. Each uploaded asset SHA-256 verified against GitHub server digest. Restore with migration/github_archive.py.')
+        view = {'isDraft': True}
+    if not view['isDraft']:
         raise RuntimeError('Refusing to alter a published release; use a new tag')
+    releases = json.loads(gh('api', f'repos/{repo}/releases?per_page=100'))
+    release = next(r for r in releases if r['tag_name'] == tag)
+    release_id = release['id']
     assets = {a['name']: a for a in release['assets']}
-    for part in manifest['parts']:
+    write(journal, state)
+
+    def transfer(part):
         name = part['name']
         if name in state['verified'] and name in assets:
             saved = state['verified'][name]
-            if saved.get('asset_id') == assets[name].get('id'):
-                continue
-        local, verify = cache / name, cache / ('verify-' + name)
+            if (saved.get('asset_id') == assets[name]['id']
+                    and assets[name].get('digest') == 'sha256:' + saved['sha256']):
+                return name, saved
+        local = cache / name
         print(f'Packing {name} ({part["raw_bytes"] / 2**20:.1f} MiB raw)', flush=True)
-        pack(root, part, local)
-        digest = sha(local)
-        if name not in assets:
-            gh('release', 'upload', tag, local, '--repo', repo)
-        download(repo, tag, name, verify)
-        # Compressed headers may differ after resuming. Verify member contents,
-        # rather than replacing an existing asset on a gzip-byte mismatch.
-        if sha(verify) != digest:
-            with tarfile.open(verify, 'r:gz') as tar:
-                expected = {r['path']: r for r in part['files']}
-                seen = set()
-                for member in tar:
-                    if member.name not in expected or member.name in seen or not member.isfile():
-                        raise RuntimeError('Remote archive member mismatch')
-                    row = expected[member.name]
-                    with tar.extractfile(member) as f:
-                        h = hashlib.sha256()
-                        for block in iter(lambda: f.read(4 * 1024 * 1024), b''):
-                            h.update(block)
-                    if member.size != row['size'] or h.hexdigest() != row['sha256']:
-                        raise RuntimeError('Remote archive content mismatch')
-                    seen.add(member.name)
-                if seen != set(expected):
-                    raise RuntimeError('Remote archive missing files')
-        fresh = json.loads(gh('release', 'view', tag, '--repo', repo, '--json', 'assets'))
-        assets = {a['name']: a for a in fresh['assets']}
-        state['verified'][name] = {'sha256': sha(verify), 'bytes': verify.stat().st_size,
-                                   'asset_id': assets[name]['id']}
-        write(journal, state)
-        local.unlink()
-        verify.unlink()
-        print(f'Uploaded and download-verified {name}', flush=True)
+        # Existing cache files may be partial after interruption; regenerate
+        # unless the exact bytes are already confirmed by the server digest.
+        if name in assets and local.exists() and assets[name].get('digest') == 'sha256:' + sha(local):
+            digest = sha(local)
+            remote = assets[name]
+        else:
+            pack(root, part, local)
+            digest = sha(local)
+            if name not in assets:
+                gh('release', 'upload', tag, local, '--repo', repo)
+            else:
+                # Do not overwrite an existing remote asset with different gzip
+                # metadata. Download and verify its actual archived members.
+                verify = cache / ('verify-' + name)
+                download(repo, tag, name, verify)
+                with tarfile.open(verify, 'r:gz') as tar:
+                    expected = {r['path']: r for r in part['files']}
+                    seen = set()
+                    for member in tar:
+                        if member.name not in expected or member.name in seen or not member.isfile():
+                            raise RuntimeError('Remote archive member mismatch')
+                        row = expected[member.name]
+                        with tar.extractfile(member) as f:
+                            h = hashlib.sha256()
+                            for block in iter(lambda: f.read(4 * 1024 * 1024), b''):
+                                h.update(block)
+                        if member.size != row['size'] or h.hexdigest() != row['sha256']:
+                            raise RuntimeError('Remote archive content mismatch')
+                        seen.add(member.name)
+                    if seen != set(expected):
+                        raise RuntimeError('Remote archive missing files')
+                digest = sha(verify)
+                verify.replace(local)
+            listing = json.loads(gh('api', f'repos/{repo}/releases/{release_id}/assets?per_page=100'))
+            remote = next(a for a in listing if a['name'] == name)
+        if remote.get('digest') != 'sha256:' + digest or remote['size'] != local.stat().st_size or remote['state'] != 'uploaded':
+            raise RuntimeError(f'GitHub server SHA-256/size/state mismatch: {name}')
+        receipt = {'sha256': digest, 'bytes': local.stat().st_size,
+                   'asset_id': remote['id'], 'verification': 'GitHub server SHA-256 equals local archive SHA-256'}
+        print(f'Uploaded and server-checksum-verified {name}', flush=True)
+        return name, receipt
+
+    with ThreadPoolExecutor(max_workers=3) as pool:
+        pending = [pool.submit(transfer, part) for part in manifest['parts']]
+        for future in as_completed(pending):
+            try:
+                name, receipt = future.result()
+            except Exception:
+                for other in pending:
+                    other.cancel()
+                raise
+            state['verified'][name] = receipt
+            write(journal, state)
+            (cache / name).unlink(missing_ok=True)
+            (cache / ('verify-' + name)).unlink(missing_ok=True)
+    listing = json.loads(gh('api', f'repos/{repo}/releases/{release_id}/assets?per_page=100'))
+    assets = {a['name']: a for a in listing}
+    for name, receipt in state['verified'].items():
+        if name not in assets or assets[name].get('digest') != 'sha256:' + receipt['sha256']:
+            raise RuntimeError(f'Final remote verification failed: {name}')
     metadata = cache / 'archive-manifest.json'
     manifest['archive_assets'] = state['verified']
     write(metadata, manifest)
