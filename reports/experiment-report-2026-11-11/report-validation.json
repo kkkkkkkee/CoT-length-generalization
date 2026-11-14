@@ -1,0 +1,56 @@
+{
+  "complete": true,
+  "scope": "Visual report: link/anchor checks, all PNG/PDF hashes, preserved numerical tables and original endpoint validation; no model rerun.",
+  "links_checked": 186,
+  "missing_links": [],
+  "anchor_errors": [],
+  "evaluation_rows": 18304,
+  "completion_counts_including_smoke": {
+    "phase-c-length-curriculum-2026-11-10": 220,
+    "phase-d-structural-2026-11-10": 36,
+    "pair-coverage-control-2026-11-10": 36,
+    "position-embedding-2026-11-10": 49,
+    "position-embedding-v2-2026-11-10": 48,
+    "position-embedding-v3-2026-11-10": 64
+  },
+  "verified_endpoints": [
+    {
+      "campaign": "phase-c-length-curriculum-2026-11-10",
+      "condition": "row_tied_self_stage4",
+      "L64_full_clause_percent": "99.78"
+    },
+    {
+      "campaign": "phase-c-length-curriculum-2026-11-10",
+      "condition": "row_tied_truth_stage4",
+      "L64_full_clause_percent": "99.73"
+    },
+    {
+      "campaign": "phase-c-length-curriculum-2026-11-10",
+      "condition": "row_tied_continue_L2_stage4",
+      "L64_full_clause_percent": "99.84"
+    },
+    {
+      "campaign": "phase-d-structural-2026-11-10",
+      "condition": "main_soft_0.1",
+      "L64_full_clause_percent": "19.74"
+    },
+    {
+      "campaign": "phase-d-structural-2026-11-10",
+      "condition": "main_soft_1",
+      "L64_full_clause_percent": "44.19"
+    },
+    {
+      "campaign": "phase-d-structural-2026-11-10",
+      "condition": "main_row_tied",
+      "L64_full_clause_percent": "93.12"
+    }
+  ],
+  "report_sha256": "d3fa8159ee1654296c0681cda866ddf98bcbf596a809a50ee9aab8ab32197da6",
+  "report_lines": 738,
+  "report_characters": 26760,
+  "figures": 30,
+  "reference_tables_in_main": 3,
+  "tables_in_numeric_appendix": 38,
+  "visual_review": "All new figures inspected in contact sheets; Phase D, position pretraining, inference and routing inspected at full resolution; final categorical plots and external legends inspected after layout changes.",
+  "figure_manifest_sha256": "2edb13cc1999af9c8fdd13dbc0ea14105a5cc3be3b2a63ff834acba7d6394214"
+}

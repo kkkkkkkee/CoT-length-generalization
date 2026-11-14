@@ -1,0 +1,12 @@
+{
+  "complete": true,
+  "links_checked": 11,
+  "figures": 4,
+  "report_characters": 2804,
+  "report_sha256": "e2aeb4152e37614055af29e80876bc6be6f24f7cc939d4b67d3ad64f84cb9a5e",
+  "checked_means": [
+    "Phase D L64",
+    "Phase C final L64",
+    "relative causal L64"
+  ]
+}

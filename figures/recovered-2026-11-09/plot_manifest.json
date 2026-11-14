@@ -1,0 +1,38 @@
+{
+  "run_glob": "base_*",
+  "runs": [
+    "base_C5_s0",
+    "base_C5_s1",
+    "base_C5_s2",
+    "base_C6_s0",
+    "base_C6_s1",
+    "base_C6_s2",
+    "base_S5_s0",
+    "base_S5_s1",
+    "base_S5_s2",
+    "base_aliasC5_s0",
+    "base_aliasC5_s1",
+    "base_aliasC5_s2"
+  ],
+  "evaluation_rows": 1116,
+  "figures": [
+    "training_loss",
+    "training_value_step",
+    "training_value_chain",
+    "training_clause_chain",
+    "length_generalization",
+    "temperature_intervention",
+    "attention_vs_length",
+    "context_intervention",
+    "mechanism_dynamics"
+  ],
+  "bands": "mean +/- one sample standard deviation across training seeds; omitted for one seed",
+  "notes": [
+    "No interpolation or fabricated results",
+    "Teacher-forced value chains are not free-rollout final-answer accuracy",
+    "Exact full-clause teacher-forced chain success equals deterministic unconstrained rollout whole-chain success",
+    "Incomplete ongoing runs may appear; consult config.json and complete.json",
+    "Files whose names contain smoke are excluded from scientific figures",
+    "Attention heads are indexed as stored and are not aligned across seeds"
+  ]
+}

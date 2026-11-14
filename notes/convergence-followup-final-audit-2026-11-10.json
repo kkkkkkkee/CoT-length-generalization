@@ -1,0 +1,50 @@
+{
+  "audited_at": "2026-11-10T12:20:08+08:00",
+  "source_basis": "saved campaign source snapshot and manifest, with live model.py/local_rule.py solely for unused transitive imports",
+  "unsnapshotted_imports": {
+    "model.py": "bf08b0b3131c00a174a93023ef99cf0773c4fbd68d2e37a2e44c57faaf6feaf7",
+    "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+  },
+  "run_count": 78,
+  "main_count": 72,
+  "smoke_count": 6,
+  "checks": {
+    "campaign": 3,
+    "source_snapshot": 9,
+    "parent_sha": 4,
+    "parent_gate": 4,
+    "parent_zero_q": 4,
+    "config_matches_manifest": 2730,
+    "run_source": 624,
+    "run_init_sha": 78,
+    "clean_truth": 390,
+    "actual_checkpoint_sha": 156,
+    "actual_ff_sha": 156,
+    "actual_frozen_sha": 156,
+    "checkpoint_step": 156,
+    "checkpoint_mode": 156,
+    "initial_zero_q": 78,
+    "fixed_budget": 450,
+    "histogram_total": 372,
+    "history_schedule": 78,
+    "loss_decomposition": 294,
+    "evaluation_separation": 294,
+    "histogram_complete_vs_history": 78,
+    "actual_training_data_sha": 312,
+    "initial_vs_final_panel": 78,
+    "evaluation_lengths": 78,
+    "evaluation_sample_sizes": 468,
+    "paired_artifacts": 30,
+    "paired_query_exposure_stream": 20
+  },
+  "total_checks": 7256,
+  "failures": [],
+  "passed": true,
+  "actual_ff_parent_hashes": {
+    "0": "66209905b52acab3df361b973c94e667e8e7a644c865885d3b559b43afff4c0f",
+    "1": "fe5b809be72adb28831a63b2086bd4eb7a035833562774f8f34fd1c319569f3d",
+    "2": "974bfb43bb0e953b34a95a3ba6dc9c747795d0b19c6371aab738884a82b0c419",
+    "3": "86a9644870f156f3238eeb2c66f750ecff0792dd0047571318dd24fdd8610f01"
+  },
+  "manifest_sha256": "a8baaec3cdcdbe6ea857991c4558a1de3792106ba6af2d7f0012f3f100aa8139"
+}

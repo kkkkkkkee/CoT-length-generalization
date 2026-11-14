@@ -1,0 +1,34 @@
+{
+  "figures": [
+    {
+      "name": "01-task",
+      "kind": "explanatory diagram, not a measured result",
+      "description": "Illustrative legal S5 transition; not a sampled test record.",
+      "png_sha256": "2427ccc03f7637d6ad596475eb1e255685341ceb989119e4999a7b988925aa9b"
+    },
+    {
+      "name": "02-model",
+      "kind": "explanatory diagram, not a measured result",
+      "description": "Shared mechanism-model training pipeline; position-aware training adds learnable position parameters in both stages.",
+      "png_sha256": "6eaab2098f01a31cf4053889768968045079c53c60851d53de7e4d403f4b5580"
+    },
+    {
+      "name": "03-curriculum",
+      "kind": "explanatory diagram, not a measured result",
+      "description": "Each routing mode has its own warmup; all seeds and branches retained, total routing budget 5000 updates including warmup.",
+      "png_sha256": "77836fcbde8b9c61c2b94ec3e4b61d90dc6c0d63b61b30bdaa45b97b7b8b9e43"
+    },
+    {
+      "name": "04-position-design",
+      "kind": "explanatory diagram, not a measured result",
+      "description": "Score-only biases; same learnable-position policy in dense and tied routing; fixed sinusoidal table never trained.",
+      "png_sha256": "16c9ca6fd2045436834c09993ade3f8e5855ced18dd3a8d6299de8ff4e8af1af"
+    },
+    {
+      "name": "05-validation",
+      "kind": "explanatory diagram, not a measured result",
+      "description": "Global validation/test phase barrier; beta selection per model family and method, averaged over seeds, lengths and orders.",
+      "png_sha256": "5d796a47c245be85317a541e3a74bd4465dd16e25b5cbdd3d94829aef492acf2"
+    }
+  ]
+}

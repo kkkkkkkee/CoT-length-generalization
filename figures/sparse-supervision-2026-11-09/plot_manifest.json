@@ -1,0 +1,4580 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-11-09T11:28:00.981527+00:00",
+  "runs_directory": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09",
+  "output_directory": "/root/shared-nvme/cot-length-generalization/figures/sparse-supervision-2026-11-09",
+  "completed_runs": [
+    "extend_L4_N4096_teacher_all_s0",
+    "extend_L4_N4096_teacher_all_s1",
+    "extend_L4_N4096_teacher_all_s2",
+    "extend_L4_N4096_teacher_random_s0",
+    "extend_L4_N4096_teacher_random_s1",
+    "extend_L4_N4096_teacher_random_s2",
+    "extend_L4_N4096_teacher_second_s0",
+    "extend_L4_N4096_teacher_second_s1",
+    "extend_L4_N4096_teacher_second_s2",
+    "extend_L4_N4096_truth_all_s0",
+    "extend_L4_N4096_truth_all_s1",
+    "extend_L4_N4096_truth_all_s2",
+    "extend_L4_N4096_truth_random_s0",
+    "extend_L4_N4096_truth_random_s1",
+    "extend_L4_N4096_truth_random_s2",
+    "extend_L4_N4096_truth_second_s0",
+    "extend_L4_N4096_truth_second_s1",
+    "extend_L4_N4096_truth_second_s2",
+    "extend_L4_N512_teacher_all_s0",
+    "extend_L4_N512_teacher_all_s1",
+    "extend_L4_N512_teacher_all_s2",
+    "extend_L4_N512_teacher_random_s0",
+    "extend_L4_N512_teacher_random_s1",
+    "extend_L4_N512_teacher_random_s2",
+    "extend_L4_N512_teacher_second_s0",
+    "extend_L4_N512_teacher_second_s1",
+    "extend_L4_N512_teacher_second_s2",
+    "extend_L4_N512_truth_all_s0",
+    "extend_L4_N512_truth_all_s1",
+    "extend_L4_N512_truth_all_s2",
+    "extend_L4_N512_truth_random_s0",
+    "extend_L4_N512_truth_random_s1",
+    "extend_L4_N512_truth_random_s2",
+    "extend_L4_N512_truth_second_s0",
+    "extend_L4_N512_truth_second_s1",
+    "extend_L4_N512_truth_second_s2",
+    "labels_L4_N1024_teacher_all_s0",
+    "labels_L4_N1024_teacher_all_s1",
+    "labels_L4_N1024_teacher_all_s2",
+    "labels_L4_N1024_truth_all_s0",
+    "labels_L4_N1024_truth_all_s1",
+    "labels_L4_N1024_truth_all_s2",
+    "local_full_s0",
+    "local_full_s1",
+    "local_full_s2",
+    "local_s0",
+    "noise_L4_prefix_consistent_r05_s0",
+    "noise_L4_prefix_consistent_r05_s1",
+    "noise_L4_prefix_consistent_r05_s2",
+    "noise_L4_prefix_consistent_r20_s0",
+    "noise_L4_prefix_consistent_r20_s1",
+    "noise_L4_prefix_consistent_r20_s2",
+    "noise_L4_prefix_consistent_r40_s0",
+    "noise_L4_prefix_consistent_r40_s1",
+    "noise_L4_prefix_consistent_r40_s2",
+    "noise_L4_prefix_inconsistent_r05_s0",
+    "noise_L4_prefix_inconsistent_r05_s1",
+    "noise_L4_prefix_inconsistent_r05_s2",
+    "noise_L4_prefix_inconsistent_r20_s0",
+    "noise_L4_prefix_inconsistent_r20_s1",
+    "noise_L4_prefix_inconsistent_r20_s2",
+    "noise_L4_prefix_inconsistent_r40_s0",
+    "noise_L4_prefix_inconsistent_r40_s1",
+    "noise_L4_prefix_inconsistent_r40_s2",
+    "noise_L4_target_r05_s0",
+    "noise_L4_target_r05_s1",
+    "noise_L4_target_r05_s2",
+    "noise_L4_target_r20_s0",
+    "noise_L4_target_r20_s1",
+    "noise_L4_target_r20_s2",
+    "noise_L4_target_r40_s0",
+    "noise_L4_target_r40_s1",
+    "noise_L4_target_r40_s2",
+    "warm_L2_all_s0",
+    "warm_L2_all_s1",
+    "warm_L2_all_s2",
+    "warm_L2_random_s0",
+    "warm_L2_random_s1",
+    "warm_L2_random_s2",
+    "warm_L2_second_s0",
+    "warm_L2_second_s1",
+    "warm_L2_second_s2"
+  ],
+  "skipped_runs": [],
+  "evaluation_rows": 562,
+  "history_rows": 357,
+  "aggregate_groups": 194,
+  "run_warnings": {
+    "local_s0": [
+      "Local pretraining gate failed; oracle curves are diagnostic, not an admitted foundation."
+    ]
+  },
+  "coverage": [
+    {
+      "design_id": "d5b9208873ae",
+      "run": "extend_L4_N4096_teacher_all_s0",
+      "seed": 0,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "all",
+      "label_source": "teacher",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "d5b9208873ae",
+      "run": "extend_L4_N4096_teacher_all_s1",
+      "seed": 1,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "all",
+      "label_source": "teacher",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "d5b9208873ae",
+      "run": "extend_L4_N4096_teacher_all_s2",
+      "seed": 2,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "all",
+      "label_source": "teacher",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "0ee5fe4fb91f",
+      "run": "extend_L4_N4096_teacher_random_s0",
+      "seed": 0,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "random",
+      "label_source": "teacher",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "0ee5fe4fb91f",
+      "run": "extend_L4_N4096_teacher_random_s1",
+      "seed": 1,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "random",
+      "label_source": "teacher",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "0ee5fe4fb91f",
+      "run": "extend_L4_N4096_teacher_random_s2",
+      "seed": 2,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "random",
+      "label_source": "teacher",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "4f1b17888057",
+      "run": "extend_L4_N4096_teacher_second_s0",
+      "seed": 0,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "teacher",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "4f1b17888057",
+      "run": "extend_L4_N4096_teacher_second_s1",
+      "seed": 1,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "teacher",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "4f1b17888057",
+      "run": "extend_L4_N4096_teacher_second_s2",
+      "seed": 2,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "teacher",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "07c03a6a854e",
+      "run": "extend_L4_N4096_truth_all_s0",
+      "seed": 0,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "all",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "07c03a6a854e",
+      "run": "extend_L4_N4096_truth_all_s1",
+      "seed": 1,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "all",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "07c03a6a854e",
+      "run": "extend_L4_N4096_truth_all_s2",
+      "seed": 2,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "all",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "70d4c4878b10",
+      "run": "extend_L4_N4096_truth_random_s0",
+      "seed": 0,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "random",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "70d4c4878b10",
+      "run": "extend_L4_N4096_truth_random_s1",
+      "seed": 1,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "random",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "70d4c4878b10",
+      "run": "extend_L4_N4096_truth_random_s2",
+      "seed": 2,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "random",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "b8058f6c52d1",
+      "run": "extend_L4_N4096_truth_second_s0",
+      "seed": 0,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "b8058f6c52d1",
+      "run": "extend_L4_N4096_truth_second_s1",
+      "seed": 1,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "b8058f6c52d1",
+      "run": "extend_L4_N4096_truth_second_s2",
+      "seed": 2,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "5506030d3004",
+      "run": "extend_L4_N512_teacher_all_s0",
+      "seed": 0,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "all",
+      "label_source": "teacher",
+      "train_length": 4,
+      "samples": 512,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "5506030d3004",
+      "run": "extend_L4_N512_teacher_all_s1",
+      "seed": 1,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "all",
+      "label_source": "teacher",
+      "train_length": 4,
+      "samples": 512,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "5506030d3004",
+      "run": "extend_L4_N512_teacher_all_s2",
+      "seed": 2,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "all",
+      "label_source": "teacher",
+      "train_length": 4,
+      "samples": 512,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "cd4e8ddff8cf",
+      "run": "extend_L4_N512_teacher_random_s0",
+      "seed": 0,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "random",
+      "label_source": "teacher",
+      "train_length": 4,
+      "samples": 512,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "cd4e8ddff8cf",
+      "run": "extend_L4_N512_teacher_random_s1",
+      "seed": 1,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "random",
+      "label_source": "teacher",
+      "train_length": 4,
+      "samples": 512,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "cd4e8ddff8cf",
+      "run": "extend_L4_N512_teacher_random_s2",
+      "seed": 2,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "random",
+      "label_source": "teacher",
+      "train_length": 4,
+      "samples": 512,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "fefde0aaad9d",
+      "run": "extend_L4_N512_teacher_second_s0",
+      "seed": 0,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "teacher",
+      "train_length": 4,
+      "samples": 512,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "fefde0aaad9d",
+      "run": "extend_L4_N512_teacher_second_s1",
+      "seed": 1,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "teacher",
+      "train_length": 4,
+      "samples": 512,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "fefde0aaad9d",
+      "run": "extend_L4_N512_teacher_second_s2",
+      "seed": 2,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "teacher",
+      "train_length": 4,
+      "samples": 512,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "85c2241568b0",
+      "run": "extend_L4_N512_truth_all_s0",
+      "seed": 0,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "all",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 512,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "85c2241568b0",
+      "run": "extend_L4_N512_truth_all_s1",
+      "seed": 1,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "all",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 512,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "85c2241568b0",
+      "run": "extend_L4_N512_truth_all_s2",
+      "seed": 2,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "all",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 512,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "5bb7ce14aa1d",
+      "run": "extend_L4_N512_truth_random_s0",
+      "seed": 0,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "random",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 512,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "5bb7ce14aa1d",
+      "run": "extend_L4_N512_truth_random_s1",
+      "seed": 1,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "random",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 512,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "5bb7ce14aa1d",
+      "run": "extend_L4_N512_truth_random_s2",
+      "seed": 2,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "random",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 512,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "1d6ac58f94f3",
+      "run": "extend_L4_N512_truth_second_s0",
+      "seed": 0,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 512,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "1d6ac58f94f3",
+      "run": "extend_L4_N512_truth_second_s1",
+      "seed": 1,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 512,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "1d6ac58f94f3",
+      "run": "extend_L4_N512_truth_second_s2",
+      "seed": 2,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 512,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "4c435b036240",
+      "run": "labels_L4_N1024_teacher_all_s0",
+      "seed": 0,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "all",
+      "label_source": "teacher",
+      "train_length": 4,
+      "samples": 1024,
+      "pool_samples": 16384,
+      "budget_label": "matched_to_N4096_single_step_unique_and_presented_value_labels"
+    },
+    {
+      "design_id": "4c435b036240",
+      "run": "labels_L4_N1024_teacher_all_s1",
+      "seed": 1,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "all",
+      "label_source": "teacher",
+      "train_length": 4,
+      "samples": 1024,
+      "pool_samples": 16384,
+      "budget_label": "matched_to_N4096_single_step_unique_and_presented_value_labels"
+    },
+    {
+      "design_id": "4c435b036240",
+      "run": "labels_L4_N1024_teacher_all_s2",
+      "seed": 2,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "all",
+      "label_source": "teacher",
+      "train_length": 4,
+      "samples": 1024,
+      "pool_samples": 16384,
+      "budget_label": "matched_to_N4096_single_step_unique_and_presented_value_labels"
+    },
+    {
+      "design_id": "ed76c6df36ce",
+      "run": "labels_L4_N1024_truth_all_s0",
+      "seed": 0,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "all",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 1024,
+      "pool_samples": 16384,
+      "budget_label": "matched_to_N4096_single_step_unique_and_presented_value_labels"
+    },
+    {
+      "design_id": "ed76c6df36ce",
+      "run": "labels_L4_N1024_truth_all_s1",
+      "seed": 1,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "all",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 1024,
+      "pool_samples": 16384,
+      "budget_label": "matched_to_N4096_single_step_unique_and_presented_value_labels"
+    },
+    {
+      "design_id": "ed76c6df36ce",
+      "run": "labels_L4_N1024_truth_all_s2",
+      "seed": 2,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "all",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 1024,
+      "pool_samples": 16384,
+      "budget_label": "matched_to_N4096_single_step_unique_and_presented_value_labels"
+    },
+    {
+      "design_id": "6d05f07b5aad",
+      "run": "local_full_s0",
+      "seed": 0,
+      "stage": "local",
+      "data_seed": 1810001,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 1,
+      "samples": 32768,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "6d05f07b5aad",
+      "run": "local_full_s1",
+      "seed": 1,
+      "stage": "local",
+      "data_seed": 1811001,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 1,
+      "samples": 32768,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "6d05f07b5aad",
+      "run": "local_full_s2",
+      "seed": 2,
+      "stage": "local",
+      "data_seed": 1812001,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 1,
+      "samples": 32768,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "dbcbda2dd32a",
+      "run": "local_s0",
+      "seed": 0,
+      "stage": "local",
+      "data_seed": 1810001,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 1,
+      "samples": 32768,
+      "pool_samples": null,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "3ec9bcc0ee6a",
+      "run": "noise_L4_prefix_consistent_r05_s0",
+      "seed": 0,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "3ec9bcc0ee6a",
+      "run": "noise_L4_prefix_consistent_r05_s1",
+      "seed": 1,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "3ec9bcc0ee6a",
+      "run": "noise_L4_prefix_consistent_r05_s2",
+      "seed": 2,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "193f8fe7ad2e",
+      "run": "noise_L4_prefix_consistent_r20_s0",
+      "seed": 0,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "193f8fe7ad2e",
+      "run": "noise_L4_prefix_consistent_r20_s1",
+      "seed": 1,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "193f8fe7ad2e",
+      "run": "noise_L4_prefix_consistent_r20_s2",
+      "seed": 2,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "8f77fa3af03a",
+      "run": "noise_L4_prefix_consistent_r40_s0",
+      "seed": 0,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "8f77fa3af03a",
+      "run": "noise_L4_prefix_consistent_r40_s1",
+      "seed": 1,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "8f77fa3af03a",
+      "run": "noise_L4_prefix_consistent_r40_s2",
+      "seed": 2,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "cc80573f243e",
+      "run": "noise_L4_prefix_inconsistent_r05_s0",
+      "seed": 0,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "cc80573f243e",
+      "run": "noise_L4_prefix_inconsistent_r05_s1",
+      "seed": 1,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "cc80573f243e",
+      "run": "noise_L4_prefix_inconsistent_r05_s2",
+      "seed": 2,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "2db1429b9ac7",
+      "run": "noise_L4_prefix_inconsistent_r20_s0",
+      "seed": 0,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "2db1429b9ac7",
+      "run": "noise_L4_prefix_inconsistent_r20_s1",
+      "seed": 1,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "2db1429b9ac7",
+      "run": "noise_L4_prefix_inconsistent_r20_s2",
+      "seed": 2,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "2bda4e51a790",
+      "run": "noise_L4_prefix_inconsistent_r40_s0",
+      "seed": 0,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "2bda4e51a790",
+      "run": "noise_L4_prefix_inconsistent_r40_s1",
+      "seed": 1,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "2bda4e51a790",
+      "run": "noise_L4_prefix_inconsistent_r40_s2",
+      "seed": 2,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "cb5c250682f7",
+      "run": "noise_L4_target_r05_s0",
+      "seed": 0,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "cb5c250682f7",
+      "run": "noise_L4_target_r05_s1",
+      "seed": 1,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "cb5c250682f7",
+      "run": "noise_L4_target_r05_s2",
+      "seed": 2,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "9f81c9feb111",
+      "run": "noise_L4_target_r20_s0",
+      "seed": 0,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "9f81c9feb111",
+      "run": "noise_L4_target_r20_s1",
+      "seed": 1,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "9f81c9feb111",
+      "run": "noise_L4_target_r20_s2",
+      "seed": 2,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "7351fb6c4be4",
+      "run": "noise_L4_target_r40_s0",
+      "seed": 0,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "7351fb6c4be4",
+      "run": "noise_L4_target_r40_s1",
+      "seed": 1,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "7351fb6c4be4",
+      "run": "noise_L4_target_r40_s2",
+      "seed": 2,
+      "stage": "attention",
+      "data_seed": 1820005,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 4,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "77d625f5c7f4",
+      "run": "warm_L2_all_s0",
+      "seed": 0,
+      "stage": "attention",
+      "data_seed": 1820003,
+      "mode": "all",
+      "label_source": "truth",
+      "train_length": 2,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "77d625f5c7f4",
+      "run": "warm_L2_all_s1",
+      "seed": 1,
+      "stage": "attention",
+      "data_seed": 1820003,
+      "mode": "all",
+      "label_source": "truth",
+      "train_length": 2,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "77d625f5c7f4",
+      "run": "warm_L2_all_s2",
+      "seed": 2,
+      "stage": "attention",
+      "data_seed": 1820003,
+      "mode": "all",
+      "label_source": "truth",
+      "train_length": 2,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "b7971fdde558",
+      "run": "warm_L2_random_s0",
+      "seed": 0,
+      "stage": "attention",
+      "data_seed": 1820003,
+      "mode": "random",
+      "label_source": "truth",
+      "train_length": 2,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "b7971fdde558",
+      "run": "warm_L2_random_s1",
+      "seed": 1,
+      "stage": "attention",
+      "data_seed": 1820003,
+      "mode": "random",
+      "label_source": "truth",
+      "train_length": 2,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "b7971fdde558",
+      "run": "warm_L2_random_s2",
+      "seed": 2,
+      "stage": "attention",
+      "data_seed": 1820003,
+      "mode": "random",
+      "label_source": "truth",
+      "train_length": 2,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "1005271717af",
+      "run": "warm_L2_second_s0",
+      "seed": 0,
+      "stage": "attention",
+      "data_seed": 1820003,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 2,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "1005271717af",
+      "run": "warm_L2_second_s1",
+      "seed": 1,
+      "stage": "attention",
+      "data_seed": 1820003,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 2,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    },
+    {
+      "design_id": "1005271717af",
+      "run": "warm_L2_second_s2",
+      "seed": 2,
+      "stage": "attention",
+      "data_seed": 1820003,
+      "mode": "second",
+      "label_source": "truth",
+      "train_length": 2,
+      "samples": 4096,
+      "pool_samples": 16384,
+      "budget_label": "equal_examples_and_optimizer_steps"
+    }
+  ],
+  "plots": [
+    {
+      "kind": "length",
+      "files": [
+        "length_5dffa8dd7d95.png",
+        "length_5dffa8dd7d95.pdf"
+      ],
+      "context": {
+        "actual_steps": 1000,
+        "design": {
+          "batch": 128,
+          "budget_label": "equal_examples_and_optimizer_steps",
+          "effective_source_sha256": {
+            "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+            "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+            "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+            "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+            "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+            "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+          },
+          "eval_samples": 1024,
+          "eval_seed": 1940001,
+          "hidden": 512,
+          "initialization_design": {
+            "batch": 128,
+            "budget_label": "equal_examples_and_optimizer_steps",
+            "effective_source_sha256": {
+              "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+              "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+              "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+              "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+              "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+              "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+            },
+            "eval_samples": 1024,
+            "eval_seed": 1940001,
+            "hidden": 512,
+            "initialization_design": {
+              "batch": 256,
+              "budget_label": "equal_examples_and_optimizer_steps",
+              "effective_source_sha256": {
+                "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+                "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+                "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+                "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+                "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+              },
+              "eval_samples": 1024,
+              "eval_seed": 1940001,
+              "hidden": 512,
+              "initialization_design": null,
+              "label_source": "truth",
+              "length": 1,
+              "local_gate": 0.9995,
+              "local_min_steps": 500,
+              "lr": 0.001,
+              "mode": "second",
+              "model": {
+                "activation": "gelu",
+                "hidden": 512,
+                "nvars": 128,
+                "vocab_size": 254
+              },
+              "noise_kind": "none",
+              "noise_rate": 0.0,
+              "nvars": 128,
+              "pool_samples": 16384,
+              "rollout_samples": 128,
+              "samples": 32768,
+              "stage": "local",
+              "steps": 16000,
+              "task": "S5",
+              "teacher_design": null,
+              "trainable_parameters": [
+                "ff.0.weight",
+                "ff.0.bias",
+                "ff.2.weight",
+                "ff.2.bias"
+              ]
+            },
+            "label_source": "truth",
+            "length": 2,
+            "local_gate": 0.9995,
+            "local_min_steps": 500,
+            "lr": 0.03,
+            "mode": "second",
+            "model": {
+              "activation": "gelu",
+              "hidden": 512,
+              "nvars": 128,
+              "vocab_size": 254
+            },
+            "noise_kind": "none",
+            "noise_rate": 0.0,
+            "nvars": 128,
+            "pool_samples": 16384,
+            "rollout_samples": 128,
+            "samples": 4096,
+            "stage": "attention",
+            "steps": 1000,
+            "task": "S5",
+            "teacher_design": null,
+            "trainable_parameters": [
+              "Q43",
+              "Q44"
+            ]
+          },
+          "length": 4,
+          "local_gate": 0.9995,
+          "local_min_steps": 500,
+          "lr": 0.03,
+          "model": {
+            "activation": "gelu",
+            "hidden": 512,
+            "nvars": 128,
+            "vocab_size": 254
+          },
+          "noise_kind": "none",
+          "noise_rate": 0.0,
+          "nvars": 128,
+          "pool_samples": 16384,
+          "rollout_samples": 128,
+          "samples": 4096,
+          "stage": "attention",
+          "steps": 1000,
+          "task": "S5",
+          "trainable_parameters": [
+            "Q43",
+            "Q44"
+          ]
+        },
+        "local_gate_passed": null,
+        "oracle_attention": false
+      },
+      "groups": [
+        "814e7b272470",
+        "7cd81b3283ca",
+        "3ca2529ce1e8",
+        "34f9088650cc",
+        "32084e1b3fb3",
+        "b9d998b5cd0b",
+        "ab91fe67aab6",
+        "6586e1f7fb51",
+        "da940dceb0ac",
+        "e969afb61c39",
+        "49257fb81c27",
+        "6dba813f4a8e",
+        "f18ce538178d",
+        "b019b507e229",
+        "4de64d5ef7e2",
+        "52e431d77214",
+        "53b3c37ab8c2",
+        "41cfc5da6fbb",
+        "2130d9604c4a",
+        "ffcaa9178083",
+        "db2116afd7ee",
+        "b1f49cd92db4",
+        "526091ed1872",
+        "5a8026184b36",
+        "a0b2f724e8e6",
+        "cfe9602af27f",
+        "ec9abc6ba108",
+        "cc772481b357",
+        "f450d0e01a13",
+        "5f653d42c585",
+        "331ab96a8640",
+        "8db5b31d1469",
+        "8c5bc1dec57d",
+        "0b151bb36bdd",
+        "56c8169ad338",
+        "fad82abc26e6",
+        "978f6baec6c7",
+        "c5bb449c4eaa",
+        "ab6ba3c746a9",
+        "16b0c1b8f796",
+        "035296a6c3cc",
+        "3c6bdeeafd7b"
+      ],
+      "teacher_designs": {
+        "1005271717af": {
+          "batch": 128,
+          "budget_label": "equal_examples_and_optimizer_steps",
+          "effective_source_sha256": {
+            "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+            "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+            "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+            "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+            "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+            "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+          },
+          "eval_samples": 1024,
+          "eval_seed": 1940001,
+          "hidden": 512,
+          "initialization_design": {
+            "batch": 256,
+            "budget_label": "equal_examples_and_optimizer_steps",
+            "effective_source_sha256": {
+              "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+              "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+              "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+              "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+              "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+            },
+            "eval_samples": 1024,
+            "eval_seed": 1940001,
+            "hidden": 512,
+            "initialization_design": null,
+            "label_source": "truth",
+            "length": 1,
+            "local_gate": 0.9995,
+            "local_min_steps": 500,
+            "lr": 0.001,
+            "mode": "second",
+            "model": {
+              "activation": "gelu",
+              "hidden": 512,
+              "nvars": 128,
+              "vocab_size": 254
+            },
+            "noise_kind": "none",
+            "noise_rate": 0.0,
+            "nvars": 128,
+            "pool_samples": 16384,
+            "rollout_samples": 128,
+            "samples": 32768,
+            "stage": "local",
+            "steps": 16000,
+            "task": "S5",
+            "teacher_design": null,
+            "trainable_parameters": [
+              "ff.0.weight",
+              "ff.0.bias",
+              "ff.2.weight",
+              "ff.2.bias"
+            ]
+          },
+          "label_source": "truth",
+          "length": 2,
+          "local_gate": 0.9995,
+          "local_min_steps": 500,
+          "lr": 0.03,
+          "mode": "second",
+          "model": {
+            "activation": "gelu",
+            "hidden": 512,
+            "nvars": 128,
+            "vocab_size": 254
+          },
+          "noise_kind": "none",
+          "noise_rate": 0.0,
+          "nvars": 128,
+          "pool_samples": 16384,
+          "rollout_samples": 128,
+          "samples": 4096,
+          "stage": "attention",
+          "steps": 1000,
+          "task": "S5",
+          "teacher_design": null,
+          "trainable_parameters": [
+            "Q43",
+            "Q44"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "length",
+      "files": [
+        "length_ade0fb1dc55e.png",
+        "length_ade0fb1dc55e.pdf"
+      ],
+      "context": {
+        "actual_steps": 1000,
+        "design": {
+          "batch": 128,
+          "budget_label": "equal_examples_and_optimizer_steps",
+          "effective_source_sha256": {
+            "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+            "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+            "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+            "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+            "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+            "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+          },
+          "eval_samples": 1024,
+          "eval_seed": 1940001,
+          "hidden": 512,
+          "initialization_design": {
+            "batch": 128,
+            "budget_label": "equal_examples_and_optimizer_steps",
+            "effective_source_sha256": {
+              "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+              "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+              "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+              "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+              "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+              "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+            },
+            "eval_samples": 1024,
+            "eval_seed": 1940001,
+            "hidden": 512,
+            "initialization_design": {
+              "batch": 256,
+              "budget_label": "equal_examples_and_optimizer_steps",
+              "effective_source_sha256": {
+                "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+                "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+                "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+                "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+                "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+              },
+              "eval_samples": 1024,
+              "eval_seed": 1940001,
+              "hidden": 512,
+              "initialization_design": null,
+              "label_source": "truth",
+              "length": 1,
+              "local_gate": 0.9995,
+              "local_min_steps": 500,
+              "lr": 0.001,
+              "mode": "second",
+              "model": {
+                "activation": "gelu",
+                "hidden": 512,
+                "nvars": 128,
+                "vocab_size": 254
+              },
+              "noise_kind": "none",
+              "noise_rate": 0.0,
+              "nvars": 128,
+              "pool_samples": 16384,
+              "rollout_samples": 128,
+              "samples": 32768,
+              "stage": "local",
+              "steps": 16000,
+              "task": "S5",
+              "teacher_design": null,
+              "trainable_parameters": [
+                "ff.0.weight",
+                "ff.0.bias",
+                "ff.2.weight",
+                "ff.2.bias"
+              ]
+            },
+            "label_source": "truth",
+            "length": 2,
+            "local_gate": 0.9995,
+            "local_min_steps": 500,
+            "lr": 0.03,
+            "mode": "second",
+            "model": {
+              "activation": "gelu",
+              "hidden": 512,
+              "nvars": 128,
+              "vocab_size": 254
+            },
+            "noise_kind": "none",
+            "noise_rate": 0.0,
+            "nvars": 128,
+            "pool_samples": 16384,
+            "rollout_samples": 128,
+            "samples": 4096,
+            "stage": "attention",
+            "steps": 1000,
+            "task": "S5",
+            "teacher_design": null,
+            "trainable_parameters": [
+              "Q43",
+              "Q44"
+            ]
+          },
+          "length": 4,
+          "local_gate": 0.9995,
+          "local_min_steps": 500,
+          "lr": 0.03,
+          "model": {
+            "activation": "gelu",
+            "hidden": 512,
+            "nvars": 128,
+            "vocab_size": 254
+          },
+          "noise_kind": "none",
+          "noise_rate": 0.0,
+          "nvars": 128,
+          "pool_samples": 16384,
+          "rollout_samples": 128,
+          "samples": 512,
+          "stage": "attention",
+          "steps": 1000,
+          "task": "S5",
+          "trainable_parameters": [
+            "Q43",
+            "Q44"
+          ]
+        },
+        "local_gate_passed": null,
+        "oracle_attention": false
+      },
+      "groups": [
+        "bc1b407d4820",
+        "e3a368b915b5",
+        "1180b5f2d403",
+        "314c7786c47a",
+        "b729b2ec6692",
+        "fe99c7d6539a",
+        "9820ee2f9f08",
+        "11cb22e817c5",
+        "d1ec5a15dfb3",
+        "3eee08690d2a",
+        "dd0d04b058f0",
+        "dba4836e2434",
+        "efa6d2569eaf",
+        "8f8164dc54ad",
+        "e5a7e7229f01",
+        "71b6cea86c4d",
+        "6a89baeea9d3",
+        "8c4b76bdeda0",
+        "454992d6a847",
+        "7f3b6415ece6",
+        "045c4c3de05b",
+        "9792448f421f",
+        "d09856d24498",
+        "c57e76057f87",
+        "978879b712dc",
+        "9690be2251ca",
+        "12ab06a5abb6",
+        "7680141a93a6",
+        "1529efe384e7",
+        "e31e0d21c714",
+        "ee591253586b",
+        "fc4291eb92c9",
+        "d44c263c57f8",
+        "54bd19027514",
+        "30b2fab74ce5",
+        "0ecb68e963b8",
+        "02d0be94a2d3",
+        "c17f041ef231",
+        "70fc7a2b59b7",
+        "4b2364933f79",
+        "cf5c683bf043",
+        "8dcd8a85d7c0"
+      ],
+      "teacher_designs": {
+        "1005271717af": {
+          "batch": 128,
+          "budget_label": "equal_examples_and_optimizer_steps",
+          "effective_source_sha256": {
+            "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+            "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+            "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+            "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+            "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+            "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+          },
+          "eval_samples": 1024,
+          "eval_seed": 1940001,
+          "hidden": 512,
+          "initialization_design": {
+            "batch": 256,
+            "budget_label": "equal_examples_and_optimizer_steps",
+            "effective_source_sha256": {
+              "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+              "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+              "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+              "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+              "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+            },
+            "eval_samples": 1024,
+            "eval_seed": 1940001,
+            "hidden": 512,
+            "initialization_design": null,
+            "label_source": "truth",
+            "length": 1,
+            "local_gate": 0.9995,
+            "local_min_steps": 500,
+            "lr": 0.001,
+            "mode": "second",
+            "model": {
+              "activation": "gelu",
+              "hidden": 512,
+              "nvars": 128,
+              "vocab_size": 254
+            },
+            "noise_kind": "none",
+            "noise_rate": 0.0,
+            "nvars": 128,
+            "pool_samples": 16384,
+            "rollout_samples": 128,
+            "samples": 32768,
+            "stage": "local",
+            "steps": 16000,
+            "task": "S5",
+            "teacher_design": null,
+            "trainable_parameters": [
+              "ff.0.weight",
+              "ff.0.bias",
+              "ff.2.weight",
+              "ff.2.bias"
+            ]
+          },
+          "label_source": "truth",
+          "length": 2,
+          "local_gate": 0.9995,
+          "local_min_steps": 500,
+          "lr": 0.03,
+          "mode": "second",
+          "model": {
+            "activation": "gelu",
+            "hidden": 512,
+            "nvars": 128,
+            "vocab_size": 254
+          },
+          "noise_kind": "none",
+          "noise_rate": 0.0,
+          "nvars": 128,
+          "pool_samples": 16384,
+          "rollout_samples": 128,
+          "samples": 4096,
+          "stage": "attention",
+          "steps": 1000,
+          "task": "S5",
+          "teacher_design": null,
+          "trainable_parameters": [
+            "Q43",
+            "Q44"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "length",
+      "files": [
+        "length_960ecb401f3e.png",
+        "length_960ecb401f3e.pdf"
+      ],
+      "context": {
+        "actual_steps": 1000,
+        "design": {
+          "batch": 128,
+          "budget_label": "equal_examples_and_optimizer_steps",
+          "effective_source_sha256": {
+            "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+            "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+            "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+            "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+            "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+            "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+          },
+          "eval_samples": 1024,
+          "eval_seed": 1940001,
+          "hidden": 512,
+          "initialization_design": {
+            "batch": 128,
+            "budget_label": "equal_examples_and_optimizer_steps",
+            "effective_source_sha256": {
+              "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+              "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+              "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+              "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+              "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+              "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+            },
+            "eval_samples": 1024,
+            "eval_seed": 1940001,
+            "hidden": 512,
+            "initialization_design": {
+              "batch": 256,
+              "budget_label": "equal_examples_and_optimizer_steps",
+              "effective_source_sha256": {
+                "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+                "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+                "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+                "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+                "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+              },
+              "eval_samples": 1024,
+              "eval_seed": 1940001,
+              "hidden": 512,
+              "initialization_design": null,
+              "label_source": "truth",
+              "length": 1,
+              "local_gate": 0.9995,
+              "local_min_steps": 500,
+              "lr": 0.001,
+              "mode": "second",
+              "model": {
+                "activation": "gelu",
+                "hidden": 512,
+                "nvars": 128,
+                "vocab_size": 254
+              },
+              "noise_kind": "none",
+              "noise_rate": 0.0,
+              "nvars": 128,
+              "pool_samples": 16384,
+              "rollout_samples": 128,
+              "samples": 32768,
+              "stage": "local",
+              "steps": 16000,
+              "task": "S5",
+              "teacher_design": null,
+              "trainable_parameters": [
+                "ff.0.weight",
+                "ff.0.bias",
+                "ff.2.weight",
+                "ff.2.bias"
+              ]
+            },
+            "label_source": "truth",
+            "length": 2,
+            "local_gate": 0.9995,
+            "local_min_steps": 500,
+            "lr": 0.03,
+            "mode": "second",
+            "model": {
+              "activation": "gelu",
+              "hidden": 512,
+              "nvars": 128,
+              "vocab_size": 254
+            },
+            "noise_kind": "none",
+            "noise_rate": 0.0,
+            "nvars": 128,
+            "pool_samples": 16384,
+            "rollout_samples": 128,
+            "samples": 4096,
+            "stage": "attention",
+            "steps": 1000,
+            "task": "S5",
+            "teacher_design": null,
+            "trainable_parameters": [
+              "Q43",
+              "Q44"
+            ]
+          },
+          "length": 4,
+          "local_gate": 0.9995,
+          "local_min_steps": 500,
+          "lr": 0.03,
+          "model": {
+            "activation": "gelu",
+            "hidden": 512,
+            "nvars": 128,
+            "vocab_size": 254
+          },
+          "noise_kind": "prefix_consistent",
+          "noise_rate": 0.05,
+          "nvars": 128,
+          "pool_samples": 16384,
+          "rollout_samples": 128,
+          "samples": 4096,
+          "stage": "attention",
+          "steps": 1000,
+          "task": "S5",
+          "trainable_parameters": [
+            "Q43",
+            "Q44"
+          ]
+        },
+        "local_gate_passed": null,
+        "oracle_attention": false
+      },
+      "groups": [
+        "faf839b79a20",
+        "18d3c7836cba",
+        "f1d267f18fc9",
+        "ebb4ac0a4d1c",
+        "5738cf6f6548",
+        "69c01bae68a7",
+        "acc124df7e74"
+      ],
+      "teacher_designs": {}
+    },
+    {
+      "kind": "length",
+      "files": [
+        "length_49026a539e61.png",
+        "length_49026a539e61.pdf"
+      ],
+      "context": {
+        "actual_steps": 1000,
+        "design": {
+          "batch": 128,
+          "budget_label": "equal_examples_and_optimizer_steps",
+          "effective_source_sha256": {
+            "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+            "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+            "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+            "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+            "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+            "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+          },
+          "eval_samples": 1024,
+          "eval_seed": 1940001,
+          "hidden": 512,
+          "initialization_design": {
+            "batch": 128,
+            "budget_label": "equal_examples_and_optimizer_steps",
+            "effective_source_sha256": {
+              "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+              "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+              "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+              "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+              "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+              "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+            },
+            "eval_samples": 1024,
+            "eval_seed": 1940001,
+            "hidden": 512,
+            "initialization_design": {
+              "batch": 256,
+              "budget_label": "equal_examples_and_optimizer_steps",
+              "effective_source_sha256": {
+                "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+                "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+                "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+                "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+                "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+              },
+              "eval_samples": 1024,
+              "eval_seed": 1940001,
+              "hidden": 512,
+              "initialization_design": null,
+              "label_source": "truth",
+              "length": 1,
+              "local_gate": 0.9995,
+              "local_min_steps": 500,
+              "lr": 0.001,
+              "mode": "second",
+              "model": {
+                "activation": "gelu",
+                "hidden": 512,
+                "nvars": 128,
+                "vocab_size": 254
+              },
+              "noise_kind": "none",
+              "noise_rate": 0.0,
+              "nvars": 128,
+              "pool_samples": 16384,
+              "rollout_samples": 128,
+              "samples": 32768,
+              "stage": "local",
+              "steps": 16000,
+              "task": "S5",
+              "teacher_design": null,
+              "trainable_parameters": [
+                "ff.0.weight",
+                "ff.0.bias",
+                "ff.2.weight",
+                "ff.2.bias"
+              ]
+            },
+            "label_source": "truth",
+            "length": 2,
+            "local_gate": 0.9995,
+            "local_min_steps": 500,
+            "lr": 0.03,
+            "mode": "second",
+            "model": {
+              "activation": "gelu",
+              "hidden": 512,
+              "nvars": 128,
+              "vocab_size": 254
+            },
+            "noise_kind": "none",
+            "noise_rate": 0.0,
+            "nvars": 128,
+            "pool_samples": 16384,
+            "rollout_samples": 128,
+            "samples": 4096,
+            "stage": "attention",
+            "steps": 1000,
+            "task": "S5",
+            "teacher_design": null,
+            "trainable_parameters": [
+              "Q43",
+              "Q44"
+            ]
+          },
+          "length": 4,
+          "local_gate": 0.9995,
+          "local_min_steps": 500,
+          "lr": 0.03,
+          "model": {
+            "activation": "gelu",
+            "hidden": 512,
+            "nvars": 128,
+            "vocab_size": 254
+          },
+          "noise_kind": "prefix_consistent",
+          "noise_rate": 0.2,
+          "nvars": 128,
+          "pool_samples": 16384,
+          "rollout_samples": 128,
+          "samples": 4096,
+          "stage": "attention",
+          "steps": 1000,
+          "task": "S5",
+          "trainable_parameters": [
+            "Q43",
+            "Q44"
+          ]
+        },
+        "local_gate_passed": null,
+        "oracle_attention": false
+      },
+      "groups": [
+        "74f12f74d093",
+        "cf45e7f29905",
+        "c2b21be97030",
+        "4d20b3aee029",
+        "f0b7780ff66b",
+        "5427f4b1365c",
+        "f12b1f05d088"
+      ],
+      "teacher_designs": {}
+    },
+    {
+      "kind": "length",
+      "files": [
+        "length_ab79e769854e.png",
+        "length_ab79e769854e.pdf"
+      ],
+      "context": {
+        "actual_steps": 1000,
+        "design": {
+          "batch": 128,
+          "budget_label": "equal_examples_and_optimizer_steps",
+          "effective_source_sha256": {
+            "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+            "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+            "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+            "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+            "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+            "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+          },
+          "eval_samples": 1024,
+          "eval_seed": 1940001,
+          "hidden": 512,
+          "initialization_design": {
+            "batch": 128,
+            "budget_label": "equal_examples_and_optimizer_steps",
+            "effective_source_sha256": {
+              "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+              "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+              "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+              "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+              "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+              "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+            },
+            "eval_samples": 1024,
+            "eval_seed": 1940001,
+            "hidden": 512,
+            "initialization_design": {
+              "batch": 256,
+              "budget_label": "equal_examples_and_optimizer_steps",
+              "effective_source_sha256": {
+                "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+                "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+                "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+                "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+                "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+              },
+              "eval_samples": 1024,
+              "eval_seed": 1940001,
+              "hidden": 512,
+              "initialization_design": null,
+              "label_source": "truth",
+              "length": 1,
+              "local_gate": 0.9995,
+              "local_min_steps": 500,
+              "lr": 0.001,
+              "mode": "second",
+              "model": {
+                "activation": "gelu",
+                "hidden": 512,
+                "nvars": 128,
+                "vocab_size": 254
+              },
+              "noise_kind": "none",
+              "noise_rate": 0.0,
+              "nvars": 128,
+              "pool_samples": 16384,
+              "rollout_samples": 128,
+              "samples": 32768,
+              "stage": "local",
+              "steps": 16000,
+              "task": "S5",
+              "teacher_design": null,
+              "trainable_parameters": [
+                "ff.0.weight",
+                "ff.0.bias",
+                "ff.2.weight",
+                "ff.2.bias"
+              ]
+            },
+            "label_source": "truth",
+            "length": 2,
+            "local_gate": 0.9995,
+            "local_min_steps": 500,
+            "lr": 0.03,
+            "mode": "second",
+            "model": {
+              "activation": "gelu",
+              "hidden": 512,
+              "nvars": 128,
+              "vocab_size": 254
+            },
+            "noise_kind": "none",
+            "noise_rate": 0.0,
+            "nvars": 128,
+            "pool_samples": 16384,
+            "rollout_samples": 128,
+            "samples": 4096,
+            "stage": "attention",
+            "steps": 1000,
+            "task": "S5",
+            "teacher_design": null,
+            "trainable_parameters": [
+              "Q43",
+              "Q44"
+            ]
+          },
+          "length": 4,
+          "local_gate": 0.9995,
+          "local_min_steps": 500,
+          "lr": 0.03,
+          "model": {
+            "activation": "gelu",
+            "hidden": 512,
+            "nvars": 128,
+            "vocab_size": 254
+          },
+          "noise_kind": "prefix_consistent",
+          "noise_rate": 0.4,
+          "nvars": 128,
+          "pool_samples": 16384,
+          "rollout_samples": 128,
+          "samples": 4096,
+          "stage": "attention",
+          "steps": 1000,
+          "task": "S5",
+          "trainable_parameters": [
+            "Q43",
+            "Q44"
+          ]
+        },
+        "local_gate_passed": null,
+        "oracle_attention": false
+      },
+      "groups": [
+        "0c8c3e6112bb",
+        "91735dd04889",
+        "7b2b383064b5",
+        "3529b47273ac",
+        "ca3e40563bb1",
+        "4626dae47223",
+        "c3a0380a7860"
+      ],
+      "teacher_designs": {}
+    },
+    {
+      "kind": "length",
+      "files": [
+        "length_545bee693a0c.png",
+        "length_545bee693a0c.pdf"
+      ],
+      "context": {
+        "actual_steps": 1000,
+        "design": {
+          "batch": 128,
+          "budget_label": "equal_examples_and_optimizer_steps",
+          "effective_source_sha256": {
+            "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+            "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+            "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+            "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+            "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+            "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+          },
+          "eval_samples": 1024,
+          "eval_seed": 1940001,
+          "hidden": 512,
+          "initialization_design": {
+            "batch": 128,
+            "budget_label": "equal_examples_and_optimizer_steps",
+            "effective_source_sha256": {
+              "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+              "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+              "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+              "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+              "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+              "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+            },
+            "eval_samples": 1024,
+            "eval_seed": 1940001,
+            "hidden": 512,
+            "initialization_design": {
+              "batch": 256,
+              "budget_label": "equal_examples_and_optimizer_steps",
+              "effective_source_sha256": {
+                "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+                "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+                "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+                "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+                "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+              },
+              "eval_samples": 1024,
+              "eval_seed": 1940001,
+              "hidden": 512,
+              "initialization_design": null,
+              "label_source": "truth",
+              "length": 1,
+              "local_gate": 0.9995,
+              "local_min_steps": 500,
+              "lr": 0.001,
+              "mode": "second",
+              "model": {
+                "activation": "gelu",
+                "hidden": 512,
+                "nvars": 128,
+                "vocab_size": 254
+              },
+              "noise_kind": "none",
+              "noise_rate": 0.0,
+              "nvars": 128,
+              "pool_samples": 16384,
+              "rollout_samples": 128,
+              "samples": 32768,
+              "stage": "local",
+              "steps": 16000,
+              "task": "S5",
+              "teacher_design": null,
+              "trainable_parameters": [
+                "ff.0.weight",
+                "ff.0.bias",
+                "ff.2.weight",
+                "ff.2.bias"
+              ]
+            },
+            "label_source": "truth",
+            "length": 2,
+            "local_gate": 0.9995,
+            "local_min_steps": 500,
+            "lr": 0.03,
+            "mode": "second",
+            "model": {
+              "activation": "gelu",
+              "hidden": 512,
+              "nvars": 128,
+              "vocab_size": 254
+            },
+            "noise_kind": "none",
+            "noise_rate": 0.0,
+            "nvars": 128,
+            "pool_samples": 16384,
+            "rollout_samples": 128,
+            "samples": 4096,
+            "stage": "attention",
+            "steps": 1000,
+            "task": "S5",
+            "teacher_design": null,
+            "trainable_parameters": [
+              "Q43",
+              "Q44"
+            ]
+          },
+          "length": 4,
+          "local_gate": 0.9995,
+          "local_min_steps": 500,
+          "lr": 0.03,
+          "model": {
+            "activation": "gelu",
+            "hidden": 512,
+            "nvars": 128,
+            "vocab_size": 254
+          },
+          "noise_kind": "prefix_inconsistent",
+          "noise_rate": 0.05,
+          "nvars": 128,
+          "pool_samples": 16384,
+          "rollout_samples": 128,
+          "samples": 4096,
+          "stage": "attention",
+          "steps": 1000,
+          "task": "S5",
+          "trainable_parameters": [
+            "Q43",
+            "Q44"
+          ]
+        },
+        "local_gate_passed": null,
+        "oracle_attention": false
+      },
+      "groups": [
+        "c602ffd8fa4d",
+        "39e86d0ebdee",
+        "99eb90ed0e07",
+        "974c8957f07c",
+        "ff343fec700f",
+        "ad222d041dfd",
+        "ff8ebeb5b334"
+      ],
+      "teacher_designs": {}
+    },
+    {
+      "kind": "length",
+      "files": [
+        "length_901467347556.png",
+        "length_901467347556.pdf"
+      ],
+      "context": {
+        "actual_steps": 1000,
+        "design": {
+          "batch": 128,
+          "budget_label": "equal_examples_and_optimizer_steps",
+          "effective_source_sha256": {
+            "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+            "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+            "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+            "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+            "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+            "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+          },
+          "eval_samples": 1024,
+          "eval_seed": 1940001,
+          "hidden": 512,
+          "initialization_design": {
+            "batch": 128,
+            "budget_label": "equal_examples_and_optimizer_steps",
+            "effective_source_sha256": {
+              "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+              "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+              "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+              "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+              "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+              "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+            },
+            "eval_samples": 1024,
+            "eval_seed": 1940001,
+            "hidden": 512,
+            "initialization_design": {
+              "batch": 256,
+              "budget_label": "equal_examples_and_optimizer_steps",
+              "effective_source_sha256": {
+                "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+                "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+                "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+                "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+                "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+              },
+              "eval_samples": 1024,
+              "eval_seed": 1940001,
+              "hidden": 512,
+              "initialization_design": null,
+              "label_source": "truth",
+              "length": 1,
+              "local_gate": 0.9995,
+              "local_min_steps": 500,
+              "lr": 0.001,
+              "mode": "second",
+              "model": {
+                "activation": "gelu",
+                "hidden": 512,
+                "nvars": 128,
+                "vocab_size": 254
+              },
+              "noise_kind": "none",
+              "noise_rate": 0.0,
+              "nvars": 128,
+              "pool_samples": 16384,
+              "rollout_samples": 128,
+              "samples": 32768,
+              "stage": "local",
+              "steps": 16000,
+              "task": "S5",
+              "teacher_design": null,
+              "trainable_parameters": [
+                "ff.0.weight",
+                "ff.0.bias",
+                "ff.2.weight",
+                "ff.2.bias"
+              ]
+            },
+            "label_source": "truth",
+            "length": 2,
+            "local_gate": 0.9995,
+            "local_min_steps": 500,
+            "lr": 0.03,
+            "mode": "second",
+            "model": {
+              "activation": "gelu",
+              "hidden": 512,
+              "nvars": 128,
+              "vocab_size": 254
+            },
+            "noise_kind": "none",
+            "noise_rate": 0.0,
+            "nvars": 128,
+            "pool_samples": 16384,
+            "rollout_samples": 128,
+            "samples": 4096,
+            "stage": "attention",
+            "steps": 1000,
+            "task": "S5",
+            "teacher_design": null,
+            "trainable_parameters": [
+              "Q43",
+              "Q44"
+            ]
+          },
+          "length": 4,
+          "local_gate": 0.9995,
+          "local_min_steps": 500,
+          "lr": 0.03,
+          "model": {
+            "activation": "gelu",
+            "hidden": 512,
+            "nvars": 128,
+            "vocab_size": 254
+          },
+          "noise_kind": "prefix_inconsistent",
+          "noise_rate": 0.2,
+          "nvars": 128,
+          "pool_samples": 16384,
+          "rollout_samples": 128,
+          "samples": 4096,
+          "stage": "attention",
+          "steps": 1000,
+          "task": "S5",
+          "trainable_parameters": [
+            "Q43",
+            "Q44"
+          ]
+        },
+        "local_gate_passed": null,
+        "oracle_attention": false
+      },
+      "groups": [
+        "fc71b08e2718",
+        "68463a78e413",
+        "8ef79ddf7e3e",
+        "94c9bbcb6e3f",
+        "413a02020183",
+        "22c0d97195f1",
+        "52e2e046cd4d"
+      ],
+      "teacher_designs": {}
+    },
+    {
+      "kind": "length",
+      "files": [
+        "length_aea7c6d8c403.png",
+        "length_aea7c6d8c403.pdf"
+      ],
+      "context": {
+        "actual_steps": 1000,
+        "design": {
+          "batch": 128,
+          "budget_label": "equal_examples_and_optimizer_steps",
+          "effective_source_sha256": {
+            "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+            "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+            "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+            "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+            "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+            "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+          },
+          "eval_samples": 1024,
+          "eval_seed": 1940001,
+          "hidden": 512,
+          "initialization_design": {
+            "batch": 128,
+            "budget_label": "equal_examples_and_optimizer_steps",
+            "effective_source_sha256": {
+              "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+              "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+              "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+              "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+              "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+              "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+            },
+            "eval_samples": 1024,
+            "eval_seed": 1940001,
+            "hidden": 512,
+            "initialization_design": {
+              "batch": 256,
+              "budget_label": "equal_examples_and_optimizer_steps",
+              "effective_source_sha256": {
+                "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+                "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+                "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+                "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+                "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+              },
+              "eval_samples": 1024,
+              "eval_seed": 1940001,
+              "hidden": 512,
+              "initialization_design": null,
+              "label_source": "truth",
+              "length": 1,
+              "local_gate": 0.9995,
+              "local_min_steps": 500,
+              "lr": 0.001,
+              "mode": "second",
+              "model": {
+                "activation": "gelu",
+                "hidden": 512,
+                "nvars": 128,
+                "vocab_size": 254
+              },
+              "noise_kind": "none",
+              "noise_rate": 0.0,
+              "nvars": 128,
+              "pool_samples": 16384,
+              "rollout_samples": 128,
+              "samples": 32768,
+              "stage": "local",
+              "steps": 16000,
+              "task": "S5",
+              "teacher_design": null,
+              "trainable_parameters": [
+                "ff.0.weight",
+                "ff.0.bias",
+                "ff.2.weight",
+                "ff.2.bias"
+              ]
+            },
+            "label_source": "truth",
+            "length": 2,
+            "local_gate": 0.9995,
+            "local_min_steps": 500,
+            "lr": 0.03,
+            "mode": "second",
+            "model": {
+              "activation": "gelu",
+              "hidden": 512,
+              "nvars": 128,
+              "vocab_size": 254
+            },
+            "noise_kind": "none",
+            "noise_rate": 0.0,
+            "nvars": 128,
+            "pool_samples": 16384,
+            "rollout_samples": 128,
+            "samples": 4096,
+            "stage": "attention",
+            "steps": 1000,
+            "task": "S5",
+            "teacher_design": null,
+            "trainable_parameters": [
+              "Q43",
+              "Q44"
+            ]
+          },
+          "length": 4,
+          "local_gate": 0.9995,
+          "local_min_steps": 500,
+          "lr": 0.03,
+          "model": {
+            "activation": "gelu",
+            "hidden": 512,
+            "nvars": 128,
+            "vocab_size": 254
+          },
+          "noise_kind": "prefix_inconsistent",
+          "noise_rate": 0.4,
+          "nvars": 128,
+          "pool_samples": 16384,
+          "rollout_samples": 128,
+          "samples": 4096,
+          "stage": "attention",
+          "steps": 1000,
+          "task": "S5",
+          "trainable_parameters": [
+            "Q43",
+            "Q44"
+          ]
+        },
+        "local_gate_passed": null,
+        "oracle_attention": false
+      },
+      "groups": [
+        "518d34e1b4a1",
+        "587744763c15",
+        "da703ab9ecda",
+        "70c86d04cf6a",
+        "154b933dbcc7",
+        "a2495f07cf4b",
+        "a6ba2f3a7eb5"
+      ],
+      "teacher_designs": {}
+    },
+    {
+      "kind": "length",
+      "files": [
+        "length_e5f3a78f0724.png",
+        "length_e5f3a78f0724.pdf"
+      ],
+      "context": {
+        "actual_steps": 1000,
+        "design": {
+          "batch": 128,
+          "budget_label": "equal_examples_and_optimizer_steps",
+          "effective_source_sha256": {
+            "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+            "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+            "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+            "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+            "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+            "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+          },
+          "eval_samples": 1024,
+          "eval_seed": 1940001,
+          "hidden": 512,
+          "initialization_design": {
+            "batch": 128,
+            "budget_label": "equal_examples_and_optimizer_steps",
+            "effective_source_sha256": {
+              "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+              "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+              "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+              "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+              "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+              "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+            },
+            "eval_samples": 1024,
+            "eval_seed": 1940001,
+            "hidden": 512,
+            "initialization_design": {
+              "batch": 256,
+              "budget_label": "equal_examples_and_optimizer_steps",
+              "effective_source_sha256": {
+                "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+                "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+                "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+                "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+                "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+              },
+              "eval_samples": 1024,
+              "eval_seed": 1940001,
+              "hidden": 512,
+              "initialization_design": null,
+              "label_source": "truth",
+              "length": 1,
+              "local_gate": 0.9995,
+              "local_min_steps": 500,
+              "lr": 0.001,
+              "mode": "second",
+              "model": {
+                "activation": "gelu",
+                "hidden": 512,
+                "nvars": 128,
+                "vocab_size": 254
+              },
+              "noise_kind": "none",
+              "noise_rate": 0.0,
+              "nvars": 128,
+              "pool_samples": 16384,
+              "rollout_samples": 128,
+              "samples": 32768,
+              "stage": "local",
+              "steps": 16000,
+              "task": "S5",
+              "teacher_design": null,
+              "trainable_parameters": [
+                "ff.0.weight",
+                "ff.0.bias",
+                "ff.2.weight",
+                "ff.2.bias"
+              ]
+            },
+            "label_source": "truth",
+            "length": 2,
+            "local_gate": 0.9995,
+            "local_min_steps": 500,
+            "lr": 0.03,
+            "mode": "second",
+            "model": {
+              "activation": "gelu",
+              "hidden": 512,
+              "nvars": 128,
+              "vocab_size": 254
+            },
+            "noise_kind": "none",
+            "noise_rate": 0.0,
+            "nvars": 128,
+            "pool_samples": 16384,
+            "rollout_samples": 128,
+            "samples": 4096,
+            "stage": "attention",
+            "steps": 1000,
+            "task": "S5",
+            "teacher_design": null,
+            "trainable_parameters": [
+              "Q43",
+              "Q44"
+            ]
+          },
+          "length": 4,
+          "local_gate": 0.9995,
+          "local_min_steps": 500,
+          "lr": 0.03,
+          "model": {
+            "activation": "gelu",
+            "hidden": 512,
+            "nvars": 128,
+            "vocab_size": 254
+          },
+          "noise_kind": "target",
+          "noise_rate": 0.05,
+          "nvars": 128,
+          "pool_samples": 16384,
+          "rollout_samples": 128,
+          "samples": 4096,
+          "stage": "attention",
+          "steps": 1000,
+          "task": "S5",
+          "trainable_parameters": [
+            "Q43",
+            "Q44"
+          ]
+        },
+        "local_gate_passed": null,
+        "oracle_attention": false
+      },
+      "groups": [
+        "51cc6f1a738a",
+        "adf67606c82e",
+        "791ce1e0a9f6",
+        "471ba4de8ef0",
+        "a9aadb2919d0",
+        "08ce8176068e",
+        "759fc0974b09"
+      ],
+      "teacher_designs": {}
+    },
+    {
+      "kind": "length",
+      "files": [
+        "length_ee238fca7e56.png",
+        "length_ee238fca7e56.pdf"
+      ],
+      "context": {
+        "actual_steps": 1000,
+        "design": {
+          "batch": 128,
+          "budget_label": "equal_examples_and_optimizer_steps",
+          "effective_source_sha256": {
+            "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+            "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+            "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+            "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+            "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+            "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+          },
+          "eval_samples": 1024,
+          "eval_seed": 1940001,
+          "hidden": 512,
+          "initialization_design": {
+            "batch": 128,
+            "budget_label": "equal_examples_and_optimizer_steps",
+            "effective_source_sha256": {
+              "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+              "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+              "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+              "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+              "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+              "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+            },
+            "eval_samples": 1024,
+            "eval_seed": 1940001,
+            "hidden": 512,
+            "initialization_design": {
+              "batch": 256,
+              "budget_label": "equal_examples_and_optimizer_steps",
+              "effective_source_sha256": {
+                "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+                "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+                "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+                "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+                "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+              },
+              "eval_samples": 1024,
+              "eval_seed": 1940001,
+              "hidden": 512,
+              "initialization_design": null,
+              "label_source": "truth",
+              "length": 1,
+              "local_gate": 0.9995,
+              "local_min_steps": 500,
+              "lr": 0.001,
+              "mode": "second",
+              "model": {
+                "activation": "gelu",
+                "hidden": 512,
+                "nvars": 128,
+                "vocab_size": 254
+              },
+              "noise_kind": "none",
+              "noise_rate": 0.0,
+              "nvars": 128,
+              "pool_samples": 16384,
+              "rollout_samples": 128,
+              "samples": 32768,
+              "stage": "local",
+              "steps": 16000,
+              "task": "S5",
+              "teacher_design": null,
+              "trainable_parameters": [
+                "ff.0.weight",
+                "ff.0.bias",
+                "ff.2.weight",
+                "ff.2.bias"
+              ]
+            },
+            "label_source": "truth",
+            "length": 2,
+            "local_gate": 0.9995,
+            "local_min_steps": 500,
+            "lr": 0.03,
+            "mode": "second",
+            "model": {
+              "activation": "gelu",
+              "hidden": 512,
+              "nvars": 128,
+              "vocab_size": 254
+            },
+            "noise_kind": "none",
+            "noise_rate": 0.0,
+            "nvars": 128,
+            "pool_samples": 16384,
+            "rollout_samples": 128,
+            "samples": 4096,
+            "stage": "attention",
+            "steps": 1000,
+            "task": "S5",
+            "teacher_design": null,
+            "trainable_parameters": [
+              "Q43",
+              "Q44"
+            ]
+          },
+          "length": 4,
+          "local_gate": 0.9995,
+          "local_min_steps": 500,
+          "lr": 0.03,
+          "model": {
+            "activation": "gelu",
+            "hidden": 512,
+            "nvars": 128,
+            "vocab_size": 254
+          },
+          "noise_kind": "target",
+          "noise_rate": 0.2,
+          "nvars": 128,
+          "pool_samples": 16384,
+          "rollout_samples": 128,
+          "samples": 4096,
+          "stage": "attention",
+          "steps": 1000,
+          "task": "S5",
+          "trainable_parameters": [
+            "Q43",
+            "Q44"
+          ]
+        },
+        "local_gate_passed": null,
+        "oracle_attention": false
+      },
+      "groups": [
+        "765d7f89fde2",
+        "e2b93c356555",
+        "be79bbf51957",
+        "a74919e267bf",
+        "6f87dc7dee08",
+        "28d3e06273e4",
+        "e04e5e223120"
+      ],
+      "teacher_designs": {}
+    },
+    {
+      "kind": "length",
+      "files": [
+        "length_d28bdd63ffac.png",
+        "length_d28bdd63ffac.pdf"
+      ],
+      "context": {
+        "actual_steps": 1000,
+        "design": {
+          "batch": 128,
+          "budget_label": "equal_examples_and_optimizer_steps",
+          "effective_source_sha256": {
+            "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+            "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+            "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+            "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+            "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+            "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+          },
+          "eval_samples": 1024,
+          "eval_seed": 1940001,
+          "hidden": 512,
+          "initialization_design": {
+            "batch": 128,
+            "budget_label": "equal_examples_and_optimizer_steps",
+            "effective_source_sha256": {
+              "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+              "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+              "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+              "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+              "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+              "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+            },
+            "eval_samples": 1024,
+            "eval_seed": 1940001,
+            "hidden": 512,
+            "initialization_design": {
+              "batch": 256,
+              "budget_label": "equal_examples_and_optimizer_steps",
+              "effective_source_sha256": {
+                "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+                "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+                "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+                "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+                "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+              },
+              "eval_samples": 1024,
+              "eval_seed": 1940001,
+              "hidden": 512,
+              "initialization_design": null,
+              "label_source": "truth",
+              "length": 1,
+              "local_gate": 0.9995,
+              "local_min_steps": 500,
+              "lr": 0.001,
+              "mode": "second",
+              "model": {
+                "activation": "gelu",
+                "hidden": 512,
+                "nvars": 128,
+                "vocab_size": 254
+              },
+              "noise_kind": "none",
+              "noise_rate": 0.0,
+              "nvars": 128,
+              "pool_samples": 16384,
+              "rollout_samples": 128,
+              "samples": 32768,
+              "stage": "local",
+              "steps": 16000,
+              "task": "S5",
+              "teacher_design": null,
+              "trainable_parameters": [
+                "ff.0.weight",
+                "ff.0.bias",
+                "ff.2.weight",
+                "ff.2.bias"
+              ]
+            },
+            "label_source": "truth",
+            "length": 2,
+            "local_gate": 0.9995,
+            "local_min_steps": 500,
+            "lr": 0.03,
+            "mode": "second",
+            "model": {
+              "activation": "gelu",
+              "hidden": 512,
+              "nvars": 128,
+              "vocab_size": 254
+            },
+            "noise_kind": "none",
+            "noise_rate": 0.0,
+            "nvars": 128,
+            "pool_samples": 16384,
+            "rollout_samples": 128,
+            "samples": 4096,
+            "stage": "attention",
+            "steps": 1000,
+            "task": "S5",
+            "teacher_design": null,
+            "trainable_parameters": [
+              "Q43",
+              "Q44"
+            ]
+          },
+          "length": 4,
+          "local_gate": 0.9995,
+          "local_min_steps": 500,
+          "lr": 0.03,
+          "model": {
+            "activation": "gelu",
+            "hidden": 512,
+            "nvars": 128,
+            "vocab_size": 254
+          },
+          "noise_kind": "target",
+          "noise_rate": 0.4,
+          "nvars": 128,
+          "pool_samples": 16384,
+          "rollout_samples": 128,
+          "samples": 4096,
+          "stage": "attention",
+          "steps": 1000,
+          "task": "S5",
+          "trainable_parameters": [
+            "Q43",
+            "Q44"
+          ]
+        },
+        "local_gate_passed": null,
+        "oracle_attention": false
+      },
+      "groups": [
+        "029e9ff301ed",
+        "fbfcedb0844d",
+        "8c5ceb237132",
+        "bfbe8b8c1b54",
+        "3708a0f03ce4",
+        "8832455e9438",
+        "77a132113c35"
+      ],
+      "teacher_designs": {}
+    },
+    {
+      "kind": "length",
+      "files": [
+        "length_ee9425908ba2.png",
+        "length_ee9425908ba2.pdf"
+      ],
+      "context": {
+        "actual_steps": 1000,
+        "design": {
+          "batch": 128,
+          "budget_label": "equal_examples_and_optimizer_steps",
+          "effective_source_sha256": {
+            "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+            "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+            "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+            "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+            "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+            "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+          },
+          "eval_samples": 1024,
+          "eval_seed": 1940001,
+          "hidden": 512,
+          "initialization_design": {
+            "batch": 256,
+            "budget_label": "equal_examples_and_optimizer_steps",
+            "effective_source_sha256": {
+              "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+              "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+              "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+              "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+              "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+            },
+            "eval_samples": 1024,
+            "eval_seed": 1940001,
+            "hidden": 512,
+            "initialization_design": null,
+            "label_source": "truth",
+            "length": 1,
+            "local_gate": 0.9995,
+            "local_min_steps": 500,
+            "lr": 0.001,
+            "mode": "second",
+            "model": {
+              "activation": "gelu",
+              "hidden": 512,
+              "nvars": 128,
+              "vocab_size": 254
+            },
+            "noise_kind": "none",
+            "noise_rate": 0.0,
+            "nvars": 128,
+            "pool_samples": 16384,
+            "rollout_samples": 128,
+            "samples": 32768,
+            "stage": "local",
+            "steps": 16000,
+            "task": "S5",
+            "teacher_design": null,
+            "trainable_parameters": [
+              "ff.0.weight",
+              "ff.0.bias",
+              "ff.2.weight",
+              "ff.2.bias"
+            ]
+          },
+          "length": 2,
+          "local_gate": 0.9995,
+          "local_min_steps": 500,
+          "lr": 0.03,
+          "model": {
+            "activation": "gelu",
+            "hidden": 512,
+            "nvars": 128,
+            "vocab_size": 254
+          },
+          "noise_kind": "none",
+          "noise_rate": 0.0,
+          "nvars": 128,
+          "pool_samples": 16384,
+          "rollout_samples": 128,
+          "samples": 4096,
+          "stage": "attention",
+          "steps": 1000,
+          "task": "S5",
+          "trainable_parameters": [
+            "Q43",
+            "Q44"
+          ]
+        },
+        "local_gate_passed": null,
+        "oracle_attention": false
+      },
+      "groups": [
+        "d8ac61d2143c",
+        "d6b85c6af8ba",
+        "2c276f090203",
+        "05097336953a",
+        "5f6bf2af4cd5",
+        "c867dc3b9e3d",
+        "7d3dc424d19f",
+        "79b569487cbc",
+        "15c0f7ca2378",
+        "c9e6f9df6698",
+        "eaa5803997f2",
+        "0c0158e75224",
+        "31c6b0290d89",
+        "26bf5a10e659",
+        "9663cd9d5216",
+        "9a15ba07c422",
+        "ad9e8db0f9da",
+        "c7082eedff55",
+        "51ee2ed0a718",
+        "48c0fc901d69",
+        "4e3be921702b"
+      ],
+      "teacher_designs": {}
+    },
+    {
+      "kind": "length",
+      "files": [
+        "length_109c1a0b995e.png",
+        "length_109c1a0b995e.pdf"
+      ],
+      "context": {
+        "actual_steps": 1000,
+        "design": {
+          "batch": 32,
+          "budget_label": "matched_to_N4096_single_step_unique_and_presented_value_labels",
+          "effective_source_sha256": {
+            "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+            "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+            "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+            "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+            "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+            "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+          },
+          "eval_samples": 1024,
+          "eval_seed": 1940001,
+          "hidden": 512,
+          "initialization_design": {
+            "batch": 128,
+            "budget_label": "equal_examples_and_optimizer_steps",
+            "effective_source_sha256": {
+              "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+              "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+              "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+              "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+              "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+              "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+            },
+            "eval_samples": 1024,
+            "eval_seed": 1940001,
+            "hidden": 512,
+            "initialization_design": {
+              "batch": 256,
+              "budget_label": "equal_examples_and_optimizer_steps",
+              "effective_source_sha256": {
+                "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+                "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+                "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+                "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+                "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+              },
+              "eval_samples": 1024,
+              "eval_seed": 1940001,
+              "hidden": 512,
+              "initialization_design": null,
+              "label_source": "truth",
+              "length": 1,
+              "local_gate": 0.9995,
+              "local_min_steps": 500,
+              "lr": 0.001,
+              "mode": "second",
+              "model": {
+                "activation": "gelu",
+                "hidden": 512,
+                "nvars": 128,
+                "vocab_size": 254
+              },
+              "noise_kind": "none",
+              "noise_rate": 0.0,
+              "nvars": 128,
+              "pool_samples": 16384,
+              "rollout_samples": 128,
+              "samples": 32768,
+              "stage": "local",
+              "steps": 16000,
+              "task": "S5",
+              "teacher_design": null,
+              "trainable_parameters": [
+                "ff.0.weight",
+                "ff.0.bias",
+                "ff.2.weight",
+                "ff.2.bias"
+              ]
+            },
+            "label_source": "truth",
+            "length": 2,
+            "local_gate": 0.9995,
+            "local_min_steps": 500,
+            "lr": 0.03,
+            "mode": "second",
+            "model": {
+              "activation": "gelu",
+              "hidden": 512,
+              "nvars": 128,
+              "vocab_size": 254
+            },
+            "noise_kind": "none",
+            "noise_rate": 0.0,
+            "nvars": 128,
+            "pool_samples": 16384,
+            "rollout_samples": 128,
+            "samples": 4096,
+            "stage": "attention",
+            "steps": 1000,
+            "task": "S5",
+            "teacher_design": null,
+            "trainable_parameters": [
+              "Q43",
+              "Q44"
+            ]
+          },
+          "length": 4,
+          "local_gate": 0.9995,
+          "local_min_steps": 500,
+          "lr": 0.03,
+          "model": {
+            "activation": "gelu",
+            "hidden": 512,
+            "nvars": 128,
+            "vocab_size": 254
+          },
+          "noise_kind": "none",
+          "noise_rate": 0.0,
+          "nvars": 128,
+          "pool_samples": 16384,
+          "rollout_samples": 128,
+          "samples": 1024,
+          "stage": "attention",
+          "steps": 1000,
+          "task": "S5",
+          "trainable_parameters": [
+            "Q43",
+            "Q44"
+          ]
+        },
+        "local_gate_passed": null,
+        "oracle_attention": false
+      },
+      "groups": [
+        "faaa1f75f27f",
+        "bda2613aad2d",
+        "a9a33989beed",
+        "2a0b20b7de39",
+        "4ffa0a46abe2",
+        "33076b42693f",
+        "f236aabab955",
+        "c1ade3fb0c54",
+        "85d97e24ae5d",
+        "0e94e6ca61cc",
+        "0733ef36a082",
+        "4a17c74f808a",
+        "a99a30689395",
+        "f5be33a1a35c"
+      ],
+      "teacher_designs": {
+        "1005271717af": {
+          "batch": 128,
+          "budget_label": "equal_examples_and_optimizer_steps",
+          "effective_source_sha256": {
+            "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+            "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+            "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+            "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+            "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+            "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+          },
+          "eval_samples": 1024,
+          "eval_seed": 1940001,
+          "hidden": 512,
+          "initialization_design": {
+            "batch": 256,
+            "budget_label": "equal_examples_and_optimizer_steps",
+            "effective_source_sha256": {
+              "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+              "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+              "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+              "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+              "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+            },
+            "eval_samples": 1024,
+            "eval_seed": 1940001,
+            "hidden": 512,
+            "initialization_design": null,
+            "label_source": "truth",
+            "length": 1,
+            "local_gate": 0.9995,
+            "local_min_steps": 500,
+            "lr": 0.001,
+            "mode": "second",
+            "model": {
+              "activation": "gelu",
+              "hidden": 512,
+              "nvars": 128,
+              "vocab_size": 254
+            },
+            "noise_kind": "none",
+            "noise_rate": 0.0,
+            "nvars": 128,
+            "pool_samples": 16384,
+            "rollout_samples": 128,
+            "samples": 32768,
+            "stage": "local",
+            "steps": 16000,
+            "task": "S5",
+            "teacher_design": null,
+            "trainable_parameters": [
+              "ff.0.weight",
+              "ff.0.bias",
+              "ff.2.weight",
+              "ff.2.bias"
+            ]
+          },
+          "label_source": "truth",
+          "length": 2,
+          "local_gate": 0.9995,
+          "local_min_steps": 500,
+          "lr": 0.03,
+          "mode": "second",
+          "model": {
+            "activation": "gelu",
+            "hidden": 512,
+            "nvars": 128,
+            "vocab_size": 254
+          },
+          "noise_kind": "none",
+          "noise_rate": 0.0,
+          "nvars": 128,
+          "pool_samples": 16384,
+          "rollout_samples": 128,
+          "samples": 4096,
+          "stage": "attention",
+          "steps": 1000,
+          "task": "S5",
+          "teacher_design": null,
+          "trainable_parameters": [
+            "Q43",
+            "Q44"
+          ]
+        }
+      }
+    },
+    {
+      "kind": "length",
+      "files": [
+        "length_ee82a9e3594d.png",
+        "length_ee82a9e3594d.pdf"
+      ],
+      "context": {
+        "actual_steps": 4000,
+        "design": {
+          "batch": 256,
+          "budget_label": "equal_examples_and_optimizer_steps",
+          "effective_source_sha256": {
+            "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+            "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+            "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+            "sparse_experiment.py": "0f430be228410b8af6c1985f512d09712624fa85cc7336ad016fda1887a95e64",
+            "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+          },
+          "eval_samples": 1024,
+          "eval_seed": 1940001,
+          "hidden": 512,
+          "initialization_design": null,
+          "length": 1,
+          "local_gate": 0.9995,
+          "local_min_steps": 500,
+          "lr": 0.001,
+          "model": {
+            "activation": "gelu",
+            "hidden": 512,
+            "nvars": 128,
+            "vocab_size": 254
+          },
+          "noise_kind": "none",
+          "noise_rate": 0.0,
+          "nvars": 128,
+          "pool_samples": null,
+          "rollout_samples": 128,
+          "samples": 32768,
+          "stage": "local",
+          "steps": 4000,
+          "task": "S5",
+          "trainable_parameters": [
+            "ff.0.weight",
+            "ff.0.bias",
+            "ff.2.weight",
+            "ff.2.bias"
+          ]
+        },
+        "local_gate_passed": false,
+        "oracle_attention": true
+      },
+      "groups": [
+        "cd0e31b2777d",
+        "9d1cc76ad834",
+        "a6bca8346e8d",
+        "c07ac5d322e9"
+      ],
+      "teacher_designs": {}
+    },
+    {
+      "kind": "length",
+      "files": [
+        "length_6ac9ba417118.png",
+        "length_6ac9ba417118.pdf"
+      ],
+      "context": {
+        "actual_steps": 4500,
+        "design": {
+          "batch": 256,
+          "budget_label": "equal_examples_and_optimizer_steps",
+          "effective_source_sha256": {
+            "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+            "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+            "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+            "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+            "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+          },
+          "eval_samples": 1024,
+          "eval_seed": 1940001,
+          "hidden": 512,
+          "initialization_design": null,
+          "length": 1,
+          "local_gate": 0.9995,
+          "local_min_steps": 500,
+          "lr": 0.001,
+          "model": {
+            "activation": "gelu",
+            "hidden": 512,
+            "nvars": 128,
+            "vocab_size": 254
+          },
+          "noise_kind": "none",
+          "noise_rate": 0.0,
+          "nvars": 128,
+          "pool_samples": 16384,
+          "rollout_samples": 128,
+          "samples": 32768,
+          "stage": "local",
+          "steps": 16000,
+          "task": "S5",
+          "trainable_parameters": [
+            "ff.0.weight",
+            "ff.0.bias",
+            "ff.2.weight",
+            "ff.2.bias"
+          ]
+        },
+        "local_gate_passed": true,
+        "oracle_attention": true
+      },
+      "groups": [
+        "a207a250a16d",
+        "c73b8cd065ae",
+        "d24b25c51988",
+        "518751be1229"
+      ],
+      "teacher_designs": {}
+    },
+    {
+      "kind": "length",
+      "files": [
+        "length_a8ecaa81fe21.png",
+        "length_a8ecaa81fe21.pdf"
+      ],
+      "context": {
+        "actual_steps": 5000,
+        "design": {
+          "batch": 256,
+          "budget_label": "equal_examples_and_optimizer_steps",
+          "effective_source_sha256": {
+            "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+            "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+            "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+            "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+            "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+          },
+          "eval_samples": 1024,
+          "eval_seed": 1940001,
+          "hidden": 512,
+          "initialization_design": null,
+          "length": 1,
+          "local_gate": 0.9995,
+          "local_min_steps": 500,
+          "lr": 0.001,
+          "model": {
+            "activation": "gelu",
+            "hidden": 512,
+            "nvars": 128,
+            "vocab_size": 254
+          },
+          "noise_kind": "none",
+          "noise_rate": 0.0,
+          "nvars": 128,
+          "pool_samples": 16384,
+          "rollout_samples": 128,
+          "samples": 32768,
+          "stage": "local",
+          "steps": 16000,
+          "task": "S5",
+          "trainable_parameters": [
+            "ff.0.weight",
+            "ff.0.bias",
+            "ff.2.weight",
+            "ff.2.bias"
+          ]
+        },
+        "local_gate_passed": true,
+        "oracle_attention": true
+      },
+      "groups": [
+        "2e591541a516",
+        "d86e7b3d27da",
+        "077ab1d1bda0",
+        "cca5b34f5d6e"
+      ],
+      "teacher_designs": {}
+    },
+    {
+      "kind": "noise",
+      "files": [
+        "noise_fbcc15715895.png",
+        "noise_fbcc15715895.pdf"
+      ],
+      "context": {
+        "actual_steps": 1000,
+        "design": {
+          "batch": 128,
+          "budget_label": "equal_examples_and_optimizer_steps",
+          "effective_source_sha256": {
+            "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+            "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+            "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+            "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+            "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+            "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+          },
+          "eval_samples": 1024,
+          "eval_seed": 1940001,
+          "hidden": 512,
+          "initialization_design": {
+            "batch": 128,
+            "budget_label": "equal_examples_and_optimizer_steps",
+            "effective_source_sha256": {
+              "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+              "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+              "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+              "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+              "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+              "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+            },
+            "eval_samples": 1024,
+            "eval_seed": 1940001,
+            "hidden": 512,
+            "initialization_design": {
+              "batch": 256,
+              "budget_label": "equal_examples_and_optimizer_steps",
+              "effective_source_sha256": {
+                "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+                "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+                "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+                "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+                "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+              },
+              "eval_samples": 1024,
+              "eval_seed": 1940001,
+              "hidden": 512,
+              "initialization_design": null,
+              "label_source": "truth",
+              "length": 1,
+              "local_gate": 0.9995,
+              "local_min_steps": 500,
+              "lr": 0.001,
+              "mode": "second",
+              "model": {
+                "activation": "gelu",
+                "hidden": 512,
+                "nvars": 128,
+                "vocab_size": 254
+              },
+              "noise_kind": "none",
+              "noise_rate": 0.0,
+              "nvars": 128,
+              "pool_samples": 16384,
+              "rollout_samples": 128,
+              "samples": 32768,
+              "stage": "local",
+              "steps": 16000,
+              "task": "S5",
+              "teacher_design": null,
+              "trainable_parameters": [
+                "ff.0.weight",
+                "ff.0.bias",
+                "ff.2.weight",
+                "ff.2.bias"
+              ]
+            },
+            "label_source": "truth",
+            "length": 2,
+            "local_gate": 0.9995,
+            "local_min_steps": 500,
+            "lr": 0.03,
+            "mode": "second",
+            "model": {
+              "activation": "gelu",
+              "hidden": 512,
+              "nvars": 128,
+              "vocab_size": 254
+            },
+            "noise_kind": "none",
+            "noise_rate": 0.0,
+            "nvars": 128,
+            "pool_samples": 16384,
+            "rollout_samples": 128,
+            "samples": 4096,
+            "stage": "attention",
+            "steps": 1000,
+            "task": "S5",
+            "teacher_design": null,
+            "trainable_parameters": [
+              "Q43",
+              "Q44"
+            ]
+          },
+          "label_source": "truth",
+          "length": 4,
+          "local_gate": 0.9995,
+          "local_min_steps": 500,
+          "lr": 0.03,
+          "mode": "second",
+          "model": {
+            "activation": "gelu",
+            "hidden": 512,
+            "nvars": 128,
+            "vocab_size": 254
+          },
+          "nvars": 128,
+          "pool_samples": 16384,
+          "rollout_samples": 128,
+          "samples": 4096,
+          "stage": "attention",
+          "steps": 1000,
+          "task": "S5",
+          "teacher_design": null,
+          "trainable_parameters": [
+            "Q43",
+            "Q44"
+          ]
+        },
+        "evaluation_length": 1,
+        "local_gate_passed": null,
+        "oracle_attention": false
+      },
+      "groups": [
+        "fad82abc26e6",
+        "faf839b79a20",
+        "74f12f74d093",
+        "0c8c3e6112bb",
+        "c602ffd8fa4d",
+        "fc71b08e2718",
+        "518d34e1b4a1",
+        "51cc6f1a738a",
+        "765d7f89fde2",
+        "029e9ff301ed"
+      ]
+    },
+    {
+      "kind": "noise",
+      "files": [
+        "noise_a7ac9546536f.png",
+        "noise_a7ac9546536f.pdf"
+      ],
+      "context": {
+        "actual_steps": 1000,
+        "design": {
+          "batch": 128,
+          "budget_label": "equal_examples_and_optimizer_steps",
+          "effective_source_sha256": {
+            "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+            "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+            "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+            "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+            "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+            "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+          },
+          "eval_samples": 1024,
+          "eval_seed": 1940001,
+          "hidden": 512,
+          "initialization_design": {
+            "batch": 128,
+            "budget_label": "equal_examples_and_optimizer_steps",
+            "effective_source_sha256": {
+              "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+              "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+              "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+              "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+              "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+              "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+            },
+            "eval_samples": 1024,
+            "eval_seed": 1940001,
+            "hidden": 512,
+            "initialization_design": {
+              "batch": 256,
+              "budget_label": "equal_examples_and_optimizer_steps",
+              "effective_source_sha256": {
+                "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+                "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+                "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+                "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+                "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+              },
+              "eval_samples": 1024,
+              "eval_seed": 1940001,
+              "hidden": 512,
+              "initialization_design": null,
+              "label_source": "truth",
+              "length": 1,
+              "local_gate": 0.9995,
+              "local_min_steps": 500,
+              "lr": 0.001,
+              "mode": "second",
+              "model": {
+                "activation": "gelu",
+                "hidden": 512,
+                "nvars": 128,
+                "vocab_size": 254
+              },
+              "noise_kind": "none",
+              "noise_rate": 0.0,
+              "nvars": 128,
+              "pool_samples": 16384,
+              "rollout_samples": 128,
+              "samples": 32768,
+              "stage": "local",
+              "steps": 16000,
+              "task": "S5",
+              "teacher_design": null,
+              "trainable_parameters": [
+                "ff.0.weight",
+                "ff.0.bias",
+                "ff.2.weight",
+                "ff.2.bias"
+              ]
+            },
+            "label_source": "truth",
+            "length": 2,
+            "local_gate": 0.9995,
+            "local_min_steps": 500,
+            "lr": 0.03,
+            "mode": "second",
+            "model": {
+              "activation": "gelu",
+              "hidden": 512,
+              "nvars": 128,
+              "vocab_size": 254
+            },
+            "noise_kind": "none",
+            "noise_rate": 0.0,
+            "nvars": 128,
+            "pool_samples": 16384,
+            "rollout_samples": 128,
+            "samples": 4096,
+            "stage": "attention",
+            "steps": 1000,
+            "task": "S5",
+            "teacher_design": null,
+            "trainable_parameters": [
+              "Q43",
+              "Q44"
+            ]
+          },
+          "label_source": "truth",
+          "length": 4,
+          "local_gate": 0.9995,
+          "local_min_steps": 500,
+          "lr": 0.03,
+          "mode": "second",
+          "model": {
+            "activation": "gelu",
+            "hidden": 512,
+            "nvars": 128,
+            "vocab_size": 254
+          },
+          "nvars": 128,
+          "pool_samples": 16384,
+          "rollout_samples": 128,
+          "samples": 4096,
+          "stage": "attention",
+          "steps": 1000,
+          "task": "S5",
+          "teacher_design": null,
+          "trainable_parameters": [
+            "Q43",
+            "Q44"
+          ]
+        },
+        "evaluation_length": 16,
+        "local_gate_passed": null,
+        "oracle_attention": false
+      },
+      "groups": [
+        "978f6baec6c7",
+        "18d3c7836cba",
+        "cf45e7f29905",
+        "91735dd04889",
+        "39e86d0ebdee",
+        "68463a78e413",
+        "587744763c15",
+        "adf67606c82e",
+        "e2b93c356555",
+        "fbfcedb0844d"
+      ]
+    },
+    {
+      "kind": "noise",
+      "files": [
+        "noise_7806136d35ec.png",
+        "noise_7806136d35ec.pdf"
+      ],
+      "context": {
+        "actual_steps": 1000,
+        "design": {
+          "batch": 128,
+          "budget_label": "equal_examples_and_optimizer_steps",
+          "effective_source_sha256": {
+            "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+            "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+            "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+            "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+            "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+            "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+          },
+          "eval_samples": 1024,
+          "eval_seed": 1940001,
+          "hidden": 512,
+          "initialization_design": {
+            "batch": 128,
+            "budget_label": "equal_examples_and_optimizer_steps",
+            "effective_source_sha256": {
+              "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+              "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+              "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+              "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+              "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+              "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+            },
+            "eval_samples": 1024,
+            "eval_seed": 1940001,
+            "hidden": 512,
+            "initialization_design": {
+              "batch": 256,
+              "budget_label": "equal_examples_and_optimizer_steps",
+              "effective_source_sha256": {
+                "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+                "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+                "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+                "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+                "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+              },
+              "eval_samples": 1024,
+              "eval_seed": 1940001,
+              "hidden": 512,
+              "initialization_design": null,
+              "label_source": "truth",
+              "length": 1,
+              "local_gate": 0.9995,
+              "local_min_steps": 500,
+              "lr": 0.001,
+              "mode": "second",
+              "model": {
+                "activation": "gelu",
+                "hidden": 512,
+                "nvars": 128,
+                "vocab_size": 254
+              },
+              "noise_kind": "none",
+              "noise_rate": 0.0,
+              "nvars": 128,
+              "pool_samples": 16384,
+              "rollout_samples": 128,
+              "samples": 32768,
+              "stage": "local",
+              "steps": 16000,
+              "task": "S5",
+              "teacher_design": null,
+              "trainable_parameters": [
+                "ff.0.weight",
+                "ff.0.bias",
+                "ff.2.weight",
+                "ff.2.bias"
+              ]
+            },
+            "label_source": "truth",
+            "length": 2,
+            "local_gate": 0.9995,
+            "local_min_steps": 500,
+            "lr": 0.03,
+            "mode": "second",
+            "model": {
+              "activation": "gelu",
+              "hidden": 512,
+              "nvars": 128,
+              "vocab_size": 254
+            },
+            "noise_kind": "none",
+            "noise_rate": 0.0,
+            "nvars": 128,
+            "pool_samples": 16384,
+            "rollout_samples": 128,
+            "samples": 4096,
+            "stage": "attention",
+            "steps": 1000,
+            "task": "S5",
+            "teacher_design": null,
+            "trainable_parameters": [
+              "Q43",
+              "Q44"
+            ]
+          },
+          "label_source": "truth",
+          "length": 4,
+          "local_gate": 0.9995,
+          "local_min_steps": 500,
+          "lr": 0.03,
+          "mode": "second",
+          "model": {
+            "activation": "gelu",
+            "hidden": 512,
+            "nvars": 128,
+            "vocab_size": 254
+          },
+          "nvars": 128,
+          "pool_samples": 16384,
+          "rollout_samples": 128,
+          "samples": 4096,
+          "stage": "attention",
+          "steps": 1000,
+          "task": "S5",
+          "teacher_design": null,
+          "trainable_parameters": [
+            "Q43",
+            "Q44"
+          ]
+        },
+        "evaluation_length": 2,
+        "local_gate_passed": null,
+        "oracle_attention": false
+      },
+      "groups": [
+        "c5bb449c4eaa",
+        "f1d267f18fc9",
+        "c2b21be97030",
+        "7b2b383064b5",
+        "99eb90ed0e07",
+        "8ef79ddf7e3e",
+        "da703ab9ecda",
+        "791ce1e0a9f6",
+        "be79bbf51957",
+        "8c5ceb237132"
+      ]
+    },
+    {
+      "kind": "noise",
+      "files": [
+        "noise_540afb9cc14f.png",
+        "noise_540afb9cc14f.pdf"
+      ],
+      "context": {
+        "actual_steps": 1000,
+        "design": {
+          "batch": 128,
+          "budget_label": "equal_examples_and_optimizer_steps",
+          "effective_source_sha256": {
+            "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+            "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+            "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+            "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+            "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+            "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+          },
+          "eval_samples": 1024,
+          "eval_seed": 1940001,
+          "hidden": 512,
+          "initialization_design": {
+            "batch": 128,
+            "budget_label": "equal_examples_and_optimizer_steps",
+            "effective_source_sha256": {
+              "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+              "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+              "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+              "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+              "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+              "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+            },
+            "eval_samples": 1024,
+            "eval_seed": 1940001,
+            "hidden": 512,
+            "initialization_design": {
+              "batch": 256,
+              "budget_label": "equal_examples_and_optimizer_steps",
+              "effective_source_sha256": {
+                "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+                "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+                "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+                "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+                "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+              },
+              "eval_samples": 1024,
+              "eval_seed": 1940001,
+              "hidden": 512,
+              "initialization_design": null,
+              "label_source": "truth",
+              "length": 1,
+              "local_gate": 0.9995,
+              "local_min_steps": 500,
+              "lr": 0.001,
+              "mode": "second",
+              "model": {
+                "activation": "gelu",
+                "hidden": 512,
+                "nvars": 128,
+                "vocab_size": 254
+              },
+              "noise_kind": "none",
+              "noise_rate": 0.0,
+              "nvars": 128,
+              "pool_samples": 16384,
+              "rollout_samples": 128,
+              "samples": 32768,
+              "stage": "local",
+              "steps": 16000,
+              "task": "S5",
+              "teacher_design": null,
+              "trainable_parameters": [
+                "ff.0.weight",
+                "ff.0.bias",
+                "ff.2.weight",
+                "ff.2.bias"
+              ]
+            },
+            "label_source": "truth",
+            "length": 2,
+            "local_gate": 0.9995,
+            "local_min_steps": 500,
+            "lr": 0.03,
+            "mode": "second",
+            "model": {
+              "activation": "gelu",
+              "hidden": 512,
+              "nvars": 128,
+              "vocab_size": 254
+            },
+            "noise_kind": "none",
+            "noise_rate": 0.0,
+            "nvars": 128,
+            "pool_samples": 16384,
+            "rollout_samples": 128,
+            "samples": 4096,
+            "stage": "attention",
+            "steps": 1000,
+            "task": "S5",
+            "teacher_design": null,
+            "trainable_parameters": [
+              "Q43",
+              "Q44"
+            ]
+          },
+          "label_source": "truth",
+          "length": 4,
+          "local_gate": 0.9995,
+          "local_min_steps": 500,
+          "lr": 0.03,
+          "mode": "second",
+          "model": {
+            "activation": "gelu",
+            "hidden": 512,
+            "nvars": 128,
+            "vocab_size": 254
+          },
+          "nvars": 128,
+          "pool_samples": 16384,
+          "rollout_samples": 128,
+          "samples": 4096,
+          "stage": "attention",
+          "steps": 1000,
+          "task": "S5",
+          "teacher_design": null,
+          "trainable_parameters": [
+            "Q43",
+            "Q44"
+          ]
+        },
+        "evaluation_length": 32,
+        "local_gate_passed": null,
+        "oracle_attention": false
+      },
+      "groups": [
+        "ab6ba3c746a9",
+        "ebb4ac0a4d1c",
+        "4d20b3aee029",
+        "3529b47273ac",
+        "974c8957f07c",
+        "94c9bbcb6e3f",
+        "70c86d04cf6a",
+        "471ba4de8ef0",
+        "a74919e267bf",
+        "bfbe8b8c1b54"
+      ]
+    },
+    {
+      "kind": "noise",
+      "files": [
+        "noise_6ceee31c9b91.png",
+        "noise_6ceee31c9b91.pdf"
+      ],
+      "context": {
+        "actual_steps": 1000,
+        "design": {
+          "batch": 128,
+          "budget_label": "equal_examples_and_optimizer_steps",
+          "effective_source_sha256": {
+            "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+            "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+            "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+            "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+            "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+            "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+          },
+          "eval_samples": 1024,
+          "eval_seed": 1940001,
+          "hidden": 512,
+          "initialization_design": {
+            "batch": 128,
+            "budget_label": "equal_examples_and_optimizer_steps",
+            "effective_source_sha256": {
+              "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+              "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+              "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+              "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+              "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+              "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+            },
+            "eval_samples": 1024,
+            "eval_seed": 1940001,
+            "hidden": 512,
+            "initialization_design": {
+              "batch": 256,
+              "budget_label": "equal_examples_and_optimizer_steps",
+              "effective_source_sha256": {
+                "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+                "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+                "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+                "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+                "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+              },
+              "eval_samples": 1024,
+              "eval_seed": 1940001,
+              "hidden": 512,
+              "initialization_design": null,
+              "label_source": "truth",
+              "length": 1,
+              "local_gate": 0.9995,
+              "local_min_steps": 500,
+              "lr": 0.001,
+              "mode": "second",
+              "model": {
+                "activation": "gelu",
+                "hidden": 512,
+                "nvars": 128,
+                "vocab_size": 254
+              },
+              "noise_kind": "none",
+              "noise_rate": 0.0,
+              "nvars": 128,
+              "pool_samples": 16384,
+              "rollout_samples": 128,
+              "samples": 32768,
+              "stage": "local",
+              "steps": 16000,
+              "task": "S5",
+              "teacher_design": null,
+              "trainable_parameters": [
+                "ff.0.weight",
+                "ff.0.bias",
+                "ff.2.weight",
+                "ff.2.bias"
+              ]
+            },
+            "label_source": "truth",
+            "length": 2,
+            "local_gate": 0.9995,
+            "local_min_steps": 500,
+            "lr": 0.03,
+            "mode": "second",
+            "model": {
+              "activation": "gelu",
+              "hidden": 512,
+              "nvars": 128,
+              "vocab_size": 254
+            },
+            "noise_kind": "none",
+            "noise_rate": 0.0,
+            "nvars": 128,
+            "pool_samples": 16384,
+            "rollout_samples": 128,
+            "samples": 4096,
+            "stage": "attention",
+            "steps": 1000,
+            "task": "S5",
+            "teacher_design": null,
+            "trainable_parameters": [
+              "Q43",
+              "Q44"
+            ]
+          },
+          "label_source": "truth",
+          "length": 4,
+          "local_gate": 0.9995,
+          "local_min_steps": 500,
+          "lr": 0.03,
+          "mode": "second",
+          "model": {
+            "activation": "gelu",
+            "hidden": 512,
+            "nvars": 128,
+            "vocab_size": 254
+          },
+          "nvars": 128,
+          "pool_samples": 16384,
+          "rollout_samples": 128,
+          "samples": 4096,
+          "stage": "attention",
+          "steps": 1000,
+          "task": "S5",
+          "teacher_design": null,
+          "trainable_parameters": [
+            "Q43",
+            "Q44"
+          ]
+        },
+        "evaluation_length": 4,
+        "local_gate_passed": null,
+        "oracle_attention": false
+      },
+      "groups": [
+        "16b0c1b8f796",
+        "5738cf6f6548",
+        "f0b7780ff66b",
+        "ca3e40563bb1",
+        "ff343fec700f",
+        "413a02020183",
+        "154b933dbcc7",
+        "a9aadb2919d0",
+        "6f87dc7dee08",
+        "3708a0f03ce4"
+      ]
+    },
+    {
+      "kind": "noise",
+      "files": [
+        "noise_ca90be4d5fab.png",
+        "noise_ca90be4d5fab.pdf"
+      ],
+      "context": {
+        "actual_steps": 1000,
+        "design": {
+          "batch": 128,
+          "budget_label": "equal_examples_and_optimizer_steps",
+          "effective_source_sha256": {
+            "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+            "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+            "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+            "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+            "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+            "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+          },
+          "eval_samples": 1024,
+          "eval_seed": 1940001,
+          "hidden": 512,
+          "initialization_design": {
+            "batch": 128,
+            "budget_label": "equal_examples_and_optimizer_steps",
+            "effective_source_sha256": {
+              "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+              "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+              "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+              "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+              "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+              "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+            },
+            "eval_samples": 1024,
+            "eval_seed": 1940001,
+            "hidden": 512,
+            "initialization_design": {
+              "batch": 256,
+              "budget_label": "equal_examples_and_optimizer_steps",
+              "effective_source_sha256": {
+                "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+                "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+                "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+                "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+                "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+              },
+              "eval_samples": 1024,
+              "eval_seed": 1940001,
+              "hidden": 512,
+              "initialization_design": null,
+              "label_source": "truth",
+              "length": 1,
+              "local_gate": 0.9995,
+              "local_min_steps": 500,
+              "lr": 0.001,
+              "mode": "second",
+              "model": {
+                "activation": "gelu",
+                "hidden": 512,
+                "nvars": 128,
+                "vocab_size": 254
+              },
+              "noise_kind": "none",
+              "noise_rate": 0.0,
+              "nvars": 128,
+              "pool_samples": 16384,
+              "rollout_samples": 128,
+              "samples": 32768,
+              "stage": "local",
+              "steps": 16000,
+              "task": "S5",
+              "teacher_design": null,
+              "trainable_parameters": [
+                "ff.0.weight",
+                "ff.0.bias",
+                "ff.2.weight",
+                "ff.2.bias"
+              ]
+            },
+            "label_source": "truth",
+            "length": 2,
+            "local_gate": 0.9995,
+            "local_min_steps": 500,
+            "lr": 0.03,
+            "mode": "second",
+            "model": {
+              "activation": "gelu",
+              "hidden": 512,
+              "nvars": 128,
+              "vocab_size": 254
+            },
+            "noise_kind": "none",
+            "noise_rate": 0.0,
+            "nvars": 128,
+            "pool_samples": 16384,
+            "rollout_samples": 128,
+            "samples": 4096,
+            "stage": "attention",
+            "steps": 1000,
+            "task": "S5",
+            "teacher_design": null,
+            "trainable_parameters": [
+              "Q43",
+              "Q44"
+            ]
+          },
+          "label_source": "truth",
+          "length": 4,
+          "local_gate": 0.9995,
+          "local_min_steps": 500,
+          "lr": 0.03,
+          "mode": "second",
+          "model": {
+            "activation": "gelu",
+            "hidden": 512,
+            "nvars": 128,
+            "vocab_size": 254
+          },
+          "nvars": 128,
+          "pool_samples": 16384,
+          "rollout_samples": 128,
+          "samples": 4096,
+          "stage": "attention",
+          "steps": 1000,
+          "task": "S5",
+          "teacher_design": null,
+          "trainable_parameters": [
+            "Q43",
+            "Q44"
+          ]
+        },
+        "evaluation_length": 64,
+        "local_gate_passed": null,
+        "oracle_attention": false
+      },
+      "groups": [
+        "035296a6c3cc",
+        "69c01bae68a7",
+        "5427f4b1365c",
+        "4626dae47223",
+        "ad222d041dfd",
+        "22c0d97195f1",
+        "a2495f07cf4b",
+        "08ce8176068e",
+        "28d3e06273e4",
+        "8832455e9438"
+      ]
+    },
+    {
+      "kind": "noise",
+      "files": [
+        "noise_56db83b0b6ec.png",
+        "noise_56db83b0b6ec.pdf"
+      ],
+      "context": {
+        "actual_steps": 1000,
+        "design": {
+          "batch": 128,
+          "budget_label": "equal_examples_and_optimizer_steps",
+          "effective_source_sha256": {
+            "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+            "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+            "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+            "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+            "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+            "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+          },
+          "eval_samples": 1024,
+          "eval_seed": 1940001,
+          "hidden": 512,
+          "initialization_design": {
+            "batch": 128,
+            "budget_label": "equal_examples_and_optimizer_steps",
+            "effective_source_sha256": {
+              "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+              "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+              "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+              "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+              "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+              "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+            },
+            "eval_samples": 1024,
+            "eval_seed": 1940001,
+            "hidden": 512,
+            "initialization_design": {
+              "batch": 256,
+              "budget_label": "equal_examples_and_optimizer_steps",
+              "effective_source_sha256": {
+                "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+                "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+                "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2",
+                "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+                "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e"
+              },
+              "eval_samples": 1024,
+              "eval_seed": 1940001,
+              "hidden": 512,
+              "initialization_design": null,
+              "label_source": "truth",
+              "length": 1,
+              "local_gate": 0.9995,
+              "local_min_steps": 500,
+              "lr": 0.001,
+              "mode": "second",
+              "model": {
+                "activation": "gelu",
+                "hidden": 512,
+                "nvars": 128,
+                "vocab_size": 254
+              },
+              "noise_kind": "none",
+              "noise_rate": 0.0,
+              "nvars": 128,
+              "pool_samples": 16384,
+              "rollout_samples": 128,
+              "samples": 32768,
+              "stage": "local",
+              "steps": 16000,
+              "task": "S5",
+              "teacher_design": null,
+              "trainable_parameters": [
+                "ff.0.weight",
+                "ff.0.bias",
+                "ff.2.weight",
+                "ff.2.bias"
+              ]
+            },
+            "label_source": "truth",
+            "length": 2,
+            "local_gate": 0.9995,
+            "local_min_steps": 500,
+            "lr": 0.03,
+            "mode": "second",
+            "model": {
+              "activation": "gelu",
+              "hidden": 512,
+              "nvars": 128,
+              "vocab_size": 254
+            },
+            "noise_kind": "none",
+            "noise_rate": 0.0,
+            "nvars": 128,
+            "pool_samples": 16384,
+            "rollout_samples": 128,
+            "samples": 4096,
+            "stage": "attention",
+            "steps": 1000,
+            "task": "S5",
+            "teacher_design": null,
+            "trainable_parameters": [
+              "Q43",
+              "Q44"
+            ]
+          },
+          "label_source": "truth",
+          "length": 4,
+          "local_gate": 0.9995,
+          "local_min_steps": 500,
+          "lr": 0.03,
+          "mode": "second",
+          "model": {
+            "activation": "gelu",
+            "hidden": 512,
+            "nvars": 128,
+            "vocab_size": 254
+          },
+          "nvars": 128,
+          "pool_samples": 16384,
+          "rollout_samples": 128,
+          "samples": 4096,
+          "stage": "attention",
+          "steps": 1000,
+          "task": "S5",
+          "teacher_design": null,
+          "trainable_parameters": [
+            "Q43",
+            "Q44"
+          ]
+        },
+        "evaluation_length": 8,
+        "local_gate_passed": null,
+        "oracle_attention": false
+      },
+      "groups": [
+        "3c6bdeeafd7b",
+        "acc124df7e74",
+        "f12b1f05d088",
+        "c3a0380a7860",
+        "ff8ebeb5b334",
+        "52e2e046cd4d",
+        "a6ba2f3a7eb5",
+        "759fc0974b09",
+        "e04e5e223120",
+        "77a132113c35"
+      ]
+    }
+  ],
+  "table_files": [
+    "per_seed_evaluation.csv",
+    "per_seed_runs.csv",
+    "history.csv",
+    "aggregate.json"
+  ],
+  "notes": [
+    "Only runs with complete final evaluation and a data audit are included; coverage may be partial.",
+    "No pooling across training lengths, dataset sizes, budget labels, optimizer settings, model/source versions or parent experimental designs.",
+    "Training seed and data_seed are random realizations, not design factors, including in initialization/teacher ancestry. Aggregate groups record seed/data_seed sets and full randomization lineage; original configs remain in CSV.",
+    "pool_samples is a design factor: sampling a prefix of a common pool is not silently pooled with another pool size.",
+    "Source exception for local stage only: effective_source_sha256 omits sparse_data.py because its supervision builders are not used in local training (tensor_hash only records provenance). Driver, model, data, local_rule, evaluate and all other hashes remain strict; attention-stage sparse_data hashes remain strict. Full original hashes are retained in config CSV.",
+    "For truth labels, an unused --teacher argument is excluded from effective experimental design; its original value and hash remain in config CSV.",
+    "The intended contrasts within a length figure are supervision mode and label source. Student initialization designs match; differing teacher designs are distinct curves, never pooled.",
+    "Noise figures hold supervision mode and label source fixed and vary noise kind/rate; a clean reference may be shared.",
+    "Shading is observed minimum to maximum across distinct training seeds, not a confidence interval.",
+    "Duplicate seed/config groups are kept in raw CSV but excluded from aggregates and figures.",
+    "TF full-clause whole-chain success equals the deterministic greedy exact-trajectory event; TF value-only metrics do not equal rollout final accuracy.",
+    "Oracle attention and failed local gates are explicitly separated and cannot be presented as autonomous inference success.",
+    "The manifest lists the current generated figures; any older unlisted files in the output directory are not part of this snapshot."
+  ]
+}

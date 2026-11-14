@@ -1,0 +1,631 @@
+{
+  "figure": "/root/shared-nvme/cot-length-generalization/figures/sparse-supervision-2026-11-09/sparse_overview.png",
+  "runs": 51,
+  "cells": 24,
+  "tables": [
+    {
+      "panel": "equal_examples",
+      "source": "truth",
+      "mode": "second",
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "mean": 0.5345052083333334,
+      "min": 0.4921875,
+      "max": 0.556640625,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.5546875,
+        0.556640625,
+        0.4921875
+      ],
+      "runs": [
+        "extend_L4_N4096_truth_second_s0",
+        "extend_L4_N4096_truth_second_s1",
+        "extend_L4_N4096_truth_second_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "equal_examples",
+      "source": "truth",
+      "mode": "random",
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "mean": 0.4733072916666667,
+      "min": 0.4169921875,
+      "max": 0.5205078125,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.5205078125,
+        0.482421875,
+        0.4169921875
+      ],
+      "runs": [
+        "extend_L4_N4096_truth_random_s0",
+        "extend_L4_N4096_truth_random_s1",
+        "extend_L4_N4096_truth_random_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "equal_examples",
+      "source": "truth",
+      "mode": "all",
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "mean": 0.6888020833333334,
+      "min": 0.66796875,
+      "max": 0.724609375,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.724609375,
+        0.66796875,
+        0.673828125
+      ],
+      "runs": [
+        "extend_L4_N4096_truth_all_s0",
+        "extend_L4_N4096_truth_all_s1",
+        "extend_L4_N4096_truth_all_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "equal_examples",
+      "source": "teacher",
+      "mode": "second",
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "mean": 0.4270833333333333,
+      "min": 0.3916015625,
+      "max": 0.453125,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.4365234375,
+        0.453125,
+        0.3916015625
+      ],
+      "runs": [
+        "extend_L4_N4096_teacher_second_s0",
+        "extend_L4_N4096_teacher_second_s1",
+        "extend_L4_N4096_teacher_second_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "equal_examples",
+      "source": "teacher",
+      "mode": "random",
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "mean": 0.3401692708333333,
+      "min": 0.33203125,
+      "max": 0.3525390625,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.3359375,
+        0.3525390625,
+        0.33203125
+      ],
+      "runs": [
+        "extend_L4_N4096_teacher_random_s0",
+        "extend_L4_N4096_teacher_random_s1",
+        "extend_L4_N4096_teacher_random_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "equal_examples",
+      "source": "teacher",
+      "mode": "all",
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "mean": 0.4599609375,
+      "min": 0.458984375,
+      "max": 0.4619140625,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.4619140625,
+        0.458984375,
+        0.458984375
+      ],
+      "runs": [
+        "extend_L4_N4096_teacher_all_s0",
+        "extend_L4_N4096_teacher_all_s1",
+        "extend_L4_N4096_teacher_all_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "equal_value_labels",
+      "source": "truth",
+      "mode": "second",
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "mean": 0.5345052083333334,
+      "min": 0.4921875,
+      "max": 0.556640625,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.5546875,
+        0.556640625,
+        0.4921875
+      ],
+      "runs": [
+        "extend_L4_N4096_truth_second_s0",
+        "extend_L4_N4096_truth_second_s1",
+        "extend_L4_N4096_truth_second_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "equal_value_labels",
+      "source": "truth",
+      "mode": "random",
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "mean": 0.4733072916666667,
+      "min": 0.4169921875,
+      "max": 0.5205078125,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.5205078125,
+        0.482421875,
+        0.4169921875
+      ],
+      "runs": [
+        "extend_L4_N4096_truth_random_s0",
+        "extend_L4_N4096_truth_random_s1",
+        "extend_L4_N4096_truth_random_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "equal_value_labels",
+      "source": "truth",
+      "mode": "all",
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "mean": 0.525390625,
+      "min": 0.462890625,
+      "max": 0.59765625,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.59765625,
+        0.515625,
+        0.462890625
+      ],
+      "runs": [
+        "labels_L4_N1024_truth_all_s0",
+        "labels_L4_N1024_truth_all_s1",
+        "labels_L4_N1024_truth_all_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "equal_value_labels",
+      "source": "teacher",
+      "mode": "second",
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "mean": 0.4270833333333333,
+      "min": 0.3916015625,
+      "max": 0.453125,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.4365234375,
+        0.453125,
+        0.3916015625
+      ],
+      "runs": [
+        "extend_L4_N4096_teacher_second_s0",
+        "extend_L4_N4096_teacher_second_s1",
+        "extend_L4_N4096_teacher_second_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "equal_value_labels",
+      "source": "teacher",
+      "mode": "random",
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "mean": 0.3401692708333333,
+      "min": 0.33203125,
+      "max": 0.3525390625,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.3359375,
+        0.3525390625,
+        0.33203125
+      ],
+      "runs": [
+        "extend_L4_N4096_teacher_random_s0",
+        "extend_L4_N4096_teacher_random_s1",
+        "extend_L4_N4096_teacher_random_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "equal_value_labels",
+      "source": "teacher",
+      "mode": "all",
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "mean": 0.4153645833333333,
+      "min": 0.3818359375,
+      "max": 0.4462890625,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.4462890625,
+        0.41796875,
+        0.3818359375
+      ],
+      "runs": [
+        "labels_L4_N1024_teacher_all_s0",
+        "labels_L4_N1024_teacher_all_s1",
+        "labels_L4_N1024_teacher_all_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "noise",
+      "source": "truth",
+      "mode": "second",
+      "noise_kind": "target",
+      "requested_noise_rate": 0,
+      "mean": 0.5345052083333334,
+      "min": 0.4921875,
+      "max": 0.556640625,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.5546875,
+        0.556640625,
+        0.4921875
+      ],
+      "runs": [
+        "extend_L4_N4096_truth_second_s0",
+        "extend_L4_N4096_truth_second_s1",
+        "extend_L4_N4096_truth_second_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "noise",
+      "source": "truth",
+      "mode": "second",
+      "noise_kind": "target",
+      "requested_noise_rate": 0.05,
+      "mean": 0.171875,
+      "min": 0.138671875,
+      "max": 0.201171875,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.138671875,
+        0.17578125,
+        0.201171875
+      ],
+      "runs": [
+        "noise_L4_target_r05_s0",
+        "noise_L4_target_r05_s1",
+        "noise_L4_target_r05_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "noise",
+      "source": "truth",
+      "mode": "second",
+      "noise_kind": "target",
+      "requested_noise_rate": 0.2,
+      "mean": 0.005859375,
+      "min": 0.0048828125,
+      "max": 0.0068359375,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.0048828125,
+        0.005859375,
+        0.0068359375
+      ],
+      "runs": [
+        "noise_L4_target_r20_s0",
+        "noise_L4_target_r20_s1",
+        "noise_L4_target_r20_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "noise",
+      "source": "truth",
+      "mode": "second",
+      "noise_kind": "target",
+      "requested_noise_rate": 0.4,
+      "mean": 0.0003255208333333333,
+      "min": 0.0,
+      "max": 0.0009765625,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.0,
+        0.0,
+        0.0009765625
+      ],
+      "runs": [
+        "noise_L4_target_r40_s0",
+        "noise_L4_target_r40_s1",
+        "noise_L4_target_r40_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "noise",
+      "source": "truth",
+      "mode": "second",
+      "noise_kind": "prefix_inconsistent",
+      "requested_noise_rate": 0,
+      "mean": 0.5345052083333334,
+      "min": 0.4921875,
+      "max": 0.556640625,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.5546875,
+        0.556640625,
+        0.4921875
+      ],
+      "runs": [
+        "extend_L4_N4096_truth_second_s0",
+        "extend_L4_N4096_truth_second_s1",
+        "extend_L4_N4096_truth_second_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "noise",
+      "source": "truth",
+      "mode": "second",
+      "noise_kind": "prefix_inconsistent",
+      "requested_noise_rate": 0.05,
+      "mean": 0.16276041666666666,
+      "min": 0.115234375,
+      "max": 0.2177734375,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.115234375,
+        0.1552734375,
+        0.2177734375
+      ],
+      "runs": [
+        "noise_L4_prefix_inconsistent_r05_s0",
+        "noise_L4_prefix_inconsistent_r05_s1",
+        "noise_L4_prefix_inconsistent_r05_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "noise",
+      "source": "truth",
+      "mode": "second",
+      "noise_kind": "prefix_inconsistent",
+      "requested_noise_rate": 0.2,
+      "mean": 0.0029296875,
+      "min": 0.0009765625,
+      "max": 0.0048828125,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.0009765625,
+        0.0029296875,
+        0.0048828125
+      ],
+      "runs": [
+        "noise_L4_prefix_inconsistent_r20_s0",
+        "noise_L4_prefix_inconsistent_r20_s1",
+        "noise_L4_prefix_inconsistent_r20_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "noise",
+      "source": "truth",
+      "mode": "second",
+      "noise_kind": "prefix_inconsistent",
+      "requested_noise_rate": 0.4,
+      "mean": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "runs": [
+        "noise_L4_prefix_inconsistent_r40_s0",
+        "noise_L4_prefix_inconsistent_r40_s1",
+        "noise_L4_prefix_inconsistent_r40_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "noise",
+      "source": "truth",
+      "mode": "second",
+      "noise_kind": "prefix_consistent",
+      "requested_noise_rate": 0,
+      "mean": 0.5345052083333334,
+      "min": 0.4921875,
+      "max": 0.556640625,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.5546875,
+        0.556640625,
+        0.4921875
+      ],
+      "runs": [
+        "extend_L4_N4096_truth_second_s0",
+        "extend_L4_N4096_truth_second_s1",
+        "extend_L4_N4096_truth_second_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "noise",
+      "source": "truth",
+      "mode": "second",
+      "noise_kind": "prefix_consistent",
+      "requested_noise_rate": 0.05,
+      "mean": 0.5276692708333334,
+      "min": 0.48828125,
+      "max": 0.55078125,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.55078125,
+        0.5439453125,
+        0.48828125
+      ],
+      "runs": [
+        "noise_L4_prefix_consistent_r05_s0",
+        "noise_L4_prefix_consistent_r05_s1",
+        "noise_L4_prefix_consistent_r05_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "noise",
+      "source": "truth",
+      "mode": "second",
+      "noise_kind": "prefix_consistent",
+      "requested_noise_rate": 0.2,
+      "mean": 0.5361328125,
+      "min": 0.4833984375,
+      "max": 0.5634765625,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.5615234375,
+        0.5634765625,
+        0.4833984375
+      ],
+      "runs": [
+        "noise_L4_prefix_consistent_r20_s0",
+        "noise_L4_prefix_consistent_r20_s1",
+        "noise_L4_prefix_consistent_r20_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "noise",
+      "source": "truth",
+      "mode": "second",
+      "noise_kind": "prefix_consistent",
+      "requested_noise_rate": 0.4,
+      "mean": 0.52734375,
+      "min": 0.4677734375,
+      "max": 0.5595703125,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.5595703125,
+        0.5546875,
+        0.4677734375
+      ],
+      "runs": [
+        "noise_L4_prefix_consistent_r40_s0",
+        "noise_L4_prefix_consistent_r40_s1",
+        "noise_L4_prefix_consistent_r40_s2"
+      ],
+      "n": 3
+    }
+  ]
+}

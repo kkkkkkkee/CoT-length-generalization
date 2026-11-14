@@ -1,0 +1,15 @@
+{
+  "complete": true,
+  "scope": "Document timing, local link/image/PDF presence, new diagram hashes; no new training or model reevaluation.",
+  "display_units": 16,
+  "minutes": 30,
+  "time_windows_contiguous": true,
+  "core_experiments": 5,
+  "image_positions": 13,
+  "unique_images": 13,
+  "links_checked": 23,
+  "new_explanatory_diagrams": 5,
+  "characters": 12455,
+  "report_sha256": "df6581e6c5905134c261d5cb5bd04a3c3836b6441ff1caeced0c5e626c7624d2",
+  "review": "New diagrams inspected visually in contact sheet; existing measured figures previously checked."
+}

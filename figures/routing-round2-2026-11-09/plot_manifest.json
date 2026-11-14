@@ -1,0 +1,809 @@
+{
+  "campaign": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09",
+  "planned_runs": 87,
+  "completed_runs": 87,
+  "rows": 1044,
+  "all_planned_complete": true,
+  "included_runs": [
+    "dense_lr03_truth_s0_r0",
+    "dense_lr03_target05_s0_r0",
+    "dense_lr03_target20_s0_r0",
+    "dense_lr03_prefix_inconsistent20_s0_r0",
+    "dense_lr03_prefix_consistent20_s0_r0",
+    "dense_lr03_teacher_s0_r0",
+    "row_tied_lr03_truth_s0_r0",
+    "row_tied_lr03_teacher_s0_r0",
+    "dense_lr003_truth_s0_r0",
+    "dense_lr003_target05_s0_r0",
+    "dense_lr003_target20_s0_r0",
+    "diagonal_lr03_truth_s0_r0",
+    "diagonal_lr03_teacher_s0_r0",
+    "dense_lr03_truth_s0_r1",
+    "dense_lr03_target05_s0_r1",
+    "dense_lr03_target20_s0_r1",
+    "dense_lr03_prefix_inconsistent20_s0_r1",
+    "dense_lr03_prefix_consistent20_s0_r1",
+    "dense_lr03_teacher_s0_r1",
+    "row_tied_lr03_truth_s0_r1",
+    "row_tied_lr03_teacher_s0_r1",
+    "dense_lr03_truth_s0_r2",
+    "dense_lr03_target05_s0_r2",
+    "dense_lr03_target20_s0_r2",
+    "dense_lr03_prefix_inconsistent20_s0_r2",
+    "dense_lr03_prefix_consistent20_s0_r2",
+    "dense_lr03_teacher_s0_r2",
+    "row_tied_lr03_truth_s0_r2",
+    "row_tied_lr03_teacher_s0_r2",
+    "dense_lr03_truth_s1_r0",
+    "dense_lr03_target05_s1_r0",
+    "dense_lr03_target20_s1_r0",
+    "dense_lr03_prefix_inconsistent20_s1_r0",
+    "dense_lr03_prefix_consistent20_s1_r0",
+    "dense_lr03_teacher_s1_r0",
+    "row_tied_lr03_truth_s1_r0",
+    "row_tied_lr03_teacher_s1_r0",
+    "dense_lr003_truth_s1_r0",
+    "dense_lr003_target05_s1_r0",
+    "dense_lr003_target20_s1_r0",
+    "diagonal_lr03_truth_s1_r0",
+    "diagonal_lr03_teacher_s1_r0",
+    "dense_lr03_truth_s1_r1",
+    "dense_lr03_target05_s1_r1",
+    "dense_lr03_target20_s1_r1",
+    "dense_lr03_prefix_inconsistent20_s1_r1",
+    "dense_lr03_prefix_consistent20_s1_r1",
+    "dense_lr03_teacher_s1_r1",
+    "row_tied_lr03_truth_s1_r1",
+    "row_tied_lr03_teacher_s1_r1",
+    "dense_lr03_truth_s1_r2",
+    "dense_lr03_target05_s1_r2",
+    "dense_lr03_target20_s1_r2",
+    "dense_lr03_prefix_inconsistent20_s1_r2",
+    "dense_lr03_prefix_consistent20_s1_r2",
+    "dense_lr03_teacher_s1_r2",
+    "row_tied_lr03_truth_s1_r2",
+    "row_tied_lr03_teacher_s1_r2",
+    "dense_lr03_truth_s2_r0",
+    "dense_lr03_target05_s2_r0",
+    "dense_lr03_target20_s2_r0",
+    "dense_lr03_prefix_inconsistent20_s2_r0",
+    "dense_lr03_prefix_consistent20_s2_r0",
+    "dense_lr03_teacher_s2_r0",
+    "row_tied_lr03_truth_s2_r0",
+    "row_tied_lr03_teacher_s2_r0",
+    "dense_lr003_truth_s2_r0",
+    "dense_lr003_target05_s2_r0",
+    "dense_lr003_target20_s2_r0",
+    "diagonal_lr03_truth_s2_r0",
+    "diagonal_lr03_teacher_s2_r0",
+    "dense_lr03_truth_s2_r1",
+    "dense_lr03_target05_s2_r1",
+    "dense_lr03_target20_s2_r1",
+    "dense_lr03_prefix_inconsistent20_s2_r1",
+    "dense_lr03_prefix_consistent20_s2_r1",
+    "dense_lr03_teacher_s2_r1",
+    "row_tied_lr03_truth_s2_r1",
+    "row_tied_lr03_teacher_s2_r1",
+    "dense_lr03_truth_s2_r2",
+    "dense_lr03_target05_s2_r2",
+    "dense_lr03_target20_s2_r2",
+    "dense_lr03_prefix_inconsistent20_s2_r2",
+    "dense_lr03_prefix_consistent20_s2_r2",
+    "dense_lr03_teacher_s2_r2",
+    "row_tied_lr03_truth_s2_r2",
+    "row_tied_lr03_teacher_s2_r2"
+  ],
+  "skipped": [],
+  "warnings": [],
+  "figures": [
+    "noise_repetitions",
+    "routing_initial_to_final",
+    "learning_rate_control"
+  ],
+  "hierarchy": {
+    "hierarchy": "dataset/noise replicates within model seed; equal weight across model-seed means",
+    "initial": "after conversion/projection and before training, NOT the unconverted original parent",
+    "scope": "only direct planned round2 runs; recursive experiments excluded",
+    "uncertainty": "observed model-mean and cell ranges only, no IID confidence intervals"
+  },
+  "incomplete_policy": "Skip unfinished runs; displayed means use only available model-seed/replicate cells, with exact coverage in overview_numbers.json",
+  "diagonal_design": "Only dataset/noise replicate 0; not nine independent cells",
+  "run_sources": [
+    {
+      "run": "dense_lr03_truth_s0_r0",
+      "model_seed": 0,
+      "replicate": 0,
+      "data_seed": 2810001,
+      "noise_seed": 2910001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_truth_s0_r0/config.json"
+    },
+    {
+      "run": "dense_lr03_target05_s0_r0",
+      "model_seed": 0,
+      "replicate": 0,
+      "data_seed": 2810001,
+      "noise_seed": 2910001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_target05_s0_r0/config.json"
+    },
+    {
+      "run": "dense_lr03_target20_s0_r0",
+      "model_seed": 0,
+      "replicate": 0,
+      "data_seed": 2810001,
+      "noise_seed": 2910001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_target20_s0_r0/config.json"
+    },
+    {
+      "run": "dense_lr03_prefix_inconsistent20_s0_r0",
+      "model_seed": 0,
+      "replicate": 0,
+      "data_seed": 2810001,
+      "noise_seed": 2910001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_prefix_inconsistent20_s0_r0/config.json"
+    },
+    {
+      "run": "dense_lr03_prefix_consistent20_s0_r0",
+      "model_seed": 0,
+      "replicate": 0,
+      "data_seed": 2810001,
+      "noise_seed": 2910001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_prefix_consistent20_s0_r0/config.json"
+    },
+    {
+      "run": "dense_lr03_teacher_s0_r0",
+      "model_seed": 0,
+      "replicate": 0,
+      "data_seed": 2810001,
+      "noise_seed": 2910001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_teacher_s0_r0/config.json"
+    },
+    {
+      "run": "row_tied_lr03_truth_s0_r0",
+      "model_seed": 0,
+      "replicate": 0,
+      "data_seed": 2810001,
+      "noise_seed": 2910001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/row_tied_lr03_truth_s0_r0/config.json"
+    },
+    {
+      "run": "row_tied_lr03_teacher_s0_r0",
+      "model_seed": 0,
+      "replicate": 0,
+      "data_seed": 2810001,
+      "noise_seed": 2910001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/row_tied_lr03_teacher_s0_r0/config.json"
+    },
+    {
+      "run": "dense_lr003_truth_s0_r0",
+      "model_seed": 0,
+      "replicate": 0,
+      "data_seed": 2810001,
+      "noise_seed": 2910001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr003_truth_s0_r0/config.json"
+    },
+    {
+      "run": "dense_lr003_target05_s0_r0",
+      "model_seed": 0,
+      "replicate": 0,
+      "data_seed": 2810001,
+      "noise_seed": 2910001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr003_target05_s0_r0/config.json"
+    },
+    {
+      "run": "dense_lr003_target20_s0_r0",
+      "model_seed": 0,
+      "replicate": 0,
+      "data_seed": 2810001,
+      "noise_seed": 2910001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr003_target20_s0_r0/config.json"
+    },
+    {
+      "run": "diagonal_lr03_truth_s0_r0",
+      "model_seed": 0,
+      "replicate": 0,
+      "data_seed": 2810001,
+      "noise_seed": 2910001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/diagonal_lr03_truth_s0_r0/config.json"
+    },
+    {
+      "run": "diagonal_lr03_teacher_s0_r0",
+      "model_seed": 0,
+      "replicate": 0,
+      "data_seed": 2810001,
+      "noise_seed": 2910001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/diagonal_lr03_teacher_s0_r0/config.json"
+    },
+    {
+      "run": "dense_lr03_truth_s0_r1",
+      "model_seed": 0,
+      "replicate": 1,
+      "data_seed": 2810101,
+      "noise_seed": 2910101,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_truth_s0_r1/config.json"
+    },
+    {
+      "run": "dense_lr03_target05_s0_r1",
+      "model_seed": 0,
+      "replicate": 1,
+      "data_seed": 2810101,
+      "noise_seed": 2910101,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_target05_s0_r1/config.json"
+    },
+    {
+      "run": "dense_lr03_target20_s0_r1",
+      "model_seed": 0,
+      "replicate": 1,
+      "data_seed": 2810101,
+      "noise_seed": 2910101,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_target20_s0_r1/config.json"
+    },
+    {
+      "run": "dense_lr03_prefix_inconsistent20_s0_r1",
+      "model_seed": 0,
+      "replicate": 1,
+      "data_seed": 2810101,
+      "noise_seed": 2910101,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_prefix_inconsistent20_s0_r1/config.json"
+    },
+    {
+      "run": "dense_lr03_prefix_consistent20_s0_r1",
+      "model_seed": 0,
+      "replicate": 1,
+      "data_seed": 2810101,
+      "noise_seed": 2910101,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_prefix_consistent20_s0_r1/config.json"
+    },
+    {
+      "run": "dense_lr03_teacher_s0_r1",
+      "model_seed": 0,
+      "replicate": 1,
+      "data_seed": 2810101,
+      "noise_seed": 2910101,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_teacher_s0_r1/config.json"
+    },
+    {
+      "run": "row_tied_lr03_truth_s0_r1",
+      "model_seed": 0,
+      "replicate": 1,
+      "data_seed": 2810101,
+      "noise_seed": 2910101,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/row_tied_lr03_truth_s0_r1/config.json"
+    },
+    {
+      "run": "row_tied_lr03_teacher_s0_r1",
+      "model_seed": 0,
+      "replicate": 1,
+      "data_seed": 2810101,
+      "noise_seed": 2910101,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/row_tied_lr03_teacher_s0_r1/config.json"
+    },
+    {
+      "run": "dense_lr03_truth_s0_r2",
+      "model_seed": 0,
+      "replicate": 2,
+      "data_seed": 2810201,
+      "noise_seed": 2910201,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_truth_s0_r2/config.json"
+    },
+    {
+      "run": "dense_lr03_target05_s0_r2",
+      "model_seed": 0,
+      "replicate": 2,
+      "data_seed": 2810201,
+      "noise_seed": 2910201,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_target05_s0_r2/config.json"
+    },
+    {
+      "run": "dense_lr03_target20_s0_r2",
+      "model_seed": 0,
+      "replicate": 2,
+      "data_seed": 2810201,
+      "noise_seed": 2910201,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_target20_s0_r2/config.json"
+    },
+    {
+      "run": "dense_lr03_prefix_inconsistent20_s0_r2",
+      "model_seed": 0,
+      "replicate": 2,
+      "data_seed": 2810201,
+      "noise_seed": 2910201,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_prefix_inconsistent20_s0_r2/config.json"
+    },
+    {
+      "run": "dense_lr03_prefix_consistent20_s0_r2",
+      "model_seed": 0,
+      "replicate": 2,
+      "data_seed": 2810201,
+      "noise_seed": 2910201,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_prefix_consistent20_s0_r2/config.json"
+    },
+    {
+      "run": "dense_lr03_teacher_s0_r2",
+      "model_seed": 0,
+      "replicate": 2,
+      "data_seed": 2810201,
+      "noise_seed": 2910201,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_teacher_s0_r2/config.json"
+    },
+    {
+      "run": "row_tied_lr03_truth_s0_r2",
+      "model_seed": 0,
+      "replicate": 2,
+      "data_seed": 2810201,
+      "noise_seed": 2910201,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/row_tied_lr03_truth_s0_r2/config.json"
+    },
+    {
+      "run": "row_tied_lr03_teacher_s0_r2",
+      "model_seed": 0,
+      "replicate": 2,
+      "data_seed": 2810201,
+      "noise_seed": 2910201,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/row_tied_lr03_teacher_s0_r2/config.json"
+    },
+    {
+      "run": "dense_lr03_truth_s1_r0",
+      "model_seed": 1,
+      "replicate": 0,
+      "data_seed": 2820001,
+      "noise_seed": 2920001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_truth_s1_r0/config.json"
+    },
+    {
+      "run": "dense_lr03_target05_s1_r0",
+      "model_seed": 1,
+      "replicate": 0,
+      "data_seed": 2820001,
+      "noise_seed": 2920001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_target05_s1_r0/config.json"
+    },
+    {
+      "run": "dense_lr03_target20_s1_r0",
+      "model_seed": 1,
+      "replicate": 0,
+      "data_seed": 2820001,
+      "noise_seed": 2920001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_target20_s1_r0/config.json"
+    },
+    {
+      "run": "dense_lr03_prefix_inconsistent20_s1_r0",
+      "model_seed": 1,
+      "replicate": 0,
+      "data_seed": 2820001,
+      "noise_seed": 2920001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_prefix_inconsistent20_s1_r0/config.json"
+    },
+    {
+      "run": "dense_lr03_prefix_consistent20_s1_r0",
+      "model_seed": 1,
+      "replicate": 0,
+      "data_seed": 2820001,
+      "noise_seed": 2920001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_prefix_consistent20_s1_r0/config.json"
+    },
+    {
+      "run": "dense_lr03_teacher_s1_r0",
+      "model_seed": 1,
+      "replicate": 0,
+      "data_seed": 2820001,
+      "noise_seed": 2920001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_teacher_s1_r0/config.json"
+    },
+    {
+      "run": "row_tied_lr03_truth_s1_r0",
+      "model_seed": 1,
+      "replicate": 0,
+      "data_seed": 2820001,
+      "noise_seed": 2920001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/row_tied_lr03_truth_s1_r0/config.json"
+    },
+    {
+      "run": "row_tied_lr03_teacher_s1_r0",
+      "model_seed": 1,
+      "replicate": 0,
+      "data_seed": 2820001,
+      "noise_seed": 2920001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/row_tied_lr03_teacher_s1_r0/config.json"
+    },
+    {
+      "run": "dense_lr003_truth_s1_r0",
+      "model_seed": 1,
+      "replicate": 0,
+      "data_seed": 2820001,
+      "noise_seed": 2920001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr003_truth_s1_r0/config.json"
+    },
+    {
+      "run": "dense_lr003_target05_s1_r0",
+      "model_seed": 1,
+      "replicate": 0,
+      "data_seed": 2820001,
+      "noise_seed": 2920001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr003_target05_s1_r0/config.json"
+    },
+    {
+      "run": "dense_lr003_target20_s1_r0",
+      "model_seed": 1,
+      "replicate": 0,
+      "data_seed": 2820001,
+      "noise_seed": 2920001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr003_target20_s1_r0/config.json"
+    },
+    {
+      "run": "diagonal_lr03_truth_s1_r0",
+      "model_seed": 1,
+      "replicate": 0,
+      "data_seed": 2820001,
+      "noise_seed": 2920001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/diagonal_lr03_truth_s1_r0/config.json"
+    },
+    {
+      "run": "diagonal_lr03_teacher_s1_r0",
+      "model_seed": 1,
+      "replicate": 0,
+      "data_seed": 2820001,
+      "noise_seed": 2920001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/diagonal_lr03_teacher_s1_r0/config.json"
+    },
+    {
+      "run": "dense_lr03_truth_s1_r1",
+      "model_seed": 1,
+      "replicate": 1,
+      "data_seed": 2820101,
+      "noise_seed": 2920101,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_truth_s1_r1/config.json"
+    },
+    {
+      "run": "dense_lr03_target05_s1_r1",
+      "model_seed": 1,
+      "replicate": 1,
+      "data_seed": 2820101,
+      "noise_seed": 2920101,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_target05_s1_r1/config.json"
+    },
+    {
+      "run": "dense_lr03_target20_s1_r1",
+      "model_seed": 1,
+      "replicate": 1,
+      "data_seed": 2820101,
+      "noise_seed": 2920101,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_target20_s1_r1/config.json"
+    },
+    {
+      "run": "dense_lr03_prefix_inconsistent20_s1_r1",
+      "model_seed": 1,
+      "replicate": 1,
+      "data_seed": 2820101,
+      "noise_seed": 2920101,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_prefix_inconsistent20_s1_r1/config.json"
+    },
+    {
+      "run": "dense_lr03_prefix_consistent20_s1_r1",
+      "model_seed": 1,
+      "replicate": 1,
+      "data_seed": 2820101,
+      "noise_seed": 2920101,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_prefix_consistent20_s1_r1/config.json"
+    },
+    {
+      "run": "dense_lr03_teacher_s1_r1",
+      "model_seed": 1,
+      "replicate": 1,
+      "data_seed": 2820101,
+      "noise_seed": 2920101,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_teacher_s1_r1/config.json"
+    },
+    {
+      "run": "row_tied_lr03_truth_s1_r1",
+      "model_seed": 1,
+      "replicate": 1,
+      "data_seed": 2820101,
+      "noise_seed": 2920101,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/row_tied_lr03_truth_s1_r1/config.json"
+    },
+    {
+      "run": "row_tied_lr03_teacher_s1_r1",
+      "model_seed": 1,
+      "replicate": 1,
+      "data_seed": 2820101,
+      "noise_seed": 2920101,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/row_tied_lr03_teacher_s1_r1/config.json"
+    },
+    {
+      "run": "dense_lr03_truth_s1_r2",
+      "model_seed": 1,
+      "replicate": 2,
+      "data_seed": 2820201,
+      "noise_seed": 2920201,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_truth_s1_r2/config.json"
+    },
+    {
+      "run": "dense_lr03_target05_s1_r2",
+      "model_seed": 1,
+      "replicate": 2,
+      "data_seed": 2820201,
+      "noise_seed": 2920201,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_target05_s1_r2/config.json"
+    },
+    {
+      "run": "dense_lr03_target20_s1_r2",
+      "model_seed": 1,
+      "replicate": 2,
+      "data_seed": 2820201,
+      "noise_seed": 2920201,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_target20_s1_r2/config.json"
+    },
+    {
+      "run": "dense_lr03_prefix_inconsistent20_s1_r2",
+      "model_seed": 1,
+      "replicate": 2,
+      "data_seed": 2820201,
+      "noise_seed": 2920201,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_prefix_inconsistent20_s1_r2/config.json"
+    },
+    {
+      "run": "dense_lr03_prefix_consistent20_s1_r2",
+      "model_seed": 1,
+      "replicate": 2,
+      "data_seed": 2820201,
+      "noise_seed": 2920201,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_prefix_consistent20_s1_r2/config.json"
+    },
+    {
+      "run": "dense_lr03_teacher_s1_r2",
+      "model_seed": 1,
+      "replicate": 2,
+      "data_seed": 2820201,
+      "noise_seed": 2920201,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_teacher_s1_r2/config.json"
+    },
+    {
+      "run": "row_tied_lr03_truth_s1_r2",
+      "model_seed": 1,
+      "replicate": 2,
+      "data_seed": 2820201,
+      "noise_seed": 2920201,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/row_tied_lr03_truth_s1_r2/config.json"
+    },
+    {
+      "run": "row_tied_lr03_teacher_s1_r2",
+      "model_seed": 1,
+      "replicate": 2,
+      "data_seed": 2820201,
+      "noise_seed": 2920201,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/row_tied_lr03_teacher_s1_r2/config.json"
+    },
+    {
+      "run": "dense_lr03_truth_s2_r0",
+      "model_seed": 2,
+      "replicate": 0,
+      "data_seed": 2830001,
+      "noise_seed": 2930001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_truth_s2_r0/config.json"
+    },
+    {
+      "run": "dense_lr03_target05_s2_r0",
+      "model_seed": 2,
+      "replicate": 0,
+      "data_seed": 2830001,
+      "noise_seed": 2930001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_target05_s2_r0/config.json"
+    },
+    {
+      "run": "dense_lr03_target20_s2_r0",
+      "model_seed": 2,
+      "replicate": 0,
+      "data_seed": 2830001,
+      "noise_seed": 2930001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_target20_s2_r0/config.json"
+    },
+    {
+      "run": "dense_lr03_prefix_inconsistent20_s2_r0",
+      "model_seed": 2,
+      "replicate": 0,
+      "data_seed": 2830001,
+      "noise_seed": 2930001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_prefix_inconsistent20_s2_r0/config.json"
+    },
+    {
+      "run": "dense_lr03_prefix_consistent20_s2_r0",
+      "model_seed": 2,
+      "replicate": 0,
+      "data_seed": 2830001,
+      "noise_seed": 2930001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_prefix_consistent20_s2_r0/config.json"
+    },
+    {
+      "run": "dense_lr03_teacher_s2_r0",
+      "model_seed": 2,
+      "replicate": 0,
+      "data_seed": 2830001,
+      "noise_seed": 2930001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_teacher_s2_r0/config.json"
+    },
+    {
+      "run": "row_tied_lr03_truth_s2_r0",
+      "model_seed": 2,
+      "replicate": 0,
+      "data_seed": 2830001,
+      "noise_seed": 2930001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/row_tied_lr03_truth_s2_r0/config.json"
+    },
+    {
+      "run": "row_tied_lr03_teacher_s2_r0",
+      "model_seed": 2,
+      "replicate": 0,
+      "data_seed": 2830001,
+      "noise_seed": 2930001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/row_tied_lr03_teacher_s2_r0/config.json"
+    },
+    {
+      "run": "dense_lr003_truth_s2_r0",
+      "model_seed": 2,
+      "replicate": 0,
+      "data_seed": 2830001,
+      "noise_seed": 2930001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr003_truth_s2_r0/config.json"
+    },
+    {
+      "run": "dense_lr003_target05_s2_r0",
+      "model_seed": 2,
+      "replicate": 0,
+      "data_seed": 2830001,
+      "noise_seed": 2930001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr003_target05_s2_r0/config.json"
+    },
+    {
+      "run": "dense_lr003_target20_s2_r0",
+      "model_seed": 2,
+      "replicate": 0,
+      "data_seed": 2830001,
+      "noise_seed": 2930001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr003_target20_s2_r0/config.json"
+    },
+    {
+      "run": "diagonal_lr03_truth_s2_r0",
+      "model_seed": 2,
+      "replicate": 0,
+      "data_seed": 2830001,
+      "noise_seed": 2930001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/diagonal_lr03_truth_s2_r0/config.json"
+    },
+    {
+      "run": "diagonal_lr03_teacher_s2_r0",
+      "model_seed": 2,
+      "replicate": 0,
+      "data_seed": 2830001,
+      "noise_seed": 2930001,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/diagonal_lr03_teacher_s2_r0/config.json"
+    },
+    {
+      "run": "dense_lr03_truth_s2_r1",
+      "model_seed": 2,
+      "replicate": 1,
+      "data_seed": 2830101,
+      "noise_seed": 2930101,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_truth_s2_r1/config.json"
+    },
+    {
+      "run": "dense_lr03_target05_s2_r1",
+      "model_seed": 2,
+      "replicate": 1,
+      "data_seed": 2830101,
+      "noise_seed": 2930101,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_target05_s2_r1/config.json"
+    },
+    {
+      "run": "dense_lr03_target20_s2_r1",
+      "model_seed": 2,
+      "replicate": 1,
+      "data_seed": 2830101,
+      "noise_seed": 2930101,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_target20_s2_r1/config.json"
+    },
+    {
+      "run": "dense_lr03_prefix_inconsistent20_s2_r1",
+      "model_seed": 2,
+      "replicate": 1,
+      "data_seed": 2830101,
+      "noise_seed": 2930101,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_prefix_inconsistent20_s2_r1/config.json"
+    },
+    {
+      "run": "dense_lr03_prefix_consistent20_s2_r1",
+      "model_seed": 2,
+      "replicate": 1,
+      "data_seed": 2830101,
+      "noise_seed": 2930101,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_prefix_consistent20_s2_r1/config.json"
+    },
+    {
+      "run": "dense_lr03_teacher_s2_r1",
+      "model_seed": 2,
+      "replicate": 1,
+      "data_seed": 2830101,
+      "noise_seed": 2930101,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_teacher_s2_r1/config.json"
+    },
+    {
+      "run": "row_tied_lr03_truth_s2_r1",
+      "model_seed": 2,
+      "replicate": 1,
+      "data_seed": 2830101,
+      "noise_seed": 2930101,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/row_tied_lr03_truth_s2_r1/config.json"
+    },
+    {
+      "run": "row_tied_lr03_teacher_s2_r1",
+      "model_seed": 2,
+      "replicate": 1,
+      "data_seed": 2830101,
+      "noise_seed": 2930101,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/row_tied_lr03_teacher_s2_r1/config.json"
+    },
+    {
+      "run": "dense_lr03_truth_s2_r2",
+      "model_seed": 2,
+      "replicate": 2,
+      "data_seed": 2830201,
+      "noise_seed": 2930201,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_truth_s2_r2/config.json"
+    },
+    {
+      "run": "dense_lr03_target05_s2_r2",
+      "model_seed": 2,
+      "replicate": 2,
+      "data_seed": 2830201,
+      "noise_seed": 2930201,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_target05_s2_r2/config.json"
+    },
+    {
+      "run": "dense_lr03_target20_s2_r2",
+      "model_seed": 2,
+      "replicate": 2,
+      "data_seed": 2830201,
+      "noise_seed": 2930201,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_target20_s2_r2/config.json"
+    },
+    {
+      "run": "dense_lr03_prefix_inconsistent20_s2_r2",
+      "model_seed": 2,
+      "replicate": 2,
+      "data_seed": 2830201,
+      "noise_seed": 2930201,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_prefix_inconsistent20_s2_r2/config.json"
+    },
+    {
+      "run": "dense_lr03_prefix_consistent20_s2_r2",
+      "model_seed": 2,
+      "replicate": 2,
+      "data_seed": 2830201,
+      "noise_seed": 2930201,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_prefix_consistent20_s2_r2/config.json"
+    },
+    {
+      "run": "dense_lr03_teacher_s2_r2",
+      "model_seed": 2,
+      "replicate": 2,
+      "data_seed": 2830201,
+      "noise_seed": 2930201,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/dense_lr03_teacher_s2_r2/config.json"
+    },
+    {
+      "run": "row_tied_lr03_truth_s2_r2",
+      "model_seed": 2,
+      "replicate": 2,
+      "data_seed": 2830201,
+      "noise_seed": 2930201,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/row_tied_lr03_truth_s2_r2/config.json"
+    },
+    {
+      "run": "row_tied_lr03_teacher_s2_r2",
+      "model_seed": 2,
+      "replicate": 2,
+      "data_seed": 2830201,
+      "noise_seed": 2930201,
+      "config": "/root/shared-nvme/cot-length-generalization/runs/routing-round2-2026-11-09/row_tied_lr03_teacher_s2_r2/config.json"
+    }
+  ]
+}

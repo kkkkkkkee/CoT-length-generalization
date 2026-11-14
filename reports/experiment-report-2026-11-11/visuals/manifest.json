@@ -1,0 +1,2145 @@
+{
+  "source_report_sha256": "be60aad8f7671ac61e5906d5d9f41f30af70a8ba702b96e8e2ac2a4e80c9b2b4",
+  "input_sha256": {
+    "reports/experiment-report-2026-11-11/实验总报告-数值详版.md": "be60aad8f7671ac61e5906d5d9f41f30af70a8ba702b96e8e2ac2a4e80c9b2b4",
+    "reports/experiment-report-2026-11-11/evaluations.csv": "8d601357af3dd0529806d3925e69f1e3314b902907fd13c54fc9f245c7e40355",
+    "runs/attention-inference-2026-11-10/per-model.csv": "5d4d72ad3f1b1565c2ad7d8dffbea8b037c0bd6d264ef671ee2498a2d7e8280b",
+    "reports/experiment-report-2026-11-11/visualize_report.py": "779fa976baaaeb0c4dc6af6df1273e01d8dd79c3e776ce91a046654db5907a5c"
+  },
+  "figures": [
+    {
+      "file": "visuals/01-models.png",
+      "pdf": "visuals/01-models.pdf",
+      "title": "两类模型与原文的对应关系",
+      "caption": "结构图用于说明架构与训练流程；完整维度和配置见[附表 02](数值附录.md#表-02)。",
+      "table_indices": [
+        1
+      ],
+      "data": null,
+      "data_precision": "Tables use audited rounded percentages; raw CSV panels retain original fractions.",
+      "source_tables": [
+        {
+          "index": 1,
+          "context": "2.2 两类模型不能直接混合比较",
+          "header": [
+            "项目",
+            "初始端到端复现",
+            "后续稀疏路由模型"
+          ],
+          "rows": [
+            [
+              "变量数",
+              "256",
+              "128"
+            ],
+            [
+              "架构",
+              "单层、双头 decoder",
+              "单头、两个变量匹配 Q 块"
+            ],
+            [
+              "embedding",
+              "可训练，共享 token embedding，64 维；五槽拼接 320 维",
+              "固定正交 one-hot"
+            ],
+            [
+              "FFN",
+              "GELU，宽 1,280",
+              "普通共享 GELU MLP，宽 512"
+            ],
+            [
+              "残差 / LayerNorm",
+              "有，pre-LN",
+              "无"
+            ],
+            [
+              "V/O 投影",
+              "常规注意力实现",
+              "无可训练 V/O 投影"
+            ],
+            [
+              "学习方式",
+              "全模型联合训练",
+              "先训练局部 FFN，再冻结 FFN 学路由"
+            ],
+            [
+              "主要任务",
+              "C6/C5/S5/aliasC5",
+              "S5"
+            ],
+            [
+              "主要长度",
+              "L5→L160",
+              "L1/L2/L4→L64"
+            ]
+          ]
+        }
+      ],
+      "png_sha256": "17ceb7242ce18e95d2da59f9a0cad9805bbc017acdf85c20d2ed9215443f6c61",
+      "pdf_sha256": "b27f8ed0858b7d7e76bbc18ec6dda729089c26eaaf4fc1d484c8c186a34121ba"
+    },
+    {
+      "file": "visuals/02-routing.png",
+      "pdf": "visuals/02-routing.pdf",
+      "title": "路由约束究竟约束了什么？",
+      "caption": "示意矩阵，不是训练得到的 Q；三个面板使用相同色阶。hard 同一行的非对角项同色，不同行可以有不同参数。dense / soft / hard 的两块 Q 参数数分别为 32,768 / 32,768 / 512；diagonal 为 256。rename 改变变量曝光，Q-L2 惩罚全部 Q 元素。完整定义见[附表 03](数值附录.md#表-03)。",
+      "table_indices": [
+        2
+      ],
+      "data": null,
+      "data_precision": "Tables use audited rounded percentages; raw CSV panels retain original fractions.",
+      "source_tables": [
+        {
+          "index": 2,
+          "context": "2.3 dense、软约束、hard row_tied 到底是什么",
+          "header": [
+            "名称",
+            "定义",
+            "两块 Q 的参数数",
+            "作用与限制"
+          ],
+          "rows": [
+            [
+              "dense",
+              "每个 \\(Q_{ij}\\) 独立可训练",
+              "32,768",
+              "可学变量相等，也可记忆具体 ID 配对"
+            ],
+            [
+              "soft row tying",
+              "保留 dense 参数，在损失中惩罚每行非对角差异",
+              "32,768",
+              "压制不匹配 ID 的偶然偏好，但不强制完全相同"
+            ],
+            [
+              "hard row_tied",
+              "\\(Q_{ii}=d_i\\)，\\(Q_{ij}=b_i\\;(j\\ne i)\\)",
+              "512",
+              "同一 query 的所有不匹配 key 共用背景参数"
+            ],
+            [
+              "diagonal",
+              "非对角恒为零，只训练对角",
+              "256",
+              "去掉错误配对自由度，也去掉可学习背景"
+            ],
+            [
+              "rename",
+              "每次呈现一致重命名一题中的变量 ID",
+              "不变",
+              "保留逻辑关系，改变 ID 组合曝光"
+            ],
+            [
+              "Q-L2",
+              "惩罚全部 Q 元素的平方均值",
+              "不变",
+              "同时压低错误关联和正确匹配分数"
+            ]
+          ]
+        }
+      ],
+      "png_sha256": "c019a49582769cd18f7be9535b1e8133839220b933f9d804d1f15fd65be8abe9",
+      "pdf_sha256": "05fab1fbfe3d99794de0a136ab7882ab0984d25d4b9e92ee8a2b1e7d811d68bf"
+    },
+    {
+      "file": "visuals/03-roadmap.png",
+      "pdf": "visuals/03-roadmap.pdf",
+      "title": "实验路线：从复现到机制干预",
+      "caption": "各框是研究问题的推进关系，面积不代表任务量。训练阶段、评测任务和 smoke 不属于同一统计单位；v2/v3 重合条件不能算独立复制。完整完成清单见[附表 05](数值附录.md#表-05)。",
+      "table_indices": [
+        4
+      ],
+      "data": null,
+      "data_precision": "Tables use audited rounded percentages; raw CSV panels retain original fractions.",
+      "source_tables": [
+        {
+          "index": 4,
+          "context": "3. 实验清单与完成状态",
+          "header": [
+            "系列",
+            "已保存的完成规模",
+            "核心问题"
+          ],
+          "rows": [
+            [
+              "端到端基线与自训练",
+              "12 个基线 + 9 个自训练阶段；12 个上下文面板和动力学分析",
+              "复现、代数结构、温度、上下文、训练时间尺度"
+            ],
+            [
+              "稀疏监督第一轮",
+              "81 个正式训练任务；18 个模型的机制诊断",
+              "第二步/随机/全步骤监督，局部一致性"
+            ],
+            [
+              "路由第二轮",
+              "87 个主任务 + 78 个递归/控制任务 + 3 个探索 LR 任务",
+              "独立数据重复、结构投影、错误记忆"
+            ],
+            [
+              "大规模 A/B",
+              "502/502：12 smoke + 5 新局部模型 + 5 warmup + 192 A + 288 B",
+              "八种子复制、噪声与优化"
+            ],
+            [
+              "收敛条件面板",
+              "72 正式 + 6 smoke",
+              "软约束、重命名、Q-L2"
+            ],
+            [
+              "pair 覆盖对照",
+              "32 正式 + 4 smoke",
+              "均匀与平衡变量配对曝光"
+            ],
+            [
+              "Phase C",
+              "220/220：12 smoke + 16 warmup + 192 课程阶段",
+              "八种子自教师/真值/持续 L2"
+            ],
+            [
+              "Phase D",
+              "32 正式 + 4 smoke",
+              "2,000 步结构约束比较"
+            ],
+            [
+              "位置偏置 v1",
+              "48 个保存的完成运行，另 1 个 smoke",
+              "旧 FFN 上加入位置项，数据重复未独立"
+            ],
+            [
+              "位置偏置 v2",
+              "48 个保存的完成运行",
+              "独立 data/noise seeds"
+            ],
+            [
+              "位置偏置 v3",
+              "64 个保存的完成运行",
+              "增加 relative；与 v2 同条件结果重合"
+            ],
+            [
+              "位置感知 FFN 预训练",
+              "80/80：16 local + 64 routing",
+              "统一位置参数训练策略后的正式比较"
+            ],
+            [
+              "注意力因果干预",
+              "28 checkpoint × 3 长度 × 50 条件",
+              "oracle 集中、比例、泄漏及精确等幅随机对照"
+            ],
+            [
+              "无 oracle 推理干预",
+              "28 模型验证 + 28 模型测试，56/56 任务",
+              "短链选参数后，在新长链面板测试恢复"
+            ]
+          ]
+        }
+      ],
+      "png_sha256": "daf404d3c6ed08d1c0afc0ba534369dbb942b61f4316358c65e0b715c7b82a9d",
+      "pdf_sha256": "4aecce994d75de4707a38c99bc7b3436062ffdf65a8d8cf71c4cdac0f13338e5"
+    },
+    {
+      "file": "visuals/04-temperature.png",
+      "pdf": "visuals/04-temperature.pdf",
+      "title": "更尖的注意力并非总是更好",
+      "caption": "L160，3 seeds 的均值。α=2 后继续增大至 4，多个任务退化；这是测试面板上的探索性扫描。",
+      "table_indices": [
+        5
+      ],
+      "data": null,
+      "data_precision": "Tables use audited rounded percentages; raw CSV panels retain original fractions.",
+      "source_tables": [
+        {
+          "index": 5,
+          "context": "4.2 L160 温度干预",
+          "header": [
+            "任务",
+            "α=0.5",
+            "α=1",
+            "α=2",
+            "α=4"
+          ],
+          "rows": [
+            [
+              "C6",
+              "0.00",
+              "9.90",
+              "93.82",
+              "33.17"
+            ],
+            [
+              "S5",
+              "0.00",
+              "0.00",
+              "7.19",
+              "0.88"
+            ],
+            [
+              "C5",
+              "0.00",
+              "0.00",
+              "55.11",
+              "0.20"
+            ],
+            [
+              "aliasC5",
+              "0.00",
+              "2.34",
+              "98.99",
+              "61.59"
+            ]
+          ]
+        }
+      ],
+      "png_sha256": "8e02a7740e847b6015f6502169bb5ba42cfa4f007872fc0d3bb064ef82db2c5c",
+      "pdf_sha256": "434ce72826a12213d05dd2af384ad65ef9c5c5dbfb4cebfbf5c5d2076507f1e7"
+    },
+    {
+      "file": "visuals/05-context.png",
+      "pdf": "visuals/05-context.pdf",
+      "title": "推理深度不变，上下文增加也会导致失败",
+      "caption": "L5 固定，α=1，随机干扰；显示报告中的 0/20/160 三个条件。干扰包含重复离路径变量，属于明确的 OOD。",
+      "table_indices": [
+        6
+      ],
+      "data": null,
+      "data_precision": "Tables use audited rounded percentages; raw CSV panels retain original fractions.",
+      "source_tables": [
+        {
+          "index": 6,
+          "context": "4.3 固定推理深度、增加无关上下文",
+          "header": [
+            "任务",
+            "无干扰",
+            "+20 条",
+            "+160 条"
+          ],
+          "rows": [
+            [
+              "C6",
+              "100.00",
+              "94.21",
+              "15.69"
+            ],
+            [
+              "S5",
+              "99.15",
+              "92.97",
+              "24.80"
+            ],
+            [
+              "C5",
+              "100.00",
+              "94.34",
+              "16.47"
+            ],
+            [
+              "aliasC5",
+              "100.00",
+              "97.07",
+              "25.98"
+            ]
+          ]
+        }
+      ],
+      "png_sha256": "45821963b2847cae63821a16212cda234df235bb7cccb4647460445bac041d36",
+      "pdf_sha256": "11f104fdb1ac17d1b85c8a21e37fa6908b4eb003b1b6109d035b9626c86e8593"
+    },
+    {
+      "file": "visuals/06-training.png",
+      "pdf": "visuals/06-training.pdf",
+      "title": "短链习得、继续训练与长链泛化具有不同时间尺度",
+      "caption": "左图区分完整整链与最终 value，三种子均值；早期自训练尚无等预算短链控制。右图 L5/L40 各 256 题，跨 checkpoint 使用相同题目。",
+      "table_indices": [
+        7,
+        8
+      ],
+      "data": null,
+      "data_precision": "Tables use audited rounded percentages; raw CSV panels retain original fractions.",
+      "source_tables": [
+        {
+          "index": 7,
+          "context": "4.4 端到端 S5 递归自训练",
+          "header": [
+            "阶段",
+            "L40 完整整链",
+            "L160 完整整链",
+            "L160 greedy 最终 value"
+          ],
+          "rows": [
+            [
+              "L5 基线",
+              "53.68",
+              "0.00",
+              "19.34"
+            ],
+            [
+              "自训练至 L10",
+              "74.74",
+              "0.10",
+              "20.51"
+            ],
+            [
+              "至 L20",
+              "85.64",
+              "4.92",
+              "22.33"
+            ],
+            [
+              "至 L40",
+              "89.03",
+              "23.86",
+              "36.98"
+            ]
+          ]
+        },
+        {
+          "index": 8,
+          "context": "4.5 固定面板训练动力学",
+          "header": [
+            "epoch",
+            "L5 完整整链",
+            "L40 完整整链"
+          ],
+          "rows": [
+            [
+              "50",
+              "98.57",
+              "22.79"
+            ],
+            [
+              "100",
+              "98.96",
+              "34.64"
+            ],
+            [
+              "200",
+              "98.96",
+              "45.70"
+            ],
+            [
+              "300",
+              "99.22",
+              "53.91"
+            ]
+          ]
+        }
+      ],
+      "png_sha256": "429104c95ac3bdab06edae267f5ac44cff1a0d5f34b4f273fa7ffb3a467b5ca3",
+      "pdf_sha256": "f800388d603aed41c200410435fb2db81ed1d677147941fac3c84918e0c2fe90"
+    },
+    {
+      "file": "visuals/07-supervision.png",
+      "pdf": "visuals/07-supervision.pdf",
+      "title": "全步骤监督的优势取决于比较预算",
+      "caption": "L8，3 seeds；三组柱分别表示三个独立预算协议。等标签条件下 all 的优势基本消失。",
+      "table_indices": [
+        9
+      ],
+      "data": null,
+      "data_precision": "Tables use audited rounded percentages; raw CSV panels retain original fractions.",
+      "source_tables": [
+        {
+          "index": 9,
+          "context": "5.2 监督稀疏性与标签预算",
+          "header": [
+            "数据与标签",
+            "second",
+            "random",
+            "all"
+          ],
+          "rows": [
+            [
+              "4,096 题，真值",
+              "53.45",
+              "47.33",
+              "68.88"
+            ],
+            [
+              "4,096 题，教师",
+              "42.71",
+              "34.02",
+              "46.00"
+            ],
+            [
+              "等 value 标签预算，真值",
+              "53.45",
+              "47.33",
+              "52.54"
+            ],
+            [
+              "等 value 标签预算，教师",
+              "42.71",
+              "34.02",
+              "41.54"
+            ],
+            [
+              "512 题，真值",
+              "57.00",
+              "47.95",
+              "48.63"
+            ],
+            [
+              "512 题，教师",
+              "50.68",
+              "41.63",
+              "41.99"
+            ]
+          ]
+        }
+      ],
+      "png_sha256": "8ae7d8700225b9025d8de3e713f6adec18322d0805f225d29e25e9fe5433849e",
+      "pdf_sha256": "1ea3429c375d363e46c92341a5805907739ed81cb423f05812b8c4c8510c7cac"
+    },
+    {
+      "file": "visuals/08-noise.png",
+      "pdf": "visuals/08-noise.pdf",
+      "title": "局部一致性比全局“错误标签率”更能解释退化",
+      "caption": "L8，固定 second 监督。局部一致组对实际输入没有错误转移标签，因此不能解释为可承受 40% 任意标签噪声。",
+      "table_indices": [
+        10
+      ],
+      "data": null,
+      "data_precision": "Tables use audited rounded percentages; raw CSV panels retain original fractions.",
+      "source_tables": [
+        {
+          "index": 10,
+          "context": "5.3 三种污染的定义与结果",
+          "header": [
+            "请求污染率",
+            "target",
+            "prefix_inconsistent",
+            "prefix_consistent"
+          ],
+          "rows": [
+            [
+              "0%",
+              "53.45",
+              "53.45",
+              "53.45"
+            ],
+            [
+              "5%",
+              "17.19",
+              "16.28",
+              "52.77"
+            ],
+            [
+              "20%",
+              "0.59",
+              "0.29",
+              "53.61"
+            ],
+            [
+              "40%",
+              "0.03",
+              "0.00",
+              "52.73"
+            ]
+          ]
+        }
+      ],
+      "png_sha256": "24f6d4bdca1634edf131089783075b2ac1a65ca277b1104dc612a3e69ecc403f",
+      "pdf_sha256": "5cb4caa0631a81306b8c7a62e2510987bab5ba8b1b7a3119b658332e5b4cfe30"
+    },
+    {
+      "file": "visuals/09-early-probe.png",
+      "pdf": "visuals/09-early-probe.pdf",
+      "title": "早期探针：污染模型同时受集中程度与比例限制",
+      "caption": "L8 完整整链，18 个模型中的主要条件组；使用 oracle 正确规则位置。旧随机对照有幅度截断，不用于特异性归因。",
+      "table_indices": [
+        11
+      ],
+      "data": null,
+      "data_precision": "Tables use audited rounded percentages; raw CSV panels retain original fractions.",
+      "source_tables": [
+        {
+          "index": 11,
+          "context": "5.4 第一轮注意力与 Q 投影诊断",
+          "header": [
+            "模型，L8",
+            "原始",
+            "只平衡 r=.5",
+            "只集中 m=.99",
+            "同时调整",
+            "Q 非对角行均值替换"
+          ],
+          "rows": [
+            [
+              "干净 second",
+              "52.28",
+              "52.15",
+              "99.93",
+              "99.93",
+              "99.93"
+            ],
+            [
+              "教师 second",
+              "41.21",
+              "41.28",
+              "99.93",
+              "99.93",
+              "99.93"
+            ],
+            [
+              "20% target",
+              "0.59",
+              "0.59",
+              "87.57",
+              "99.93",
+              "61.39"
+            ],
+            [
+              "20% 前缀不一致",
+              "0.52",
+              "0.85",
+              "88.15",
+              "99.93",
+              "62.76"
+            ],
+            [
+              "20% 前缀一致",
+              "51.69",
+              "51.43",
+              "99.93",
+              "99.93",
+              "99.93"
+            ]
+          ]
+        }
+      ],
+      "png_sha256": "721e030da144c07d48386299985415964bfc30555b489f1bfa968d4cd3952346",
+      "pdf_sha256": "76dc8e2cafbf439c95b5f5edb89d2d96fbf3fb2950d557cb40c75b0a3f95f13b"
+    },
+    {
+      "file": "visuals/10-replication.png",
+      "pdf": "visuals/10-replication.pdf",
+      "title": "从已学路由继续训练时，较低学习率改善外推",
+      "caption": "左图 3 FFN seeds × 3 数据 repeats；右图只用每 seed 的 repeat 0。相同更新次数不代表相同优化进程。",
+      "table_indices": [
+        12,
+        13
+      ],
+      "data": null,
+      "data_precision": "Tables use audited rounded percentages; raw CSV panels retain original fractions.",
+      "source_tables": [
+        {
+          "index": 12,
+          "context": "6.1 独立数据重复与学习率",
+          "header": [
+            "dense，lr=.03",
+            "L8 完整整链"
+          ],
+          "rows": [
+            [
+              "干净真值",
+              "51.84"
+            ],
+            [
+              "5% target",
+              "14.76"
+            ],
+            [
+              "20% target",
+              "0.61"
+            ],
+            [
+              "20% 前缀不一致",
+              "0.47"
+            ],
+            [
+              "20% 前缀一致",
+              "51.09"
+            ],
+            [
+              "真实教师",
+              "42.43"
+            ]
+          ]
+        },
+        {
+          "index": 13,
+          "context": "6.1 独立数据重复与学习率",
+          "header": [
+            "标签",
+            "lr=.03",
+            "lr=.003"
+          ],
+          "rows": [
+            [
+              "干净",
+              "52.18",
+              "88.09"
+            ],
+            [
+              "5% target",
+              "15.14",
+              "73.73"
+            ],
+            [
+              "20% target",
+              "0.55",
+              "46.68"
+            ]
+          ]
+        }
+      ],
+      "png_sha256": "2d43b37fea464ecaaf275b9e68051a457fc19942c5f839a9d16ae5efcb1eebc4",
+      "pdf_sha256": "cef12a2896b15ea7f29cecac00d962cd68149946ea523c942ea8272200698541"
+    },
+    {
+      "file": "visuals/11-memorization.png",
+      "pdf": "visuals/11-memorization.pdf",
+      "title": "拟合污染目标时，正确规则检索也遭到破坏",
+      "caption": "L4 第二步诊断，20% target 污染，1,000 步；三种子均值。第一行越高意味着错误标签记忆越强，并非模型更好。",
+      "table_indices": [
+        14
+      ],
+      "data": null,
+      "data_precision": "Tables use audited rounded percentages; raw CSV panels retain original fractions.",
+      "source_tables": [
+        {
+          "index": 14,
+          "context": "6.2 污染记忆的训练过程",
+          "header": [
+            "1,000 步，20% target",
+            "lr=.03",
+            "lr=.003"
+          ],
+          "rows": [
+            [
+              "污染样本错误目标拟合率",
+              "66.77",
+              "1.73"
+            ],
+            [
+              "污染样本正确规则 strict top-1",
+              "38.22",
+              "98.41"
+            ],
+            [
+              "独立验证正确 y2",
+              "82.21",
+              "97.80"
+            ]
+          ]
+        }
+      ],
+      "png_sha256": "3573c74aa8174af58c833c489bb7ba1ee261551f67bcc695f4c3bbb7fcb39044",
+      "pdf_sha256": "c0566346e0205d4446ffede0d5a4a580691d460c85b9a80878b5bf72094515a7"
+    },
+    {
+      "file": "visuals/12-projection.png",
+      "pdf": "visuals/12-projection.pdf",
+      "title": "结构转换的即时收益与继续训练收益分开看",
+      "caption": "每段线从转换后连接到训练后；dense/row_tied 为 3×3 重复，diagonal 仅每 seed 的 repeat 0。",
+      "table_indices": [
+        15
+      ],
+      "data": null,
+      "data_precision": "Tables use audited rounded percentages; raw CSV panels retain original fractions.",
+      "source_tables": [
+        {
+          "index": 15,
+          "context": "6.3 结构转换的即时收益与继续训练收益",
+          "header": [
+            "路由 / 标签",
+            "L8 转换后→训练后",
+            "L16 转换后→训练后"
+          ],
+          "rows": [
+            [
+              "dense / truth",
+              "49.97→51.84",
+              "2.31→3.85"
+            ],
+            [
+              "dense / teacher",
+              "49.97→42.43",
+              "2.31→1.52"
+            ],
+            [
+              "row_tied / truth",
+              "76.46→100.00",
+              "11.56→99.98"
+            ],
+            [
+              "row_tied / teacher",
+              "76.46→97.83",
+              "11.56→75.07"
+            ],
+            [
+              "diagonal / truth",
+              "65.40→100.00",
+              "6.67→99.90"
+            ],
+            [
+              "diagonal / teacher",
+              "65.40→98.01",
+              "6.67→75.81"
+            ]
+          ]
+        }
+      ],
+      "png_sha256": "ec37c7a82020166c659d22bf55ecd7dbd08e64f84690d05ef4056c76cc53145f",
+      "pdf_sha256": "d21d19480bf10b793a65dd40f4706fffb5f7e428881371e59da8f57c1fa2dd8e"
+    },
+    {
+      "file": "visuals/13-recursive.png",
+      "pdf": "visuals/13-recursive.pdf",
+      "title": "早期三种子：持续短题也能达到相同 L64 终点",
+      "caption": "各组柱对应不同训练方案。三种子均值，终点比较匹配更新与 value 标签呈现，不匹配 FLOPs。",
+      "table_indices": [
+        16
+      ],
+      "data": null,
+      "data_precision": "Tables use audited rounded percentages; raw CSV panels retain original fractions.",
+      "source_tables": [
+        {
+          "index": 16,
+          "context": "6.4 三种子的递归与短题控制",
+          "header": [
+            "路由，最终 L64",
+            "L2 warm",
+            "自教师至 L32",
+            "真值至 L32",
+            "持续 L2"
+          ],
+          "rows": [
+            [
+              "dense",
+              "0.00",
+              "0.00",
+              "0.36",
+              "0.00"
+            ],
+            [
+              "row_tied",
+              "2.18",
+              "99.80",
+              "99.80",
+              "99.80"
+            ]
+          ]
+        }
+      ],
+      "png_sha256": "2f97b0fb1da8af4c9ec67ce446995cb77bd7591327fc89cd4ddb32a10632e270",
+      "pdf_sha256": "57eedfd731119c64851e9f4844687e57321bb5d8bdccdda1ccfde3ff5e6736d8"
+    },
+    {
+      "file": "visuals/14-phase-a.png",
+      "pdf": "visuals/14-phase-a.pdf",
+      "title": "Phase A：结构约束改善中等长度，但 L64 仍不稳定",
+      "caption": "8 FFN seeds × 3 数据 repeats；学生从 Q=0 开始。各格为完整整链百分比，不能把 24 配对当成 24 个独立 FFN。",
+      "table_indices": [
+        17
+      ],
+      "data": null,
+      "data_precision": "Tables use audited rounded percentages; raw CSV panels retain original fractions.",
+      "source_tables": [
+        {
+          "index": 17,
+          "context": "7.2 Phase A：结构与标签来源，192 组",
+          "header": [
+            "路由",
+            "标签",
+            "L8",
+            "L16",
+            "L64"
+          ],
+          "rows": [
+            [
+              "dense",
+              "truth 干净",
+              "77.29",
+              "14.78",
+              "0.00"
+            ],
+            [
+              "dense",
+              "teacher",
+              "62.35",
+              "6.25",
+              "0.00"
+            ],
+            [
+              "dense",
+              "target 20%",
+              "0.58",
+              "0.00",
+              "0.00"
+            ],
+            [
+              "dense",
+              "前缀不一致 20%",
+              "0.66",
+              "0.00",
+              "0.00"
+            ],
+            [
+              "row_tied",
+              "truth 干净",
+              "99.98",
+              "99.80",
+              "16.05"
+            ],
+            [
+              "row_tied",
+              "teacher",
+              "96.49",
+              "69.87",
+              "1.45"
+            ],
+            [
+              "row_tied",
+              "target 20%",
+              "37.78",
+              "1.78",
+              "0.00"
+            ],
+            [
+              "row_tied",
+              "前缀不一致 20%",
+              "37.25",
+              "1.57",
+              "0.00"
+            ]
+          ]
+        }
+      ],
+      "png_sha256": "5a613e498125c8a8bd993edf94348afa39a7e15124470616d7f6d5d4ecfca6c2",
+      "pdf_sha256": "ee0598c978adf412423fae3b8e3eeb2a2758be5823ea8cc0c37d3d3c48b12b5f"
+    },
+    {
+      "file": "visuals/15-phase-a-ci.png",
+      "pdf": "visuals/15-phase-a-ci.pdf",
+      "title": "Phase A：结构约束的配对收益",
+      "caption": "点为平均差值，误差线为 95% 分层 bootstrap 区间；先抽 FFN seeds，再抽 seed 内数据 repeats。",
+      "table_indices": [
+        18
+      ],
+      "data": null,
+      "data_precision": "Tables use audited rounded percentages; raw CSV panels retain original fractions.",
+      "source_tables": [
+        {
+          "index": 18,
+          "context": "7.2 Phase A：结构与标签来源，192 组",
+          "header": [
+            "标签",
+            "L8 配对提升（百分点）",
+            "95% bootstrap 区间"
+          ],
+          "rows": [
+            [
+              "truth 干净",
+              "+22.68",
+              "+16.54～+29.07"
+            ],
+            [
+              "teacher",
+              "+34.14",
+              "+27.46～+41.21"
+            ],
+            [
+              "target 20%",
+              "+37.20",
+              "+26.51～+48.91"
+            ],
+            [
+              "前缀不一致 20%",
+              "+36.58",
+              "+27.02～+47.23"
+            ]
+          ]
+        }
+      ],
+      "png_sha256": "3a4e9d4f8be2b04573794298e2c031e0b24176dc2ca67edbf34fa052484fd4f6",
+      "pdf_sha256": "5aebafbe1ac8d6f73da6aec3ae6769351e5de5c270449e59727bf77fad15535f"
+    },
+    {
+      "file": "visuals/16-phase-b.png",
+      "pdf": "visuals/16-phase-b.pdf",
+      "title": "Phase B：从 Q=0 开始，低学习率在固定预算下训练不足",
+      "caption": "L8，8 seeds，1,000 更新。图中为 target 剂量曲线；前缀一致/不一致对照和 L16/L64 全部数字保留在附录。",
+      "table_indices": [
+        19
+      ],
+      "data": null,
+      "data_precision": "Tables use audited rounded percentages; raw CSV panels retain original fractions.",
+      "source_tables": [
+        {
+          "index": 19,
+          "context": "7.3 Phase B：学习率与噪声，288 组",
+          "header": [
+            "路由",
+            "lr",
+            "干净 L8",
+            "target 5% L8",
+            "target 20% L8",
+            "target 40% L8",
+            "不一致 20% L8",
+            "一致 20% L8"
+          ],
+          "rows": [
+            [
+              "dense",
+              ".003",
+              "2.10",
+              "1.60",
+              ".46",
+              ".01",
+              ".44",
+              "2.14"
+            ],
+            [
+              "dense",
+              ".01",
+              "46.88",
+              "19.38",
+              ".56",
+              ".00",
+              ".46",
+              "46.85"
+            ],
+            [
+              "dense",
+              ".03",
+              "77.11",
+              "26.70",
+              ".67",
+              ".00",
+              ".81",
+              "77.17"
+            ],
+            [
+              "row_tied",
+              ".003",
+              "33.64",
+              "25.62",
+              "8.35",
+              ".78",
+              "8.25",
+              "33.65"
+            ],
+            [
+              "row_tied",
+              ".01",
+              "99.27",
+              "88.72",
+              "34.38",
+              "3.74",
+              "33.29",
+              "99.33"
+            ],
+            [
+              "row_tied",
+              ".03",
+              "99.99",
+              "92.63",
+              "38.84",
+              "4.85",
+              "37.59",
+              "99.99"
+            ]
+          ]
+        }
+      ],
+      "png_sha256": "c754206d468b6933ceec10f632cef822bdebda998553ac3b09653186b394034f",
+      "pdf_sha256": "5e7d98c3bfce5c2e8ce9f717b7297762f216ef2c7418997e62d854e154f5cb8c"
+    },
+    {
+      "file": "visuals/17-regularization.png",
+      "pdf": "visuals/17-regularization.pdf",
+      "title": "软约束与重命名可改善 L16，但 1,000 步仍不足以稳定 L64",
+      "caption": "4 FFN seeds × 2 数据 repeats；两图使用相同 0–100% 横轴。hard row_tied 的 L64 成功主要集中于少数 seed。",
+      "table_indices": [
+        20
+      ],
+      "data": null,
+      "data_precision": "Tables use audited rounded percentages; raw CSV panels retain original fractions.",
+      "source_tables": [
+        {
+          "index": 20,
+          "context": "8.2 正则与数据增强结果",
+          "header": [
+            "处理",
+            "TF L8",
+            "TF L16",
+            "TF L64",
+            "greedy L64"
+          ],
+          "rows": [
+            [
+              "dense",
+              "79.59",
+              "16.91",
+              "0.00",
+              "0.00"
+            ],
+            [
+              "soft λ=.001",
+              "83.98",
+              "33.28",
+              "0.00",
+              "0.00"
+            ],
+            [
+              "soft λ=.01",
+              "93.04",
+              "55.19",
+              "0.00",
+              "0.00"
+            ],
+            [
+              "soft λ=.1",
+              "99.84",
+              "96.08",
+              ".02",
+              ".10"
+            ],
+            [
+              "soft λ=1",
+              "99.98",
+              "98.67",
+              "1.56",
+              "1.37"
+            ],
+            [
+              "hard row_tied",
+              "99.98",
+              "99.85",
+              "19.53",
+              "19.63"
+            ],
+            [
+              "rename",
+              "99.98",
+              "98.96",
+              ".83",
+              ".29"
+            ],
+            [
+              "rename + soft .01",
+              "99.98",
+              "99.11",
+              "1.05",
+              ".59"
+            ],
+            [
+              "Q-L2 .01",
+              "88.99",
+              "24.62",
+              "0.00",
+              "0.00"
+            ]
+          ]
+        }
+      ],
+      "png_sha256": "1bec92b92bfdcf5e468f88f34959f0d381f38a605679f11219d13b25fbe7d245",
+      "pdf_sha256": "d81723efb4a366a18ec9d7f560058e48535dbcb0b13303222156dbb5b9307757"
+    },
+    {
+      "file": "visuals/18-q-geometry.png",
+      "pdf": "visuals/18-q-geometry.pdf",
+      "title": "压低行内残差与建立匹配分数差是不同要求",
+      "caption": "4 seeds 内先平均 repeats，再跨 seeds 平均；各处理是离散协议。平均分数差不等于最差竞争规则 margin。",
+      "table_indices": [
+        21
+      ],
+      "data": null,
+      "data_precision": "Tables use audited rounded percentages; raw CSV panels retain original fractions.",
+      "source_tables": [
+        {
+          "index": 21,
+          "context": "8.3 参数与覆盖分析",
+          "header": [
+            "处理",
+            "Q43/Q44 非对角残差 RMS",
+            "Q43/Q44 对角减行背景"
+          ],
+          "rows": [
+            [
+              "dense",
+              ".702 / .399",
+              "3.702 / 3.451"
+            ],
+            [
+              "soft .01",
+              ".506 / .268",
+              "4.053 / 3.897"
+            ],
+            [
+              "soft .1",
+              ".170 / .109",
+              "4.245 / 4.049"
+            ],
+            [
+              "soft 1",
+              ".0117 / .0093",
+              "4.396 / 4.211"
+            ],
+            [
+              "row_tied",
+              "0 / 0",
+              "5.090 / 4.551"
+            ],
+            [
+              "rename",
+              ".313 / .406",
+              "4.423 / 4.274"
+            ],
+            [
+              "Q-L2 .01",
+              ".607 / .348",
+              "3.674 / 3.438"
+            ]
+          ]
+        }
+      ],
+      "png_sha256": "a65cf0b0d7ddce16549447c2f43262c2be30129bd6af269d8a90f796b58927ca",
+      "pdf_sha256": "9cb7d8ab7ae76b7afb6f65c49c850584654a60ff2cee24e2bf02999874ee7e8a"
+    },
+    {
+      "file": "visuals/19-coverage.png",
+      "pdf": "visuals/19-coverage.pdf",
+      "title": "平衡配对曝光没有救回 dense",
+      "caption": "4 seeds × 2 repeats；配对曝光方案改变变量链分布，不表示全部非匹配变量对都被覆盖。",
+      "table_indices": [
+        22
+      ],
+      "data": null,
+      "data_precision": "Tables use audited rounded percentages; raw CSV panels retain original fractions.",
+      "source_tables": [
+        {
+          "index": 22,
+          "context": "9.2 结果与分析",
+          "header": [
+            "训练分布 / 路由",
+            "L8",
+            "L16",
+            "L64",
+            "greedy L64"
+          ],
+          "rows": [
+            [
+              "uniform / dense",
+              "79.50",
+              "16.82",
+              "0.00",
+              "0.00"
+            ],
+            [
+              "balanced / dense",
+              "67.20",
+              "8.20",
+              "0.00",
+              "0.00"
+            ],
+            [
+              "uniform / row_tied",
+              "99.98",
+              "99.78",
+              "19.38",
+              "20.21"
+            ],
+            [
+              "balanced / row_tied",
+              "99.98",
+              "99.80",
+              "19.75",
+              "20.12"
+            ]
+          ]
+        }
+      ],
+      "png_sha256": "88ceefb5b834dfca13217b482fac1d2bef6bc058617921cc328896464b5d91b8",
+      "pdf_sha256": "5e755c0e58263517085acc756bc50c4658ea30e6a4f56602a4fe33ab9205da86"
+    },
+    {
+      "file": "visuals/20-phase-c.png",
+      "pdf": "visuals/20-phase-c.pdf",
+      "title": "Phase C：长链成功不要求训练长度不断增长",
+      "caption": "纵轴始终为独立 L64 测试成绩；8 seeds，原始 CSV 重算。课程分支依次训练 L4/8/16/32，持续 L2 分支每阶段始终训练 L2。终点只取阶段 4，不平均中间阶段。",
+      "table_indices": [
+        23
+      ],
+      "data": null,
+      "data_precision": "Tables use audited rounded percentages; raw CSV panels retain original fractions.",
+      "source_tables": [
+        {
+          "index": 23,
+          "context": "10.2 最终结果",
+          "header": [
+            "路由 / 分支",
+            "L8",
+            "L16",
+            "L64",
+            "greedy L64"
+          ],
+          "rows": [
+            [
+              "dense / 自教师",
+              "2.20",
+              "0.00",
+              "0.00",
+              "0.00"
+            ],
+            [
+              "dense / 真值课程",
+              "92.32",
+              "70.15",
+              ".32",
+              ".39"
+            ],
+            [
+              "dense / 持续 L2",
+              "51.70",
+              "5.14",
+              "0.00",
+              "0.00"
+            ],
+            [
+              "row_tied / 自教师",
+              "100.00",
+              "99.88",
+              "99.78",
+              "99.61"
+            ],
+            [
+              "row_tied / 真值课程",
+              "100.00",
+              "99.90",
+              "99.73",
+              "99.41"
+            ],
+            [
+              "row_tied / 持续 L2",
+              "100.00",
+              "99.89",
+              "99.84",
+              "99.51"
+            ]
+          ]
+        }
+      ],
+      "png_sha256": "cb7caa8ca9502dee72a44896956a5794f951c3dd7243ab743d7ba991c513ee01",
+      "pdf_sha256": "ceab35915629b4afd0552b87d21853dacc3c5f6233ee6247c8dc86ec83a78bc6"
+    },
+    {
+      "file": "visuals/21-phase-d.png",
+      "pdf": "visuals/21-phase-d.pdf",
+      "title": "Phase D：硬约束的收益体现在长链与跨种子稳定性",
+      "caption": "4 seeds × 2 repeats，2,000 更新。右图每个点先平均该 seed 的两个数据 repeats；点是独立 FFN seed，不是置信区间。数据从原始 CSV 重算。",
+      "table_indices": [
+        24,
+        25
+      ],
+      "data": [
+        {
+          "condition": "dense",
+          "lengths": [
+            4,
+            8,
+            16,
+            32,
+            64
+          ],
+          "means": [
+            93.017578125,
+            67.6025390625,
+            14.2333984375,
+            0.01220703125,
+            0.0
+          ],
+          "L64_seed_means": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "condition": "soft_0.1",
+          "lengths": [
+            4,
+            8,
+            16,
+            32,
+            64
+          ],
+          "means": [
+            99.98779296875,
+            99.89013671875,
+            99.27978515625,
+            94.6533203125,
+            19.73876953125
+          ],
+          "L64_seed_means": [
+            0.48828125,
+            5.859375,
+            47.314453125,
+            25.29296875
+          ]
+        },
+        {
+          "condition": "soft_1",
+          "lengths": [
+            4,
+            8,
+            16,
+            32,
+            64
+          ],
+          "means": [
+            100.0,
+            99.9755859375,
+            99.90234375,
+            99.03564453125,
+            44.189453125
+          ],
+          "L64_seed_means": [
+            10.44921875,
+            19.677734375,
+            93.1640625,
+            53.466796875
+          ]
+        },
+        {
+          "condition": "row_tied",
+          "lengths": [
+            4,
+            8,
+            16,
+            32,
+            64
+          ],
+          "means": [
+            100.0,
+            99.9755859375,
+            99.9267578125,
+            99.8046875,
+            93.115234375
+          ],
+          "L64_seed_means": [
+            89.697265625,
+            88.525390625,
+            98.193359375,
+            96.044921875
+          ]
+        }
+      ],
+      "data_precision": "Tables use audited rounded percentages; raw CSV panels retain original fractions.",
+      "source_tables": [
+        {
+          "index": 24,
+          "context": "11.2 完整整链结果",
+          "header": [
+            "处理",
+            "TF L8",
+            "TF L16",
+            "TF L64",
+            "greedy L64"
+          ],
+          "rows": [
+            [
+              "dense",
+              "67.60",
+              "14.23",
+              "0.00",
+              "0.00"
+            ],
+            [
+              "soft .1",
+              "99.89",
+              "99.28",
+              "19.74",
+              "20.90"
+            ],
+            [
+              "soft 1",
+              "99.98",
+              "99.90",
+              "44.19",
+              "43.75"
+            ],
+            [
+              "row_tied",
+              "99.98",
+              "99.93",
+              "93.12",
+              "92.77"
+            ]
+          ]
+        },
+        {
+          "index": 25,
+          "context": "11.2 完整整链结果",
+          "header": [
+            "处理，TF L64",
+            "seed 0",
+            "seed 1",
+            "seed 2",
+            "seed 3"
+          ],
+          "rows": [
+            [
+              "dense",
+              "0.00",
+              "0.00",
+              "0.00",
+              "0.00"
+            ],
+            [
+              "soft .1",
+              ".49",
+              "5.86",
+              "47.31",
+              "25.29"
+            ],
+            [
+              "soft 1",
+              "10.45",
+              "19.68",
+              "93.16",
+              "53.47"
+            ],
+            [
+              "row_tied",
+              "89.70",
+              "88.53",
+              "98.19",
+              "96.04"
+            ]
+          ]
+        }
+      ],
+      "png_sha256": "91b5b09b17f47866d0a97c81364caea5a59011883d9d4d851814b24dd485dbeb",
+      "pdf_sha256": "d81e666b011de7d6c855f312f7a3be4fb74db0b7c53d80071e8c8f62006a0672"
+    },
+    {
+      "file": "visuals/22-position-history.png",
+      "pdf": "visuals/22-position-history.pdf",
+      "title": "旧 FFN 的位置实验：固定正弦并未普遍破坏泛化",
+      "caption": "row_tied，L64 完整整链（%）。v1 数据重复不独立；v2/v3 重合条件不能当作独立复制。各版本 dense 与 row_tied 的可学习位置参数冻结策略不同。",
+      "table_indices": [
+        27
+      ],
+      "data": null,
+      "data_precision": "Tables use audited rounded percentages; raw CSV panels retain original fractions.",
+      "source_tables": [
+        {
+          "index": 27,
+          "context": "12.3 三版结果保留与 v3 完整比较",
+          "header": [
+            "row_tied 模式",
+            "v1 L64",
+            "v2 L64",
+            "v3 L64"
+          ],
+          "rows": [
+            [
+              "none",
+              "92.58",
+              "92.70",
+              "92.70"
+            ],
+            [
+              "learned_abs",
+              "0.00",
+              "0.00",
+              "0.00"
+            ],
+            [
+              "sinusoidal",
+              "99.15",
+              "99.38",
+              "99.38"
+            ],
+            [
+              "relative",
+              "未设置",
+              "未设置",
+              "0.00"
+            ]
+          ]
+        }
+      ],
+      "png_sha256": "4425e8564f55ada6a710fd86d98162d02b549efb707486dd13c81d1745e95344",
+      "pdf_sha256": "093b07ab59a9be1ed09cb501ac39b59a5ba3f2a5ce0e67bf1a302f511b7818eb"
+    },
+    {
+      "file": "visuals/23-position-v3.png",
+      "pdf": "visuals/23-position-v3.pdf",
+      "title": "v3 结果必须连同冻结策略一起解读",
+      "caption": "旧 FFN，4 seeds × 2 repeats。此图保留历史证据，不用于无条件比较两种路由的 PE 效应；当时没有保存规则打乱面板。",
+      "table_indices": [
+        28
+      ],
+      "data": null,
+      "data_precision": "Tables use audited rounded percentages; raw CSV panels retain original fractions.",
+      "source_tables": [
+        {
+          "index": 28,
+          "context": "12.3 三版结果保留与 v3 完整比较",
+          "header": [
+            "模式",
+            "路由",
+            "L4",
+            "L8",
+            "L16",
+            "L64"
+          ],
+          "rows": [
+            [
+              "none",
+              "dense",
+              "92.61",
+              "68.52",
+              "15.56",
+              "0.00"
+            ],
+            [
+              "learned_abs",
+              "dense，位置冻结",
+              "92.61",
+              "68.52",
+              "15.58",
+              "0.00"
+            ],
+            [
+              "sinusoidal",
+              "dense",
+              "93.84",
+              "75.15",
+              "17.14",
+              "0.00"
+            ],
+            [
+              "relative",
+              "dense，位置冻结",
+              "92.50",
+              "67.47",
+              "14.20",
+              "0.00"
+            ],
+            [
+              "none",
+              "row_tied",
+              "100.00",
+              "99.96",
+              "99.85",
+              "92.70"
+            ],
+            [
+              "learned_abs",
+              "row_tied",
+              "21.15",
+              ".10",
+              "0.00",
+              "0.00"
+            ],
+            [
+              "sinusoidal",
+              "row_tied",
+              "100.00",
+              "99.99",
+              "98.74",
+              "99.38"
+            ],
+            [
+              "relative",
+              "row_tied",
+              "100.00",
+              "0.00",
+              "0.00",
+              "0.00"
+            ]
+          ]
+        }
+      ],
+      "png_sha256": "5cad694bc77bfce440f57c2b3ea94c74de3320270449c08565e9bb971de567ff",
+      "pdf_sha256": "6981b1a7c66d08f9e9b707c652b370ad75918ccfa0b93aa22b566159d5ceddff"
+    },
+    {
+      "file": "visuals/24-position-pretrain.png",
+      "pdf": "visuals/24-position-pretrain.pdf",
+      "title": "新 FFN 预训练：位置依赖与无位置基线下降必须分开解释",
+      "caption": "16 local + 64 routing 全部完成。可学习位置项在两种路由中统一训练；每条件 4 seeds × 2 repeats。无位置 L64 也为 0%，不能把全部失败归因于 PE。",
+      "table_indices": [
+        29
+      ],
+      "data": null,
+      "data_precision": "Tables use audited rounded percentages; raw CSV panels retain original fractions.",
+      "source_tables": [
+        {
+          "index": 29,
+          "context": "13.2 结果",
+          "header": [
+            "模式",
+            "路由",
+            "L4 正常",
+            "L4 打乱",
+            "L8 正常",
+            "L16 正常",
+            "L64 正常"
+          ],
+          "rows": [
+            [
+              "none",
+              "dense",
+              "97.71",
+              "97.71",
+              "35.18",
+              ".09",
+              "0.00"
+            ],
+            [
+              "none",
+              "row_tied",
+              "100.00",
+              "100.00",
+              "95.24",
+              "11.18",
+              "0.00"
+            ],
+            [
+              "learned_abs",
+              "dense",
+              "6.15",
+              "1.72",
+              "0.00",
+              "0.00",
+              "0.00"
+            ],
+            [
+              "learned_abs",
+              "row_tied",
+              "14.43",
+              "3.69",
+              ".07",
+              "0.00",
+              "0.00"
+            ],
+            [
+              "sinusoidal",
+              "dense",
+              "98.51",
+              "98.68",
+              "51.21",
+              ".06",
+              "0.00"
+            ],
+            [
+              "sinusoidal",
+              "row_tied",
+              "100.00",
+              "100.00",
+              "99.38",
+              "24.13",
+              "0.00"
+            ],
+            [
+              "relative",
+              "dense",
+              "95.03",
+              "3.96",
+              "0.00",
+              "0.00",
+              "0.00"
+            ],
+            [
+              "relative",
+              "row_tied",
+              "100.00",
+              "4.10",
+              ".59",
+              "0.00",
+              "0.00"
+            ]
+          ]
+        }
+      ],
+      "png_sha256": "37dfbe1441d2a8caf5db6fe14db373b314838fcb68768e18613f330650d7564e",
+      "pdf_sha256": "97ed4534164ce140845ad5711150cc0ba59fef665ee198d1373940a3a60a3a47"
+    },
+    {
+      "file": "visuals/25-mass-balance.png",
+      "pdf": "visuals/25-mass-balance.pdf",
+      "title": "注意力“集中”与“平衡”是两个不同操作",
+      "caption": "数值为操作示意，不是模型测量值。m 为两个正确位置的总质量，r 为其中规则占比。正式实验另含泄漏、二维剂量网格和逐 query 等 L1 随机对照；使用 oracle 位置。完整设计见[附表 31](数值附录.md#表-31)。",
+      "table_indices": [
+        30
+      ],
+      "data": null,
+      "data_precision": "Tables use audited rounded percentages; raw CSV panels retain original fractions.",
+      "source_tables": [
+        {
+          "index": 30,
+          "context": "14.1 研究设计",
+          "header": [
+            "类别",
+            "操作"
+          ],
+          "rows": [
+            [
+              "基线与 sham",
+              "原始权重；重建同一权重"
+            ],
+            [
+              "规则泄漏",
+              "把正确规则 25%/50% 权重转给其他规则"
+            ],
+            [
+              "仅集中",
+              "保持 r，把 m 提到至少 .9/.99/1"
+            ],
+            [
+              "仅平衡",
+              "保持 m，把 r 改为 .25/.5/.75"
+            ],
+            [
+              "联合修复",
+              "m 至少 .99，r=.5"
+            ],
+            [
+              "剂量网格",
+              "m∈{.5,.9,.99,1}×r∈{.25,.5,.75}"
+            ],
+            [
+              "等幅随机",
+              "9 个主干预各 3 个随机方向，逐 query 精确匹配 attention L1 改变量"
+            ]
+          ]
+        }
+      ],
+      "png_sha256": "88b05354dede730de1bcecb0117152b927360dc8f1c2024e9eaab9d013f8f3d0",
+      "pdf_sha256": "96f2b6d40e70133019d8163e69aee0c33d0d07c1869b68d71903d09651c1412f"
+    },
+    {
+      "file": "visuals/26-causal.png",
+      "pdf": "visuals/26-causal.pdf",
+      "title": "相对位置模型：只集中不够，集中与平衡一起恢复",
+      "caption": "L64，7 组 × 4 seeds，repeat 0，256 题。所有预训练组均为 row_tied；此为 oracle 正确位置干预，不能视为无需额外信息的推理算法。",
+      "table_indices": [
+        31
+      ],
+      "data": null,
+      "data_precision": "Tables use audited rounded percentages; raw CSV panels retain original fractions.",
+      "source_tables": [
+        {
+          "index": 31,
+          "context": "14.2 L64 干预结果",
+          "header": [
+            "模型组",
+            "原始",
+            "仅集中 m=1",
+            "仅平衡 r=.5",
+            "集中≥.99且平衡",
+            "泄漏规则 50%"
+          ],
+          "rows": [
+            [
+              "Phase D dense",
+              "0.00",
+              "99.90",
+              "0.00",
+              "99.90",
+              "0.00"
+            ],
+            [
+              "Phase D soft1",
+              "45.80",
+              "99.90",
+              "50.78",
+              "99.90",
+              ".49"
+            ],
+            [
+              "Phase D row_tied",
+              "94.34",
+              "99.90",
+              "96.09",
+              "99.90",
+              "6.64"
+            ],
+            [
+              "预训练 none",
+              "0.00",
+              "100.00",
+              "0.00",
+              "100.00",
+              "0.00"
+            ],
+            [
+              "预训练 learned_abs",
+              "0.00",
+              "100.00",
+              "0.00",
+              "100.00",
+              "0.00"
+            ],
+            [
+              "预训练 sinusoidal",
+              "0.00",
+              "100.00",
+              "0.00",
+              "100.00",
+              "0.00"
+            ],
+            [
+              "预训练 relative",
+              "0.00",
+              "21.48",
+              "0.00",
+              "100.00",
+              "0.00"
+            ]
+          ]
+        }
+      ],
+      "png_sha256": "6244a540f57903cb973f452248c46d5ea60425deb0e957c4219c5d50c841ff1d",
+      "pdf_sha256": "50899f006c81306b3ace2d181df8574c3c1d6e23b2ec3f3dc5f384120d6a99c6"
+    },
+    {
+      "file": "visuals/27-random.png",
+      "pdf": "visuals/27-random.pdf",
+      "title": "等幅随机对照：恢复侧比破坏侧更有区分力",
+      "caption": "L64；随机方向先在模型内平均，再跨 4 seeds。预训练四组在这里数值均相同，合并展示；随机控制只匹配 L1 幅度，不匹配修改位置数。",
+      "table_indices": [
+        32
+      ],
+      "data": null,
+      "data_precision": "Tables use audited rounded percentages; raw CSV panels retain original fractions.",
+      "source_tables": [
+        {
+          "index": 32,
+          "context": "14.3 精确等幅随机对照",
+          "header": [
+            "模型组",
+            "规则泄漏50%",
+            "对应随机",
+            "集中+平衡",
+            "对应随机"
+          ],
+          "rows": [
+            [
+              "Phase D dense",
+              "0.00",
+              "0.00",
+              "99.90",
+              "0.00"
+            ],
+            [
+              "Phase D soft1",
+              ".49",
+              "0.00",
+              "99.90",
+              ".39"
+            ],
+            [
+              "Phase D row_tied",
+              "6.64",
+              "0.00",
+              "99.90",
+              "16.63"
+            ],
+            [
+              "预训练 none/abs/sinusoidal/relative，各组",
+              "0.00",
+              "0.00",
+              "100.00",
+              "0.00"
+            ]
+          ]
+        }
+      ],
+      "png_sha256": "2f3943112b2cd4e7b6b7f8e5304486be88d99c6a3ceb4cf78511ff195ed0b11e",
+      "pdf_sha256": "fad269351792cd472d3af21ec2cc2f15383cdac6b7d519cce7533d9155b3597c"
+    },
+    {
+      "file": "visuals/28-inference.png",
+      "pdf": "visuals/28-inference.pdf",
+      "title": "不提供正确规则位置，也能恢复部分模型的 L64 泛化",
+      "caption": "先在 L4/L8 验证集选 β，全部锁定后才测试 L64。菱形为 4 seeds 均值，小点为各 seed，横线为最小–最大范围，均不是置信区间；数据从逐模型 CSV 重算。",
+      "table_indices": [
+        33
+      ],
+      "data": null,
+      "data_precision": "Tables use audited rounded percentages; raw CSV panels retain original fractions.",
+      "source_tables": [
+        {
+          "index": 33,
+          "context": "15.2 L64 正常顺序结果",
+          "header": [
+            "模型组",
+            "原始 TF",
+            "锐化 TF",
+            "分组 TF",
+            "原始 greedy",
+            "锐化 greedy",
+            "分组 greedy"
+          ],
+          "rows": [
+            [
+              "Phase D dense",
+              "0.00",
+              "0.00",
+              "0.00",
+              "0.00",
+              "0.00",
+              "0.00"
+            ],
+            [
+              "Phase D soft1",
+              "43.95",
+              "99.71",
+              "99.90",
+              "40.62",
+              "100.00",
+              "100.00"
+            ],
+            [
+              "Phase D row_tied",
+              "92.48",
+              "99.71",
+              "99.90",
+              "90.62",
+              "100.00",
+              "100.00"
+            ],
+            [
+              "预训练 none",
+              "0.00",
+              "99.61",
+              "10.74",
+              "0.00",
+              "100.00",
+              "13.28"
+            ],
+            [
+              "预训练 learned_abs",
+              "0.00",
+              "2.83",
+              "81.93",
+              "0.00",
+              "1.56",
+              "80.47"
+            ],
+            [
+              "预训练 sinusoidal",
+              "0.00",
+              "41.60",
+              "54.10",
+              "0.00",
+              "41.41",
+              "53.91"
+            ],
+            [
+              "预训练 relative",
+              "0.00",
+              "0.00",
+              "51.56",
+              "0.00",
+              "0.00",
+              "57.81"
+            ]
+          ]
+        }
+      ],
+      "png_sha256": "c6f03a34bee6f93082628f9945ef15c788569d807dc146cad888a2d272375fc8",
+      "pdf_sha256": "8cafe3a0302ed11e982ab786d53e0707d9817153d61a14f55cb03b24d3f4e39f"
+    },
+    {
+      "file": "visuals/29-order.png",
+      "pdf": "visuals/29-order.pdf",
+      "title": "规则顺序改变后，哪些恢复仍能保留？",
+      "caption": "空心圆为正常顺序，叉号为打乱顺序；同色横线连接同一方法的两种顺序，重合时只显一个符号。四 seed 均值。sinusoidal 的分组恢复从 54.10% 降至 5.57%；选择的 β 见附表。",
+      "table_indices": [
+        34
+      ],
+      "data": null,
+      "data_precision": "Tables use audited rounded percentages; raw CSV panels retain original fractions.",
+      "source_tables": [
+        {
+          "index": 34,
+          "context": "15.3 规则打乱与已选择参数",
+          "header": [
+            "模型组",
+            "锐化 β",
+            "分组 β",
+            "打乱后原始 TF",
+            "打乱后锐化 TF",
+            "打乱后分组 TF"
+          ],
+          "rows": [
+            [
+              "Phase D dense",
+              "4",
+              "8",
+              "0.00",
+              "0.00",
+              "0.00"
+            ],
+            [
+              "Phase D soft1",
+              "2",
+              "1",
+              "43.95",
+              "99.71",
+              "99.90"
+            ],
+            [
+              "Phase D row_tied",
+              "2",
+              "1",
+              "92.48",
+              "99.71",
+              "99.90"
+            ],
+            [
+              "预训练 none",
+              "2",
+              "1",
+              "0.00",
+              "99.61",
+              "10.74"
+            ],
+            [
+              "预训练 learned_abs",
+              "8",
+              "8",
+              "0.00",
+              "3.03",
+              "81.45"
+            ],
+            [
+              "预训练 sinusoidal",
+              "2",
+              "1",
+              "0.00",
+              "0.00",
+              "5.57"
+            ],
+            [
+              "预训练 relative",
+              "2",
+              "8",
+              "0.00",
+              "0.00",
+              "41.31"
+            ]
+          ]
+        }
+      ],
+      "png_sha256": "5a1ee31725ab50072d4bd233297c4252ac480edbce9f75610dba916787ea2ea5",
+      "pdf_sha256": "d9cb184efbb4848e8b6c2b458436404a2176f3e0aea0778664c69fea2c33efc7"
+    },
+    {
+      "file": "visuals/30-mass-ratio-L64.png",
+      "pdf": "visuals/30-mass-ratio-L64.pdf",
+      "title": "L64 注意力质量与规则比例的二维干预网格",
+      "existing_artifact": "runs/attention-causal-2026-11-10/mass-ratio-L64.png",
+      "png_sha256": "6f960932c1bd8ef5b9bb502b837fe1a5244cb3c132472970ddabf969ec372667",
+      "pdf_sha256": "a284581b2352af20ae0eb2f4961ad1be6a0beb32710f146ad645c7907f3b6b39"
+    }
+  ]
+}

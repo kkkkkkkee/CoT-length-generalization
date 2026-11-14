@@ -1,0 +1,2580 @@
+{
+  "schema_version": 1,
+  "campaign": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09",
+  "metric": "teacher_forced.metrics.clause_chain_accuracy",
+  "training_length": 4,
+  "evaluation_length": 8,
+  "samples_per_seed": 1024,
+  "statistics": "means and observed minimum/maximum across seeds 0,1,2; not CI",
+  "cells": [
+    {
+      "panel": "equal_examples",
+      "source": "truth",
+      "mode": "second",
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "mean": 0.5345052083333334,
+      "min": 0.4921875,
+      "max": 0.556640625,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.5546875,
+        0.556640625,
+        0.4921875
+      ],
+      "runs": [
+        "extend_L4_N4096_truth_second_s0",
+        "extend_L4_N4096_truth_second_s1",
+        "extend_L4_N4096_truth_second_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "equal_examples",
+      "source": "truth",
+      "mode": "random",
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "mean": 0.4733072916666667,
+      "min": 0.4169921875,
+      "max": 0.5205078125,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.5205078125,
+        0.482421875,
+        0.4169921875
+      ],
+      "runs": [
+        "extend_L4_N4096_truth_random_s0",
+        "extend_L4_N4096_truth_random_s1",
+        "extend_L4_N4096_truth_random_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "equal_examples",
+      "source": "truth",
+      "mode": "all",
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "mean": 0.6888020833333334,
+      "min": 0.66796875,
+      "max": 0.724609375,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.724609375,
+        0.66796875,
+        0.673828125
+      ],
+      "runs": [
+        "extend_L4_N4096_truth_all_s0",
+        "extend_L4_N4096_truth_all_s1",
+        "extend_L4_N4096_truth_all_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "equal_examples",
+      "source": "teacher",
+      "mode": "second",
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "mean": 0.4270833333333333,
+      "min": 0.3916015625,
+      "max": 0.453125,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.4365234375,
+        0.453125,
+        0.3916015625
+      ],
+      "runs": [
+        "extend_L4_N4096_teacher_second_s0",
+        "extend_L4_N4096_teacher_second_s1",
+        "extend_L4_N4096_teacher_second_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "equal_examples",
+      "source": "teacher",
+      "mode": "random",
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "mean": 0.3401692708333333,
+      "min": 0.33203125,
+      "max": 0.3525390625,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.3359375,
+        0.3525390625,
+        0.33203125
+      ],
+      "runs": [
+        "extend_L4_N4096_teacher_random_s0",
+        "extend_L4_N4096_teacher_random_s1",
+        "extend_L4_N4096_teacher_random_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "equal_examples",
+      "source": "teacher",
+      "mode": "all",
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "mean": 0.4599609375,
+      "min": 0.458984375,
+      "max": 0.4619140625,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.4619140625,
+        0.458984375,
+        0.458984375
+      ],
+      "runs": [
+        "extend_L4_N4096_teacher_all_s0",
+        "extend_L4_N4096_teacher_all_s1",
+        "extend_L4_N4096_teacher_all_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "equal_value_labels",
+      "source": "truth",
+      "mode": "second",
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "mean": 0.5345052083333334,
+      "min": 0.4921875,
+      "max": 0.556640625,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.5546875,
+        0.556640625,
+        0.4921875
+      ],
+      "runs": [
+        "extend_L4_N4096_truth_second_s0",
+        "extend_L4_N4096_truth_second_s1",
+        "extend_L4_N4096_truth_second_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "equal_value_labels",
+      "source": "truth",
+      "mode": "random",
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "mean": 0.4733072916666667,
+      "min": 0.4169921875,
+      "max": 0.5205078125,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.5205078125,
+        0.482421875,
+        0.4169921875
+      ],
+      "runs": [
+        "extend_L4_N4096_truth_random_s0",
+        "extend_L4_N4096_truth_random_s1",
+        "extend_L4_N4096_truth_random_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "equal_value_labels",
+      "source": "truth",
+      "mode": "all",
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "mean": 0.525390625,
+      "min": 0.462890625,
+      "max": 0.59765625,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.59765625,
+        0.515625,
+        0.462890625
+      ],
+      "runs": [
+        "labels_L4_N1024_truth_all_s0",
+        "labels_L4_N1024_truth_all_s1",
+        "labels_L4_N1024_truth_all_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "equal_value_labels",
+      "source": "teacher",
+      "mode": "second",
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "mean": 0.4270833333333333,
+      "min": 0.3916015625,
+      "max": 0.453125,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.4365234375,
+        0.453125,
+        0.3916015625
+      ],
+      "runs": [
+        "extend_L4_N4096_teacher_second_s0",
+        "extend_L4_N4096_teacher_second_s1",
+        "extend_L4_N4096_teacher_second_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "equal_value_labels",
+      "source": "teacher",
+      "mode": "random",
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "mean": 0.3401692708333333,
+      "min": 0.33203125,
+      "max": 0.3525390625,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.3359375,
+        0.3525390625,
+        0.33203125
+      ],
+      "runs": [
+        "extend_L4_N4096_teacher_random_s0",
+        "extend_L4_N4096_teacher_random_s1",
+        "extend_L4_N4096_teacher_random_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "equal_value_labels",
+      "source": "teacher",
+      "mode": "all",
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "mean": 0.4153645833333333,
+      "min": 0.3818359375,
+      "max": 0.4462890625,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.4462890625,
+        0.41796875,
+        0.3818359375
+      ],
+      "runs": [
+        "labels_L4_N1024_teacher_all_s0",
+        "labels_L4_N1024_teacher_all_s1",
+        "labels_L4_N1024_teacher_all_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "noise",
+      "source": "truth",
+      "mode": "second",
+      "noise_kind": "target",
+      "requested_noise_rate": 0,
+      "mean": 0.5345052083333334,
+      "min": 0.4921875,
+      "max": 0.556640625,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.5546875,
+        0.556640625,
+        0.4921875
+      ],
+      "runs": [
+        "extend_L4_N4096_truth_second_s0",
+        "extend_L4_N4096_truth_second_s1",
+        "extend_L4_N4096_truth_second_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "noise",
+      "source": "truth",
+      "mode": "second",
+      "noise_kind": "target",
+      "requested_noise_rate": 0.05,
+      "mean": 0.171875,
+      "min": 0.138671875,
+      "max": 0.201171875,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.138671875,
+        0.17578125,
+        0.201171875
+      ],
+      "runs": [
+        "noise_L4_target_r05_s0",
+        "noise_L4_target_r05_s1",
+        "noise_L4_target_r05_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "noise",
+      "source": "truth",
+      "mode": "second",
+      "noise_kind": "target",
+      "requested_noise_rate": 0.2,
+      "mean": 0.005859375,
+      "min": 0.0048828125,
+      "max": 0.0068359375,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.0048828125,
+        0.005859375,
+        0.0068359375
+      ],
+      "runs": [
+        "noise_L4_target_r20_s0",
+        "noise_L4_target_r20_s1",
+        "noise_L4_target_r20_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "noise",
+      "source": "truth",
+      "mode": "second",
+      "noise_kind": "target",
+      "requested_noise_rate": 0.4,
+      "mean": 0.0003255208333333333,
+      "min": 0.0,
+      "max": 0.0009765625,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.0,
+        0.0,
+        0.0009765625
+      ],
+      "runs": [
+        "noise_L4_target_r40_s0",
+        "noise_L4_target_r40_s1",
+        "noise_L4_target_r40_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "noise",
+      "source": "truth",
+      "mode": "second",
+      "noise_kind": "prefix_inconsistent",
+      "requested_noise_rate": 0,
+      "mean": 0.5345052083333334,
+      "min": 0.4921875,
+      "max": 0.556640625,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.5546875,
+        0.556640625,
+        0.4921875
+      ],
+      "runs": [
+        "extend_L4_N4096_truth_second_s0",
+        "extend_L4_N4096_truth_second_s1",
+        "extend_L4_N4096_truth_second_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "noise",
+      "source": "truth",
+      "mode": "second",
+      "noise_kind": "prefix_inconsistent",
+      "requested_noise_rate": 0.05,
+      "mean": 0.16276041666666666,
+      "min": 0.115234375,
+      "max": 0.2177734375,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.115234375,
+        0.1552734375,
+        0.2177734375
+      ],
+      "runs": [
+        "noise_L4_prefix_inconsistent_r05_s0",
+        "noise_L4_prefix_inconsistent_r05_s1",
+        "noise_L4_prefix_inconsistent_r05_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "noise",
+      "source": "truth",
+      "mode": "second",
+      "noise_kind": "prefix_inconsistent",
+      "requested_noise_rate": 0.2,
+      "mean": 0.0029296875,
+      "min": 0.0009765625,
+      "max": 0.0048828125,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.0009765625,
+        0.0029296875,
+        0.0048828125
+      ],
+      "runs": [
+        "noise_L4_prefix_inconsistent_r20_s0",
+        "noise_L4_prefix_inconsistent_r20_s1",
+        "noise_L4_prefix_inconsistent_r20_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "noise",
+      "source": "truth",
+      "mode": "second",
+      "noise_kind": "prefix_inconsistent",
+      "requested_noise_rate": 0.4,
+      "mean": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "runs": [
+        "noise_L4_prefix_inconsistent_r40_s0",
+        "noise_L4_prefix_inconsistent_r40_s1",
+        "noise_L4_prefix_inconsistent_r40_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "noise",
+      "source": "truth",
+      "mode": "second",
+      "noise_kind": "prefix_consistent",
+      "requested_noise_rate": 0,
+      "mean": 0.5345052083333334,
+      "min": 0.4921875,
+      "max": 0.556640625,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.5546875,
+        0.556640625,
+        0.4921875
+      ],
+      "runs": [
+        "extend_L4_N4096_truth_second_s0",
+        "extend_L4_N4096_truth_second_s1",
+        "extend_L4_N4096_truth_second_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "noise",
+      "source": "truth",
+      "mode": "second",
+      "noise_kind": "prefix_consistent",
+      "requested_noise_rate": 0.05,
+      "mean": 0.5276692708333334,
+      "min": 0.48828125,
+      "max": 0.55078125,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.55078125,
+        0.5439453125,
+        0.48828125
+      ],
+      "runs": [
+        "noise_L4_prefix_consistent_r05_s0",
+        "noise_L4_prefix_consistent_r05_s1",
+        "noise_L4_prefix_consistent_r05_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "noise",
+      "source": "truth",
+      "mode": "second",
+      "noise_kind": "prefix_consistent",
+      "requested_noise_rate": 0.2,
+      "mean": 0.5361328125,
+      "min": 0.4833984375,
+      "max": 0.5634765625,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.5615234375,
+        0.5634765625,
+        0.4833984375
+      ],
+      "runs": [
+        "noise_L4_prefix_consistent_r20_s0",
+        "noise_L4_prefix_consistent_r20_s1",
+        "noise_L4_prefix_consistent_r20_s2"
+      ],
+      "n": 3
+    },
+    {
+      "panel": "noise",
+      "source": "truth",
+      "mode": "second",
+      "noise_kind": "prefix_consistent",
+      "requested_noise_rate": 0.4,
+      "mean": 0.52734375,
+      "min": 0.4677734375,
+      "max": 0.5595703125,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.5595703125,
+        0.5546875,
+        0.4677734375
+      ],
+      "runs": [
+        "noise_L4_prefix_consistent_r40_s0",
+        "noise_L4_prefix_consistent_r40_s1",
+        "noise_L4_prefix_consistent_r40_s2"
+      ],
+      "n": 3
+    }
+  ],
+  "runs": [
+    {
+      "run": "extend_L4_N4096_truth_second_s0",
+      "seed": 0,
+      "mode": "second",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "actual_noise_rate": 0.0,
+      "chain_accuracy": 0.5546875,
+      "rollout_final_accuracy": 0.59375,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/extend_L4_N4096_truth_second_s0/evaluation.json",
+      "evaluation_sha256": "4f31db6abc93a498c4a9c3a1c6bfd3ddcb0657af5118f7ae99687b59a7cbb17c"
+    },
+    {
+      "run": "extend_L4_N4096_truth_second_s1",
+      "seed": 1,
+      "mode": "second",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "actual_noise_rate": 0.0,
+      "chain_accuracy": 0.556640625,
+      "rollout_final_accuracy": 0.65625,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/extend_L4_N4096_truth_second_s1/evaluation.json",
+      "evaluation_sha256": "f177804069c36d3b4aca1054ca43771d51b1bba08378c5436a8c0d77cc942950"
+    },
+    {
+      "run": "extend_L4_N4096_truth_second_s2",
+      "seed": 2,
+      "mode": "second",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "actual_noise_rate": 0.0,
+      "chain_accuracy": 0.4921875,
+      "rollout_final_accuracy": 0.59375,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/extend_L4_N4096_truth_second_s2/evaluation.json",
+      "evaluation_sha256": "3862a28c3da3a57bc10560be761bfa653d7054c196dea3393e1ee2e91e3af0cd"
+    },
+    {
+      "run": "extend_L4_N4096_truth_random_s0",
+      "seed": 0,
+      "mode": "random",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "actual_noise_rate": 0.0,
+      "chain_accuracy": 0.5205078125,
+      "rollout_final_accuracy": 0.5859375,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/extend_L4_N4096_truth_random_s0/evaluation.json",
+      "evaluation_sha256": "596eda08e8da6126d14009e61e551f640e32eaba9d92143d286e38ae89d2992e"
+    },
+    {
+      "run": "extend_L4_N4096_truth_random_s1",
+      "seed": 1,
+      "mode": "random",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "actual_noise_rate": 0.0,
+      "chain_accuracy": 0.482421875,
+      "rollout_final_accuracy": 0.5625,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/extend_L4_N4096_truth_random_s1/evaluation.json",
+      "evaluation_sha256": "2509993cf2a84f60c26cde7bd14537320d37ee399f8a948ae010cf40bfd1bb7b"
+    },
+    {
+      "run": "extend_L4_N4096_truth_random_s2",
+      "seed": 2,
+      "mode": "random",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "actual_noise_rate": 0.0,
+      "chain_accuracy": 0.4169921875,
+      "rollout_final_accuracy": 0.5546875,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/extend_L4_N4096_truth_random_s2/evaluation.json",
+      "evaluation_sha256": "28634f2bc9c0ce581362456319d299a595e82700caa1bace89305cc27e385070"
+    },
+    {
+      "run": "extend_L4_N4096_truth_all_s0",
+      "seed": 0,
+      "mode": "all",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "actual_noise_rate": 0.0,
+      "chain_accuracy": 0.724609375,
+      "rollout_final_accuracy": 0.7265625,
+      "unique_labels": 16384,
+      "labels_presented": 512000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/extend_L4_N4096_truth_all_s0/evaluation.json",
+      "evaluation_sha256": "d6ef27dbcd26214b2a885b73f6c9c818ea041993cd580cd93084091e5b1e8288"
+    },
+    {
+      "run": "extend_L4_N4096_truth_all_s1",
+      "seed": 1,
+      "mode": "all",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "actual_noise_rate": 0.0,
+      "chain_accuracy": 0.66796875,
+      "rollout_final_accuracy": 0.734375,
+      "unique_labels": 16384,
+      "labels_presented": 512000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/extend_L4_N4096_truth_all_s1/evaluation.json",
+      "evaluation_sha256": "cdeb6945add94d8c8c98e5434b457a9eef39ad7928385f63e6b17199ad53ba42"
+    },
+    {
+      "run": "extend_L4_N4096_truth_all_s2",
+      "seed": 2,
+      "mode": "all",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "actual_noise_rate": 0.0,
+      "chain_accuracy": 0.673828125,
+      "rollout_final_accuracy": 0.65625,
+      "unique_labels": 16384,
+      "labels_presented": 512000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/extend_L4_N4096_truth_all_s2/evaluation.json",
+      "evaluation_sha256": "fabbe25bcc729429668fb8ff1c6ba23d715ad0ca2ffa3a43761e00411dade7aa"
+    },
+    {
+      "run": "labels_L4_N1024_truth_all_s0",
+      "seed": 0,
+      "mode": "all",
+      "source": "truth",
+      "samples": 1024,
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "actual_noise_rate": 0.0,
+      "chain_accuracy": 0.59765625,
+      "rollout_final_accuracy": 0.59375,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 32000,
+      "steps": 1000,
+      "budget_label": "matched_to_N4096_single_step_unique_and_presented_value_labels",
+      "batch": 32,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/labels_L4_N1024_truth_all_s0/evaluation.json",
+      "evaluation_sha256": "7e6d2f207536745a1af74e916847a8e5c1c1aa433337bf8b6fcee698dd7859d7"
+    },
+    {
+      "run": "labels_L4_N1024_truth_all_s1",
+      "seed": 1,
+      "mode": "all",
+      "source": "truth",
+      "samples": 1024,
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "actual_noise_rate": 0.0,
+      "chain_accuracy": 0.515625,
+      "rollout_final_accuracy": 0.5546875,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 32000,
+      "steps": 1000,
+      "budget_label": "matched_to_N4096_single_step_unique_and_presented_value_labels",
+      "batch": 32,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/labels_L4_N1024_truth_all_s1/evaluation.json",
+      "evaluation_sha256": "6a41a0b802fde2897392c52a44e0f4c089bae3bb42e1760cbc297c80a52d5817"
+    },
+    {
+      "run": "labels_L4_N1024_truth_all_s2",
+      "seed": 2,
+      "mode": "all",
+      "source": "truth",
+      "samples": 1024,
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "actual_noise_rate": 0.0,
+      "chain_accuracy": 0.462890625,
+      "rollout_final_accuracy": 0.53125,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 32000,
+      "steps": 1000,
+      "budget_label": "matched_to_N4096_single_step_unique_and_presented_value_labels",
+      "batch": 32,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/labels_L4_N1024_truth_all_s2/evaluation.json",
+      "evaluation_sha256": "fea0b125c3238fbb29ff6e74c5b34bd46619fb3eff76763120edf8627be0bce3"
+    },
+    {
+      "run": "extend_L4_N4096_teacher_second_s0",
+      "seed": 0,
+      "mode": "second",
+      "source": "teacher",
+      "samples": 4096,
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "actual_noise_rate": 0.0,
+      "chain_accuracy": 0.4365234375,
+      "rollout_final_accuracy": 0.53125,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/extend_L4_N4096_teacher_second_s0/evaluation.json",
+      "evaluation_sha256": "3a739698607710bab37a2cbdb01a285a58d1ef703b352f94a2c45acf739bab93"
+    },
+    {
+      "run": "extend_L4_N4096_teacher_second_s1",
+      "seed": 1,
+      "mode": "second",
+      "source": "teacher",
+      "samples": 4096,
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "actual_noise_rate": 0.0,
+      "chain_accuracy": 0.453125,
+      "rollout_final_accuracy": 0.5546875,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/extend_L4_N4096_teacher_second_s1/evaluation.json",
+      "evaluation_sha256": "c8d80c4077b3bd0289139f24a7aae9af9c9e585a07de9d73a999ac5c31d02a85"
+    },
+    {
+      "run": "extend_L4_N4096_teacher_second_s2",
+      "seed": 2,
+      "mode": "second",
+      "source": "teacher",
+      "samples": 4096,
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "actual_noise_rate": 0.0,
+      "chain_accuracy": 0.3916015625,
+      "rollout_final_accuracy": 0.4765625,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/extend_L4_N4096_teacher_second_s2/evaluation.json",
+      "evaluation_sha256": "9cb686d3f47e2a8dd03509045bc0b41d24a9d9b12eb31af57f01d341c87a8817"
+    },
+    {
+      "run": "extend_L4_N4096_teacher_random_s0",
+      "seed": 0,
+      "mode": "random",
+      "source": "teacher",
+      "samples": 4096,
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "actual_noise_rate": 0.0,
+      "chain_accuracy": 0.3359375,
+      "rollout_final_accuracy": 0.484375,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/extend_L4_N4096_teacher_random_s0/evaluation.json",
+      "evaluation_sha256": "a28c7fe1344b7c23c6e6b64121517f1af5cc42fdbdeb07e834ab1f31bedf6221"
+    },
+    {
+      "run": "extend_L4_N4096_teacher_random_s1",
+      "seed": 1,
+      "mode": "random",
+      "source": "teacher",
+      "samples": 4096,
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "actual_noise_rate": 0.0,
+      "chain_accuracy": 0.3525390625,
+      "rollout_final_accuracy": 0.46875,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/extend_L4_N4096_teacher_random_s1/evaluation.json",
+      "evaluation_sha256": "9c1ad4d2eb0863e5518d0c4c431f713f855090e07a9ce861eea77d1946b3ef3c"
+    },
+    {
+      "run": "extend_L4_N4096_teacher_random_s2",
+      "seed": 2,
+      "mode": "random",
+      "source": "teacher",
+      "samples": 4096,
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "actual_noise_rate": 0.0,
+      "chain_accuracy": 0.33203125,
+      "rollout_final_accuracy": 0.4453125,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/extend_L4_N4096_teacher_random_s2/evaluation.json",
+      "evaluation_sha256": "f97f94a45756a75668ad04c205e0581a084bd1d3dd14bd6bef99b3063cf55b3c"
+    },
+    {
+      "run": "extend_L4_N4096_teacher_all_s0",
+      "seed": 0,
+      "mode": "all",
+      "source": "teacher",
+      "samples": 4096,
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "actual_noise_rate": 0.0,
+      "chain_accuracy": 0.4619140625,
+      "rollout_final_accuracy": 0.5390625,
+      "unique_labels": 16384,
+      "labels_presented": 512000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/extend_L4_N4096_teacher_all_s0/evaluation.json",
+      "evaluation_sha256": "a040db9399b6514a5008d8ca3dbe128249eec4e3d0ff6746e606dc2ec55d6772"
+    },
+    {
+      "run": "extend_L4_N4096_teacher_all_s1",
+      "seed": 1,
+      "mode": "all",
+      "source": "teacher",
+      "samples": 4096,
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "actual_noise_rate": 0.0,
+      "chain_accuracy": 0.458984375,
+      "rollout_final_accuracy": 0.578125,
+      "unique_labels": 16384,
+      "labels_presented": 512000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/extend_L4_N4096_teacher_all_s1/evaluation.json",
+      "evaluation_sha256": "634bc4ab99188829b56defefbc41e47e63208de013345b36dee22039ee47df41"
+    },
+    {
+      "run": "extend_L4_N4096_teacher_all_s2",
+      "seed": 2,
+      "mode": "all",
+      "source": "teacher",
+      "samples": 4096,
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "actual_noise_rate": 0.0,
+      "chain_accuracy": 0.458984375,
+      "rollout_final_accuracy": 0.5390625,
+      "unique_labels": 16384,
+      "labels_presented": 512000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/extend_L4_N4096_teacher_all_s2/evaluation.json",
+      "evaluation_sha256": "f555dc259fd2757530c21f72ae15e12bba77b7e23fe704dd84f72106c8e9e102"
+    },
+    {
+      "run": "labels_L4_N1024_teacher_all_s0",
+      "seed": 0,
+      "mode": "all",
+      "source": "teacher",
+      "samples": 1024,
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "actual_noise_rate": 0.0,
+      "chain_accuracy": 0.4462890625,
+      "rollout_final_accuracy": 0.5234375,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 32000,
+      "steps": 1000,
+      "budget_label": "matched_to_N4096_single_step_unique_and_presented_value_labels",
+      "batch": 32,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/labels_L4_N1024_teacher_all_s0/evaluation.json",
+      "evaluation_sha256": "21d7080d698312548e30d09b8e155ecfcab99d03df0ae9096f9c74d1df035bab"
+    },
+    {
+      "run": "labels_L4_N1024_teacher_all_s1",
+      "seed": 1,
+      "mode": "all",
+      "source": "teacher",
+      "samples": 1024,
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "actual_noise_rate": 0.0,
+      "chain_accuracy": 0.41796875,
+      "rollout_final_accuracy": 0.546875,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 32000,
+      "steps": 1000,
+      "budget_label": "matched_to_N4096_single_step_unique_and_presented_value_labels",
+      "batch": 32,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/labels_L4_N1024_teacher_all_s1/evaluation.json",
+      "evaluation_sha256": "3d71335eae69c0f3ef9d56aee0c41c52b3f9070e743a7e81d6db91c56f033b6a"
+    },
+    {
+      "run": "labels_L4_N1024_teacher_all_s2",
+      "seed": 2,
+      "mode": "all",
+      "source": "teacher",
+      "samples": 1024,
+      "noise_kind": "none",
+      "requested_noise_rate": 0,
+      "actual_noise_rate": 0.0,
+      "chain_accuracy": 0.3818359375,
+      "rollout_final_accuracy": 0.4453125,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 32000,
+      "steps": 1000,
+      "budget_label": "matched_to_N4096_single_step_unique_and_presented_value_labels",
+      "batch": 32,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/labels_L4_N1024_teacher_all_s2/evaluation.json",
+      "evaluation_sha256": "27254bb8f2a6481087d7883b11ef6bc0759e022662ba775815c84c9d705c053f"
+    },
+    {
+      "run": "noise_L4_target_r05_s0",
+      "seed": 0,
+      "mode": "second",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "target",
+      "requested_noise_rate": 0.05,
+      "actual_noise_rate": 0.04736328125,
+      "chain_accuracy": 0.138671875,
+      "rollout_final_accuracy": 0.3203125,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/noise_L4_target_r05_s0/evaluation.json",
+      "evaluation_sha256": "10544a67f049b38d08bf91294f895b3bbc40ce8ad88f28609bbd10e1d68a05f6"
+    },
+    {
+      "run": "noise_L4_target_r05_s1",
+      "seed": 1,
+      "mode": "second",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "target",
+      "requested_noise_rate": 0.05,
+      "actual_noise_rate": 0.04736328125,
+      "chain_accuracy": 0.17578125,
+      "rollout_final_accuracy": 0.359375,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/noise_L4_target_r05_s1/evaluation.json",
+      "evaluation_sha256": "a64368cb1edd92361799b0cfcd477b023315628c45079038561366ccb6dc0422"
+    },
+    {
+      "run": "noise_L4_target_r05_s2",
+      "seed": 2,
+      "mode": "second",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "target",
+      "requested_noise_rate": 0.05,
+      "actual_noise_rate": 0.04736328125,
+      "chain_accuracy": 0.201171875,
+      "rollout_final_accuracy": 0.3203125,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/noise_L4_target_r05_s2/evaluation.json",
+      "evaluation_sha256": "98702bbab8968886661d52797523deecc0df737ff87b8fc7eff5d103c48ed258"
+    },
+    {
+      "run": "noise_L4_target_r20_s0",
+      "seed": 0,
+      "mode": "second",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "target",
+      "requested_noise_rate": 0.2,
+      "actual_noise_rate": 0.1923828125,
+      "chain_accuracy": 0.0048828125,
+      "rollout_final_accuracy": 0.1953125,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/noise_L4_target_r20_s0/evaluation.json",
+      "evaluation_sha256": "557312a745f35c3d2b6e26e5f9952f86128a5bbd36ea1f5efd373ada3d33e15c"
+    },
+    {
+      "run": "noise_L4_target_r20_s1",
+      "seed": 1,
+      "mode": "second",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "target",
+      "requested_noise_rate": 0.2,
+      "actual_noise_rate": 0.1923828125,
+      "chain_accuracy": 0.005859375,
+      "rollout_final_accuracy": 0.2109375,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/noise_L4_target_r20_s1/evaluation.json",
+      "evaluation_sha256": "9ef3b8e35c16b6b3fb67179127dc6ed841c298ff8df09bdabd9e2f3f1f200a13"
+    },
+    {
+      "run": "noise_L4_target_r20_s2",
+      "seed": 2,
+      "mode": "second",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "target",
+      "requested_noise_rate": 0.2,
+      "actual_noise_rate": 0.1923828125,
+      "chain_accuracy": 0.0068359375,
+      "rollout_final_accuracy": 0.171875,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/noise_L4_target_r20_s2/evaluation.json",
+      "evaluation_sha256": "59372ca307276e7a999069eae0702d2c0ca5c3b6b1889b3928136dbc62cc1dbe"
+    },
+    {
+      "run": "noise_L4_target_r40_s0",
+      "seed": 0,
+      "mode": "second",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "target",
+      "requested_noise_rate": 0.4,
+      "actual_noise_rate": 0.390380859375,
+      "chain_accuracy": 0.0,
+      "rollout_final_accuracy": 0.1640625,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/noise_L4_target_r40_s0/evaluation.json",
+      "evaluation_sha256": "2c48a02369e3f417001927ea472558084dc593e3e00c8510ed42557f277acca5"
+    },
+    {
+      "run": "noise_L4_target_r40_s1",
+      "seed": 1,
+      "mode": "second",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "target",
+      "requested_noise_rate": 0.4,
+      "actual_noise_rate": 0.390380859375,
+      "chain_accuracy": 0.0,
+      "rollout_final_accuracy": 0.21875,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/noise_L4_target_r40_s1/evaluation.json",
+      "evaluation_sha256": "dc8566150d445de58f0ca0467693134df8ac310bad9af4607113d7a430fcb3ef"
+    },
+    {
+      "run": "noise_L4_target_r40_s2",
+      "seed": 2,
+      "mode": "second",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "target",
+      "requested_noise_rate": 0.4,
+      "actual_noise_rate": 0.390380859375,
+      "chain_accuracy": 0.0009765625,
+      "rollout_final_accuracy": 0.140625,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/noise_L4_target_r40_s2/evaluation.json",
+      "evaluation_sha256": "5509045318744408fbd6db5ad2d85e3ff5b7e71f1326ca778c9bb4cdac6adf3b"
+    },
+    {
+      "run": "noise_L4_prefix_inconsistent_r05_s0",
+      "seed": 0,
+      "mode": "second",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "prefix_inconsistent",
+      "requested_noise_rate": 0.05,
+      "actual_noise_rate": 0.04736328125,
+      "chain_accuracy": 0.115234375,
+      "rollout_final_accuracy": 0.2578125,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/noise_L4_prefix_inconsistent_r05_s0/evaluation.json",
+      "evaluation_sha256": "5f653be044721c9f12d3807e4e0839b850b16a9062580cf0304622e700ce8997"
+    },
+    {
+      "run": "noise_L4_prefix_inconsistent_r05_s1",
+      "seed": 1,
+      "mode": "second",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "prefix_inconsistent",
+      "requested_noise_rate": 0.05,
+      "actual_noise_rate": 0.04736328125,
+      "chain_accuracy": 0.1552734375,
+      "rollout_final_accuracy": 0.3671875,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/noise_L4_prefix_inconsistent_r05_s1/evaluation.json",
+      "evaluation_sha256": "1e5e70aee55c29821bf423027b5ee88bd7f0804234b512b17f6bdbca9d403fe5"
+    },
+    {
+      "run": "noise_L4_prefix_inconsistent_r05_s2",
+      "seed": 2,
+      "mode": "second",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "prefix_inconsistent",
+      "requested_noise_rate": 0.05,
+      "actual_noise_rate": 0.04736328125,
+      "chain_accuracy": 0.2177734375,
+      "rollout_final_accuracy": 0.40625,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/noise_L4_prefix_inconsistent_r05_s2/evaluation.json",
+      "evaluation_sha256": "def4e7362c14dd06148a0118f3fe2dec382c7c7d536ac5ff89d14432c515bfc8"
+    },
+    {
+      "run": "noise_L4_prefix_inconsistent_r20_s0",
+      "seed": 0,
+      "mode": "second",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "prefix_inconsistent",
+      "requested_noise_rate": 0.2,
+      "actual_noise_rate": 0.1923828125,
+      "chain_accuracy": 0.0009765625,
+      "rollout_final_accuracy": 0.203125,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/noise_L4_prefix_inconsistent_r20_s0/evaluation.json",
+      "evaluation_sha256": "5ffb3e5a20d92a3d2707bbce17f7a135666e10f8537f8ee491cbd56ab12cda92"
+    },
+    {
+      "run": "noise_L4_prefix_inconsistent_r20_s1",
+      "seed": 1,
+      "mode": "second",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "prefix_inconsistent",
+      "requested_noise_rate": 0.2,
+      "actual_noise_rate": 0.1923828125,
+      "chain_accuracy": 0.0029296875,
+      "rollout_final_accuracy": 0.203125,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/noise_L4_prefix_inconsistent_r20_s1/evaluation.json",
+      "evaluation_sha256": "d2114e072132c36be8010658dcd094abe78b28931dc623812f916fbb2f56b642"
+    },
+    {
+      "run": "noise_L4_prefix_inconsistent_r20_s2",
+      "seed": 2,
+      "mode": "second",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "prefix_inconsistent",
+      "requested_noise_rate": 0.2,
+      "actual_noise_rate": 0.1923828125,
+      "chain_accuracy": 0.0048828125,
+      "rollout_final_accuracy": 0.1953125,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/noise_L4_prefix_inconsistent_r20_s2/evaluation.json",
+      "evaluation_sha256": "6edd2717252c154ee58919b83f23c5866504e734296af0e2e5b357c58bf601cc"
+    },
+    {
+      "run": "noise_L4_prefix_inconsistent_r40_s0",
+      "seed": 0,
+      "mode": "second",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "prefix_inconsistent",
+      "requested_noise_rate": 0.4,
+      "actual_noise_rate": 0.390380859375,
+      "chain_accuracy": 0.0,
+      "rollout_final_accuracy": 0.2265625,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/noise_L4_prefix_inconsistent_r40_s0/evaluation.json",
+      "evaluation_sha256": "cf5f4a38344163f27a8f2a17074c2a2ddbd1876ef7061a41d4f3a5112077f206"
+    },
+    {
+      "run": "noise_L4_prefix_inconsistent_r40_s1",
+      "seed": 1,
+      "mode": "second",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "prefix_inconsistent",
+      "requested_noise_rate": 0.4,
+      "actual_noise_rate": 0.390380859375,
+      "chain_accuracy": 0.0,
+      "rollout_final_accuracy": 0.296875,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/noise_L4_prefix_inconsistent_r40_s1/evaluation.json",
+      "evaluation_sha256": "ae978051ab33f07021e87f08f192fb92b0b80751d28b13566370be7ffc8f568f"
+    },
+    {
+      "run": "noise_L4_prefix_inconsistent_r40_s2",
+      "seed": 2,
+      "mode": "second",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "prefix_inconsistent",
+      "requested_noise_rate": 0.4,
+      "actual_noise_rate": 0.390380859375,
+      "chain_accuracy": 0.0,
+      "rollout_final_accuracy": 0.1875,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/noise_L4_prefix_inconsistent_r40_s2/evaluation.json",
+      "evaluation_sha256": "0c28cc917dae631daf823e6e744e6c5b9e4b0b9c3268a3e49f8616009703bf0d"
+    },
+    {
+      "run": "noise_L4_prefix_consistent_r05_s0",
+      "seed": 0,
+      "mode": "second",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "prefix_consistent",
+      "requested_noise_rate": 0.05,
+      "actual_noise_rate": 0.04736328125,
+      "chain_accuracy": 0.55078125,
+      "rollout_final_accuracy": 0.625,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/noise_L4_prefix_consistent_r05_s0/evaluation.json",
+      "evaluation_sha256": "cbefe3021da17ec35eee652e197b1d8356b186ff01961ea4f82517b113098a17"
+    },
+    {
+      "run": "noise_L4_prefix_consistent_r05_s1",
+      "seed": 1,
+      "mode": "second",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "prefix_consistent",
+      "requested_noise_rate": 0.05,
+      "actual_noise_rate": 0.04736328125,
+      "chain_accuracy": 0.5439453125,
+      "rollout_final_accuracy": 0.625,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/noise_L4_prefix_consistent_r05_s1/evaluation.json",
+      "evaluation_sha256": "1feac16f1d76fe12cf06c2b0b60602d908e12b0a29d5b822130a8e6ef28682fb"
+    },
+    {
+      "run": "noise_L4_prefix_consistent_r05_s2",
+      "seed": 2,
+      "mode": "second",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "prefix_consistent",
+      "requested_noise_rate": 0.05,
+      "actual_noise_rate": 0.04736328125,
+      "chain_accuracy": 0.48828125,
+      "rollout_final_accuracy": 0.5859375,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/noise_L4_prefix_consistent_r05_s2/evaluation.json",
+      "evaluation_sha256": "7466003ee7e06db8acf2cf4fa9dcdbb5c66ca543677932146c9d1be09231fca7"
+    },
+    {
+      "run": "noise_L4_prefix_consistent_r20_s0",
+      "seed": 0,
+      "mode": "second",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "prefix_consistent",
+      "requested_noise_rate": 0.2,
+      "actual_noise_rate": 0.1923828125,
+      "chain_accuracy": 0.5615234375,
+      "rollout_final_accuracy": 0.6015625,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/noise_L4_prefix_consistent_r20_s0/evaluation.json",
+      "evaluation_sha256": "594dc5e873bd89851e860f3d3f9514615e4fd6b2670993658e95aac6c0543652"
+    },
+    {
+      "run": "noise_L4_prefix_consistent_r20_s1",
+      "seed": 1,
+      "mode": "second",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "prefix_consistent",
+      "requested_noise_rate": 0.2,
+      "actual_noise_rate": 0.1923828125,
+      "chain_accuracy": 0.5634765625,
+      "rollout_final_accuracy": 0.6328125,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/noise_L4_prefix_consistent_r20_s1/evaluation.json",
+      "evaluation_sha256": "4dcf995e3c188e8321bc3f9d5f28276a0b13f9a39b23799b8bcb8deafdce421e"
+    },
+    {
+      "run": "noise_L4_prefix_consistent_r20_s2",
+      "seed": 2,
+      "mode": "second",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "prefix_consistent",
+      "requested_noise_rate": 0.2,
+      "actual_noise_rate": 0.1923828125,
+      "chain_accuracy": 0.4833984375,
+      "rollout_final_accuracy": 0.5390625,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/noise_L4_prefix_consistent_r20_s2/evaluation.json",
+      "evaluation_sha256": "cc3fbfbed5a1694181f8f7c25986f308ad1c73fcc74b5cbdb09614a228fb1c78"
+    },
+    {
+      "run": "noise_L4_prefix_consistent_r40_s0",
+      "seed": 0,
+      "mode": "second",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "prefix_consistent",
+      "requested_noise_rate": 0.4,
+      "actual_noise_rate": 0.390380859375,
+      "chain_accuracy": 0.5595703125,
+      "rollout_final_accuracy": 0.6171875,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/noise_L4_prefix_consistent_r40_s0/evaluation.json",
+      "evaluation_sha256": "b6d7fb64a7865f4beee4ce8d0dba56b02aab1bf6805dff7bf1e799603b1b0b20"
+    },
+    {
+      "run": "noise_L4_prefix_consistent_r40_s1",
+      "seed": 1,
+      "mode": "second",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "prefix_consistent",
+      "requested_noise_rate": 0.4,
+      "actual_noise_rate": 0.390380859375,
+      "chain_accuracy": 0.5546875,
+      "rollout_final_accuracy": 0.640625,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/noise_L4_prefix_consistent_r40_s1/evaluation.json",
+      "evaluation_sha256": "c462958930f29f97dfe4dc16096a30dd3a0c27c47c6926cc39f16bf9ad89a4d5"
+    },
+    {
+      "run": "noise_L4_prefix_consistent_r40_s2",
+      "seed": 2,
+      "mode": "second",
+      "source": "truth",
+      "samples": 4096,
+      "noise_kind": "prefix_consistent",
+      "requested_noise_rate": 0.4,
+      "actual_noise_rate": 0.390380859375,
+      "chain_accuracy": 0.4677734375,
+      "rollout_final_accuracy": 0.546875,
+      "unique_labels": 4096,
+      "labels_presented": 128000,
+      "examples_presented": 128000,
+      "steps": 1000,
+      "budget_label": "equal_examples_and_optimizer_steps",
+      "batch": 128,
+      "pool_samples": 16384,
+      "data_seed": 1820005,
+      "panel_sha256": "c3156863c15e0d8f7e269a6ce1b3b82b4cbdb45598d241e31f5f5f8b3e9f3364",
+      "model_config": {
+        "vocab_size": 254,
+        "nvars": 128,
+        "hidden": 512,
+        "activation": "gelu"
+      },
+      "source_sha256": {
+        "sparse_experiment.py": "44f02aae8512264d688036f1d85ce1e14956ae96fbddd0482ebcd37ece63675f",
+        "sparse_model.py": "fc269fa9a973dece24f535e7fa945dbf9dc870d45aebec93ba603ef1b688d48e",
+        "sparse_data.py": "097174b6bddbc234704352da9e77aed2263290777d4e362e850b78df7fcfa020",
+        "data.py": "c552eb5b900a04d623c20f41c0db9fb5aa685ff43e1172e20c0039b7e4d806c2",
+        "evaluate.py": "c9f2f3aaf57733779bb3c8ab655aae7300821c006391a4b093e9cdc0e21a55db",
+        "local_rule.py": "4c3e173fa065fbfe7e5e5e5863ba96eb04b24769a5bc466aedf2743e3080bff2"
+      },
+      "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/noise_L4_prefix_consistent_r40_s2/evaluation.json",
+      "evaluation_sha256": "22fb43dec80f57afeb6acff72410dde1550083807e7d805f4c462b628b46baaf"
+    }
+  ],
+  "untrained_parent_baseline": {
+    "summary": {
+      "mean": 0.5045572916666666,
+      "min": 0.3701171875,
+      "max": 0.62109375,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "values": [
+        0.3701171875,
+        0.5224609375,
+        0.62109375
+      ],
+      "runs": [
+        "warm_L2_second_s0",
+        "warm_L2_second_s1",
+        "warm_L2_second_s2"
+      ],
+      "n": 3
+    },
+    "runs": [
+      {
+        "run": "warm_L2_second_s0",
+        "seed": 0,
+        "chain_accuracy": 0.3701171875,
+        "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/warm_L2_second_s0/evaluation.json",
+        "evaluation_sha256": "2774a877b325f564f4c26537db9972b0153997920c8da8de718ffc2f772c95da"
+      },
+      {
+        "run": "warm_L2_second_s1",
+        "seed": 1,
+        "chain_accuracy": 0.5224609375,
+        "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/warm_L2_second_s1/evaluation.json",
+        "evaluation_sha256": "a88549f636a0359970a39cfb27b3ef09b77f50c4a7c80c2ca6ad86e69ad91f7a"
+      },
+      {
+        "run": "warm_L2_second_s2",
+        "seed": 2,
+        "chain_accuracy": 0.62109375,
+        "evaluation_path": "/root/shared-nvme/cot-length-generalization/runs/sparse-supervision-2026-11-09/warm_L2_second_s2/evaluation.json",
+        "evaluation_sha256": "d59529447de4735340fc782d093a48948e4a3e116bdc7fc7f64537b401d00374"
+      }
+    ]
+  },
+  "notes": [
+    "Exact full-clause success is equivalent to the deterministic full greedy exact-trajectory event.",
+    "This figure uses only planned runs from this sparse-supervision campaign.",
+    "Panel A matches examples and updates, not supervised label counts.",
+    "Panel B matches unique and presented value labels; example counts and batches differ.",
+    "Panel C shares its zero-noise baseline across three noise types.",
+    "Panel A includes the same-seed L2 parents before L4 training as a horizontal mean baseline; the three parent values are retained.",
+    "Teacher-generated input histories are additional information not counted as target labels.",
+    "Only one length expansion is tested here; multi-round stability remains untested."
+  ]
+}
